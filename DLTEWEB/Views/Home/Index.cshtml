@@ -1,0 +1,748 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<style>
+    /* Optional: Fade effect for carousel */
+    .carousel-item {
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+    }
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+    .carousel-item {
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+    }
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+    .nav-logo {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    .navbar {
+        background-color: #343a40;
+    }
+
+    .nav-link {
+        color: white !important;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-toggler-icon {
+        background-color: white;
+    }
+
+    @@media (min-width: 992px) {
+        .navbar {
+            padding: 1rem;
+        }
+    }
+
+    @@media (max-width: 991px) {
+        .navbar {
+            padding: 0.5rem;
+        }
+    }
+
+    .first-menu {
+        width: 100%;
+        background-color: white;
+        height: 130px;
+        text-align: center;
+    }
+
+    .second-menu {
+        width: 100%;
+        background-color: green;
+        height: 80px;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .banniere {
+        width: 100%;
+        /*  background-image: url("/Images/paneau.png");*/
+        height: 70%;
+    }
+    .banniereIndicateur {
+        width: 100%;
+        /*  background-image: url("/Images/paneau.png");*/
+        height: auto;
+    }
+    .pied-page {
+        width: 100%;
+        /*  background-image: url("/Images/paneau.png");*/
+        height: auto;
+    }
+
+    .grid-container {
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+        padding: 1px;
+        height: 100%;
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .containera {
+        display: flex;
+        flex-direction: row; /* Default direction */
+        width: 100%;
+        height: 55vh; /* Take full viewport height for demo purposes */
+    }
+
+    .boxa {
+        flex: 1;
+        text-align: center;
+        line-height: 100px; /* Center text vertically */
+        font-size: 24px;
+        color: #110f1f;
+    }
+
+    .box1a {
+        /*background-color: #3498db;*/ /* Blue */
+        /*        background-image: url("/Images/DLTE.png");*/
+    }
+
+    .box2a {
+        background-color: white; /* Red */
+    }
+
+    @@media (max-width: 600px) {
+        .containera {
+            flex-direction: column; /* Stack divs vertically on smaller screens */
+        }
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        margin: 10px;
+        flex: 1 1 200px;
+    }
+
+    .footer-section h4 {
+        margin-top: 0;
+    }
+
+    .footer-section a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    @@media (max-width: 600px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Caption text */
+    .texta {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @@keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @@media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 310px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+
+        #container {
+            height: 400px;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #ebebeb;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+    }
+</style>
+<body style="margin:0!important">
+    <div class="first-menu">
+        <div class="d-flex justify-content-around">
+            <div class="p-2">
+                <img src="~/Images/logo-cntig2024ok.png" height=80 width=80 />
+            </div>
+            <div class="p-2">
+                <img src="~/Images/fanion.jpg" height=80 width=80 />
+                <h2 style="margin-block-start:0px">Ministère de lutte contre le travail des enfants</h2>
+            </div>
+            <div class="p-2">
+
+                <img src="~/Images/MEPS.png" height=100 width=100 />
+            </div>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand nav-logo" asp-controller="Home" asp-action="Index">
+                Accueil
+            </a>
+
+            <!-- Hamburger Menu for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Services" asp-action="Index">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Progiciels" asp-action="Index">Progiciels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Logiciels" asp-action="Index">Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Incidents" asp-action="Index">Incidents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Utilisateurs" asp-action="Index">Utilisateurs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banniere" id="header">
+
+        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            </ol>
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Images/banniere11.png" height="10" width="100" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/banniere33.png" height="10" width="100" />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/banniere21.png" height="10" width="100" />
+                </div>
+            </div>
+
+            <!-- Controls (optional) -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="banniereIndicateur">
+        <br />
+        <center>
+            <h1 style="color: #EB6209">
+                INDICATEURS
+            </h1>
+        </center>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                        @*<p class="highcharts-description">
+                                A basic column chart comparing estimated corn and wheat production
+                                in some countries.
+
+                            </p>*@
+                    </figure>
+                </div>
+                <div class="col-sm-3">
+                    <figure class="highcharts-figure">
+                        <div id="container1"></div>
+                        @*<p class="highcharts-description">
+                                A basic column chart comparing estimated corn and wheat production
+                                in some countries.
+
+                                The chart is making use of the axis crosshair feature, to highlight
+                                the hovered country.
+                            </p>*@
+                    </figure>
+                </div>
+                <div class="col-sm-3">
+                    <figure class="highcharts-figure">
+                        <div id="container2"></div>
+                        @*<p class="highcharts-description">
+                                A basic column chart comparing estimated corn and wheat production
+                                in some countries.
+
+                                The chart is making use of the axis crosshair feature, to highlight
+                                the hovered country.
+                            </p>*@
+                    </figure>
+                </div>
+                <div class="col-sm-3">
+                    <figure class="highcharts-figure">
+                        <div id="container3"></div>
+                        @*<p class="highcharts-description">
+                                A basic column chart comparing estimated corn and wheat production
+                                in some countries.
+
+                                The chart is making use of the axis crosshair feature, to highlight
+                                the hovered country.
+                            </p>*@
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 0 !important; background-color: #005569; position: static; height:auto ">
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>A propos de nous</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@example.com</p>
+                    <p>Tel.: +225 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Réseau sociaux</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+    <script type="text/javascript">
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2021 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Graçon',
+                data: [387749, 280000, 129000, 387749, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 140000, 140500, 19500, 113500]
+            }
+            ]
+        });
+
+        Highcharts.chart('container1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2022 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [187749, 387749, 129000, 34300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 140500, 19500, 113500]
+            }
+            ]
+        });
+        Highcharts.chart('container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2023 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Gorçon',
+                data: [387749, 280000, 829000, 64300, 14000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [5321, 140000, 10000, 140500, 19500, 713500]
+            }
+            ]
+        });
+
+        Highcharts.chart('container3', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+
+        Highcharts.chart('container4', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+
+
+        $(document).ready(function () {
+
+            // Select the header element using jQuery
+            var $header = $('.navbar');
+
+            // Function to toggle the sticky class based on scroll position
+            function checkScroll() {
+                var currentPosition = $header.css('position');
+                if (window.scrollY >= 131) {
+                    // Toggle position
+                    if (currentPosition === 'static') {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': '0', // Optional: add this if you want it to stick at the top
+                            'width': '100%' // Optional: ensure it spans the full width
+                        });
+                    }
+                } else {
+                    // Reset to static position
+                    $header.css({
+                        'position': 'static',
+                        'top': '', // Optional: remove top if set before
+                        'width': '' // Optional: remove width if set before
+                    });
+                }
+            }
+
+            // Event listener to call checkScroll function on scroll
+            $(window).on('scroll', checkScroll);
+
+            // Initial check in case the page is loaded at the top
+            checkScroll();
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>

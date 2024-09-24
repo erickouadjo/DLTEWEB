@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8705BEC4-973C-46ED-9963-ABC96FA77243}|DLTEWEB\\DLTEWEB.csproj|e:\\erickouadjo\\2024\\projets\\dlteweb\\dlteweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8705BEC4-973C-46ED-9963-ABC96FA77243}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8705BEC4-973C-46ED-9963-ABC96FA77243}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8705BEC4-973C-46ED-9963-ABC96FA77243}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DLTEWEB\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DLTEWEB\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAiwFoBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T14:56:27.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DLTEWEB\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T14:55:47.147Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
