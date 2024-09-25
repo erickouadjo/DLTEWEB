@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales sur un assembly sont contrôlées via ce
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("DLTEWEB")]
+[assembly: AssemblyTitle("DLTEv3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DLTEWEB")]
+[assembly: AssemblyProduct("DLTEv3")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("1db8b0a0-2da1-428c-a03d-e01fc36335b1")]
+[assembly: Guid("ecb5c800-218d-49b7-b0d8-e60be9957eee")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

@@ -1,137 +1,19 @@
 ﻿@{
     ViewBag.Title = "Contact";
-    Layout = null;
 }
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<style>
-    .cardd {
-        background-color: #ffffff;
-        color: dimgrey;
-        padding: 1rem;
-        height: 8rem;
-        border-radius: 3px;
-        text-align: center;
-        border: solid #cac9c9 1px;
-        box-shadow: 0 1rem 1rem hsl(0 0% 0% / 10%);
-    }
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
 
-    .cardds {
-        max-width: 900px;
-        margin: 0 auto;
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-       
-    }
+    <address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
 
-    @@media (min-width: 600px) {
-        .cardds {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    @@media (min-width: 900px) {
-        .cardds { grid-template-columns: repeat(3, 1fr); }
-    }
-    .cardd-title {
-        font-family: "Google Sans", "Google Sans Text", "Roboto", sans-serif;
-        font-size: 1.25rem;
-        margin-bottom: .5rem;
-    }
-    a:hover {
-        background-color: green;
-    }
-
-    .first-menu {
-        width: 100%;
-        background-color: white;
-        height: 130px;
-        text-align: center;
-    }
-
-    .second-menu {
-        width: 100%;
-        background-color: green;
-        height: 60px;
-        color: white;
-    }
-</style>
-
-<body style="margin:0!important">
-    <div style="padding-bottom:40px">
-        <div class="first-menu">
-            <img src="~/Images/fanion.jpg" height=80 width=80 />
-            <h2 style="margin-block-start:0px">Ministère de lutte contre le travail des enfants</h2>
-        </div>
-        <div class="second-menu">
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
-                <div class="container">
-                    @Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Activer/désactiver la navigation" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-sm-inline-flex justify-content-end">
-                        <ul class="navbar-nav flex-grow-1">
-                        </ul>
-                        @Html.ActionLink("Login", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <main>
-        <div class="cardds">
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd  cardd-title">
-                    <img src="/Images/admin.png" height=60 width=60 /><br />
-                    COLLECTE DE DONNEES
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/alerte.png" height=60 width=60 /><br />
-                    TRAITEMENTS ET ALERTE
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/graph.png" height=60 width=60 /><br />
-                    CARTOGRAPHIE
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/suivi.png" height=60 width=60 /><br />
-                    SUIVI-EVALUATION
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/dashboard_icon.png" height=60 width=60 /><br />
-                    TABLEAU DE BORD
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/communication.png" height=60 width=60 /><br />
-                    COMMUNICATION
-                </div>
-            </a>
-            <a href="#" style="text-decoration: none;">
-                <div class="cardd cardd-title">
-                    <img src="~/Images/admine.png" height=60 width=60 /><br />
-                    ADMINISTRATION
-                </div>
-            </a>
-        </div>
-    </main>
-</body>
-   
-
+    <address>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    </address>
+</main>

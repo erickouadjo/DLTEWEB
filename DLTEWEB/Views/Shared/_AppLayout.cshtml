@@ -1,0 +1,930 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="description" content="topfloor HTML 5 Template " />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 310px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+
+        #container {
+            height: 400px;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #ebebeb;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+
+        /* Optional: Fade effect for carousel */
+        .carousel-item {
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+            .carousel-item.active {
+                opacity: 1;
+            }
+
+        .carousel-item {
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+            .carousel-item.active {
+                opacity: 1;
+            }
+
+        .nav-logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        @@media (min-width: 992px) {
+            .navbar {
+                padding: 1rem;
+            }
+        }
+
+        @@media (max-width: 991px) {
+            .navbar {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!-- preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <div class="page-wrapper">
+        <header class="main-header-three">
+            <div class="first-menu">
+                <div class="d-flex justify-content-around">
+
+                    <div class="p-1">
+                        <center>
+                            <img src="~/Images/armoirie278x90.png" />
+                        </center>
+                    </div>
+
+                    <div class="p-2">
+                        <h3 style="color:orangered; padding-top:20px">Direction de la Lutte Contre le Travail des Enfants</h3>
+                    </div>
+                    <div class="p-2">
+                        <img src="~/Images/LOGO-MEPS4_278x90.png" />
+                    </div>
+                </div>
+
+            </div>
+            <nav class="main-menu main-menu-four" style="background-color:forestgreen">
+                <div class="main-menu-four__wrapper">
+                    <div class="container">
+                        <div class="main-menu-four__wrapper-inner">
+                            <div class="main-menu-four__logo">
+                                <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+                            </div>
+                            <div class="main-menu-four__left">
+                                <div class="main-menu-four__main-menu-box">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                    <ul class="main-menu__list">
+                                        <li>
+                                            @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color:white; text-decoration:none">CARTOGRAPHIE</a>
+                                            <ul>
+                                                <li style="background-color:midnightblue">
+                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color:midnightblue">
+                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+
+                                        <li>
+                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-menu-four__right">
+                                <div class="main-menu-four__search-btn-box">
+
+                                    <div class="main-menu-four__btn-box">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            @RenderBody() <!-- Contenu de la vue spécifique -->
+        </main>
+        <footer class="site-footer site-footer-four">
+            <div class="site-footer__shape-1">
+                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__social">
+                                <a href="#"><span class="icon-facebook"></span></a>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="#"><span class="icon-linkin"></span></a>
+                                <a href="#"><span class="icon-pinterest"></span></a>
+                            </div>
+                        </div>
+                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                        <ul class="list-unstyled site-footer__bottom-menu">
+                            <li>
+                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /.page-wrapper -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/marque/marquee.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
+
+    <!-- template js -->
+    <script src="~/Content/FichierAsset/assets/js/topfloor.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log('verification');
+            // Select the header element using jQuery
+            var $header = $('.navbar');
+
+            // Function to toggle the sticky class based on scroll position
+            function checkScroll() {
+                var currentPosition = $header.css('position');
+                if (window.scrollY >= 131) {
+                    console.log('verification 1');
+                    // Toggle position
+                    if (currentPosition === 'static') {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': '0', // Optional: add this if you want it to stick at the top
+                            'width': '100%' // Optional: ensure it spans the full width
+                        });
+                    }
+                } else {
+                    // Reset to static position
+                    $header.css({
+                        'position': 'static',
+                        'top': '', // Optional: remove top if set before
+                        'width': '' // Optional: remove width if set before
+                    });
+                }
+            }
+
+            // Event listener to call checkScroll function on scroll
+            $(window).on('scroll', checkScroll);
+
+            // Initial check in case the page is loaded at the top
+            checkScroll();
+        });
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                align: 'left',
+                text: ''
+            },
+            subtitle: {
+                align: 'left',
+                text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+            },
+            accessibility: {
+                announceNewData: {
+                    enabled: true
+                }
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+                    '<b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [
+                {
+                    name: 'Browsers',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: '2009',
+                            y: 63.06,
+                            drilldown: '2009'
+                        },
+                        {
+                            name: '2010',
+                            y: 19.84,
+                            drilldown: '2010'
+                        },
+                        {
+                            name: '2011',
+                            y: 4.18,
+                            drilldown: '2011'
+                        },
+                        {
+                            name: '2012',
+                            y: 4.12,
+                            drilldown: '2012'
+                        },
+                        {
+                            name: '2013',
+                            y: 2.33,
+                            drilldown: '2013'
+                        },
+                        {
+                            name: '2014',
+                            y: 0.45,
+                            drilldown: '2014'
+                        },
+
+                    ]
+                }
+            ],
+            drilldown: {
+                breadcrumbs: {
+                    position: {
+                        align: 'right'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Chrome',
+                        id: 'Chrome',
+                        data: [
+                            [
+                                'v65.0',
+                                0.1
+                            ],
+                            [
+                                'v64.0',
+                                1.3
+                            ],
+                            [
+                                'v63.0',
+                                53.02
+                            ],
+                            [
+                                'v62.0',
+                                1.4
+                            ],
+                            [
+                                'v61.0',
+                                0.88
+                            ],
+                            [
+                                'v60.0',
+                                0.56
+                            ],
+                            [
+                                'v59.0',
+                                0.45
+                            ],
+                            [
+                                'v58.0',
+                                0.49
+                            ],
+                            [
+                                'v57.0',
+                                0.32
+                            ],
+                            [
+                                'v56.0',
+                                0.29
+                            ],
+                            [
+                                'v55.0',
+                                0.79
+                            ],
+                            [
+                                'v54.0',
+                                0.18
+                            ],
+                            [
+                                'v51.0',
+                                0.13
+                            ],
+                            [
+                                'v49.0',
+                                2.16
+                            ],
+                            [
+                                'v48.0',
+                                0.13
+                            ],
+                            [
+                                'v47.0',
+                                0.11
+                            ],
+                            [
+                                'v43.0',
+                                0.17
+                            ],
+                            [
+                                'v29.0',
+                                0.26
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Firefox',
+                        id: 'Firefox',
+                        data: [
+                            [
+                                'v58.0',
+                                1.02
+                            ],
+                            [
+                                'v57.0',
+                                7.36
+                            ],
+                            [
+                                'v56.0',
+                                0.35
+                            ],
+                            [
+                                'v55.0',
+                                0.11
+                            ],
+                            [
+                                'v54.0',
+                                0.1
+                            ],
+                            [
+                                'v52.0',
+                                0.95
+                            ],
+                            [
+                                'v51.0',
+                                0.15
+                            ],
+                            [
+                                'v50.0',
+                                0.1
+                            ],
+                            [
+                                'v48.0',
+                                0.31
+                            ],
+                            [
+                                'v47.0',
+                                0.12
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Internet Explorer',
+                        id: 'Internet Explorer',
+                        data: [
+                            [
+                                'v11.0',
+                                6.2
+                            ],
+                            [
+                                'v10.0',
+                                0.29
+                            ],
+                            [
+                                'v9.0',
+                                0.27
+                            ],
+                            [
+                                'v8.0',
+                                0.47
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Safari',
+                        id: 'Safari',
+                        data: [
+                            [
+                                'v11.0',
+                                3.39
+                            ],
+                            [
+                                'v10.1',
+                                0.96
+                            ],
+                            [
+                                'v10.0',
+                                0.36
+                            ],
+                            [
+                                'v9.1',
+                                0.54
+                            ],
+                            [
+                                'v9.0',
+                                0.13
+                            ],
+                            [
+                                'v5.1',
+                                0.2
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Edge',
+                        id: 'Edge',
+                        data: [
+                            [
+                                'v16',
+                                2.6
+                            ],
+                            [
+                                'v15',
+                                0.92
+                            ],
+                            [
+                                'v14',
+                                0.4
+                            ],
+                            [
+                                'v13',
+                                0.1
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Opera',
+                        id: 'Opera',
+                        data: [
+                            [
+                                'v50.0',
+                                0.96
+                            ],
+                            [
+                                'v49.0',
+                                0.82
+                            ],
+                            [
+                                'v12.1',
+                                0.14
+                            ]
+                        ]
+                    }
+                ]
+            }
+        });
+        Highcharts.chart('containerM', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            subtitle: {
+                text:
+                    'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>'
+            },
+            plotOptions: {
+                series: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: [{
+                        enabled: true,
+                        distance: 20
+                    }, {
+                        enabled: true,
+                        distance: -40,
+                        format: '{point.percentage:.1f}%',
+                        style: {
+                            fontSize: '1.2em',
+                            textOutline: 'none',
+                            opacity: 0.7
+                        },
+                        filter: {
+                            operator: '>',
+                            property: 'percentage',
+                            value: 10
+                        }
+                    }]
+                }
+            },
+            series: [
+                {
+                    name: 'Percentage',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: 'Guémon',
+                            y: 55.02
+                        },
+                        {
+                            name: 'Bélier',
+                            sliced: true,
+                            selected: true,
+                            y: 26.71
+                        },
+                        {
+                            name: 'Nawa',
+                            y: 1.09
+                        },
+                        {
+                            name: 'Haut sassandra',
+                            y: 15.5
+                        },
+                        {
+                            name: 'Lagune',
+                            y: 1.68
+                        }
+                    ]
+                }
+            ]
+        });
+
+        Highcharts.chart('container1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [187749, 387749, 129000, 34300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 140500, 19500, 113500]
+            }
+            ]
+        });
+        Highcharts.chart('container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2023 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Gorçon',
+                data: [387749, 280000, 829000, 64300, 14000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [5321, 140000, 10000, 140500, 19500, 713500]
+            }
+            ]
+        });
+        Highcharts.chart('container3', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+        Highcharts.chart('container4', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+
+    </script>
+
+</body>
+</html>

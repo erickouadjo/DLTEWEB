@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace DLTEWEB
+namespace DLTEv3
 {
     public class FilterConfig
     {

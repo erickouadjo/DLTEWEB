@@ -2,14 +2,102 @@
 @{
     ViewBag.Title = "Index";
 }
+<style>
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 15px;
+    }
+
+        .navbar .logo {
+            font-size: 24px;
+            color: white;
+        }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            .nav-links li a:hover {
+                color: #ffcc00;
+            }
+
+    /* Hamburger menu for small screens */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+    /* Media Query for responsiveness */
+    @@media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: #333;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+        }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+        .hamburger {
+            display: flex;
+        }
+    }
+</style>
 <body style="margin:0px">
     <div class="content">
-        <div style="height: 50px; background-color: aliceblue; border-radius: 3px; width: 100%;">
-            <h2 style="padding:10px">Suivi-Evaluation</h2>
-        </div>
+        <nav class="navbar">
+            <div class="logo"> Suivi et Evaluation</div>
+            <ul class="nav-links">
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
         <br />
-        <div style="background-color:aliceblue; height:1000px; width:100%">
+        <div style="background-color:aliceblue; height:1000px; width:100%" id="partial-view-container">
 
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+
 </body>
+
