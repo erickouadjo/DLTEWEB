@@ -18,8 +18,16 @@ namespace DLTEv3.Controllers
         {
             return View();
         }
+        public ActionResult listeForm1()
+        {
+            return View();
+        }
 
         public ActionResult Form2()
+        {
+            return View();
+        }
+        public ActionResult listeForm2()
         {
             return View();
         }
@@ -27,7 +35,15 @@ namespace DLTEv3.Controllers
         {
             return View();
         }
+        public ActionResult listeForm3()
+        {
+            return View();
+        }
         public ActionResult Form4()
+        {
+            return View();
+        }
+        public ActionResult listeForm4()
         {
             return View();
         }
@@ -35,7 +51,15 @@ namespace DLTEv3.Controllers
         {
             return View();
         }
+        public ActionResult listeForm5()
+        {
+            return View();
+        }
         public ActionResult Form6()
+        {
+            return View();
+        }
+        public ActionResult listeForm6()
         {
             return View();
         }

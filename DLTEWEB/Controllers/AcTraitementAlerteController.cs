@@ -13,6 +13,10 @@ namespace DLTEv3.Controllers
         {
             return View();
         }
+        public ActionResult TraitementActivité()
+        {
+            return View();
+        }
 
         // GET: AcTraitementAlerte/Details/5
         public ActionResult Details(int id)

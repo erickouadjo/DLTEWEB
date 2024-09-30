@@ -1,0 +1,261 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+
+<div class="container-fluid" style="padding:0px 20px 0px 20px">
+    <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
+        <div class="col-md">
+            <label for="exampleInputPassword1" class="form-label">Région</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tout</option>
+                <option value="1">Gbêkè</option>
+                <option value="2">Haut Sassandra</option>
+                <option value="3">Grand Pont</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Département</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tout</option>
+                <option value="1">Adzopé</option>
+                <option value="2">Akoupé</option>
+                <option value="3">yakassé-Attobrou</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Commune</label>
+            <select class="form-select" aria-label="Default select example">
+
+                <option selected>Tout</option>
+                <option value="1">Aboisso</option>
+                <option value="2">Abidjan</option>
+                <option value="3">Bouaké</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Localité</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tout</option>
+                <option value="1">Angré</option>
+                <option value="2">Koumassi</option>
+                <option value="3">Yopougon</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Genre</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tout</option>
+                <option value="1">Homme</option>
+                <option value="2">Femme</option>
+                <option value="3">Autre</option>
+            </select>
+        </div>
+        <div class="col">
+            <div class="col-md">
+                <label for="exampleInputPassword1" class="form-label">Domaine d'activité</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tout</option>
+                    <option value="1">Ferronnerie</option>
+                    <option value="2">Travaux champêtres</option>
+                    <option value="3">Minier</option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Etat</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tous</option>
+                <option value="1">Confirmé</option>
+                <option value="2">Infirmé</option>
+                <option value="3">En attente</option>
+            </select>
+        </div>
+    </div>
+    <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
+
+        <div class="col-md">
+            <label class="form-label">Date debut</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-md">
+            <label class="form-label">Date fin</label>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-md">
+
+        </div>
+        <div class="col-md">
+
+        </div>
+        <div class="col-md">
+
+        </div>
+        <div class="col-md">
+
+        </div>
+    </div>
+    <center>
+        <h3 style="padding:20px 0px 20px 0px">
+            Traitement et Alerte
+        </h3>
+    </center>
+    <div class="row">
+        <div class="col" style="display: flex; justify-content:center;">
+            <div>
+                <img src="~/Images/carteAlerte.JPG" />
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>
+            Données collectées
+        </h3>
+        <div class="d-grid gap-3 d-md-block">
+            <button class="btn btn-primary btn-sm" type="button">Word</button>
+            <button class="btn btn-success btn-sm" type="button">Excel</button>
+            <button class="btn btn-danger btn-sm" type="button">PDF</button>
+        </div>
+        <br />
+        <table class="table table-hover">
+            <tr style="background-color: #D3E3FD">
+                <th scope="col">ID</th>
+                <th scope="col">Régions</th>
+                <th scope="col">Départements</th>
+                <th scope="col">Communes</th>
+                <th scope="col">Localités</th>
+                <th scope="col">Genres</th>
+                <th scope="col">Années</th>
+                <th scope="col">Etats</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Gbêkè</td>
+                    <td>Bouaké</td>
+                    <td>Bouaké</td>
+                    <td>R France2</td>
+                    <td>Homme</td>
+                    <td>2020</td>
+                    <td>
+                        <span class="badge text-bg-primary">Confirmé</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Montagne</td>
+                    <td>Man</td>
+                    <td>Man</td>
+                    <td>Domorauld</td>
+                    <td>Femme</td>
+                    <td>2020</td>
+                    <td><span class="badge text-bg-warning">Infirmé</span></td>
+                </tr>
+        </table>
+    </div>
+    <div>
+        <h3>
+            Données existantes
+        </h3>
+        <div class="d-grid gap-3 d-md-block">
+            <button class="btn btn-primary btn-sm" type="button">Word</button>
+            <button class="btn btn-success btn-sm" type="button">Excel</button>
+            <button class="btn btn-danger btn-sm" type="button">PDF</button>
+        </div>
+        <br />
+        <table class="table table-hover">
+            <tr style="background-color: #ABD0BC">
+                <th scope="col">ID</th>
+                <th scope="col">Régions</th>
+                <th scope="col">Départements</th>
+                <th scope="col">Communes</th>
+                <th scope="col">Localités</th>
+                <th scope="col">Genres</th>
+                <th scope="col">Années</th>
+                <th scope="col">Etats</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Gbêkè</td>
+                    <td>Bouaké</td>
+                    <td>Bouaké</td>
+                    <td>R France2</td>
+                    <td>Homme</td>
+                    <td>2020</td>
+                    <td>
+                        <span class="badge text-bg-primary">Confirmé</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Montagne</td>
+                    <td>Man</td>
+                    <td>Man</td>
+                    <td>Domorauld</td>
+                    <td>Femme</td>
+                    <td>2020</td>
+                    <td><span class="badge text-bg-warning">Infirmé</span></td>
+                </tr>
+        </table>
+    </div>
+    <div>
+        <h3>
+            Données avec doublons
+        </h3>
+        <div class="d-grid gap-3 d-md-block">
+            <button class="btn btn-primary btn-sm" type="button">Word</button>
+            <button class="btn btn-success btn-sm" type="button">Excel</button>
+            <button class="btn btn-danger btn-sm" type="button">PDF</button>
+        </div>
+        <br />
+        <table class="table table-hover">
+            <tr style="background-color: #FF99A4">
+                <th scope="col">ID</th>
+                <th scope="col">Régions</th>
+                <th scope="col">Départements</th>
+                <th scope="col">Communes</th>
+                <th scope="col">Localités</th>
+                <th scope="col">Genres</th>
+                <th scope="col">Années</th>
+                <th scope="col">Etats</th>
+                <th scope="col">Actions</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Gbêkè</td>
+                    <td>Bouaké</td>
+                    <td>Bouaké</td>
+                    <td>R France2</td>
+                    <td>Homme</td>
+                    <td>2020</td>
+                    <td>
+                        <span class="badge text-bg-primary">Confirmé</span>
+                    </td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-outline-success btn-sm" type="button">Modifier</button>
+                            <button class="btn btn-outline-danger btn-sm" type="button">Supprimer</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Montagne</td>
+                    <td>Man</td>
+                    <td>Man</td>
+                    <td>Domorauld</td>
+                    <td>Femme</td>
+                    <td>2020</td>
+                    <td><span class="badge text-bg-warning">Infirmé</span></td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-outline-success btn-sm" type="button">Modifier</button>
+                            <button class="btn btn-outline-danger btn-sm" type="button">Supprimer</button>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+    </div>
+</div>

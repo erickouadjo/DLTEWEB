@@ -183,7 +183,10 @@
                     </div>
 
                     <div class="p-2">
-                        <h3 style="color:orangered; padding-top:20px">Direction de la Lutte Contre le Travail des Enfants</h3>
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
                     </div>
                     <div class="p-2">
                         <img src="~/Images/LOGO-MEPS4_278x90.png" />
@@ -212,12 +215,12 @@
                                             @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            <a href="#" style="color:white; text-decoration:none">CARTOGRAPHIE</a>
+                                            <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
                                             <ul>
-                                                <li style="background-color:midnightblue">
+                                                <li style="background-color: #007565">
                                                     @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
-                                                <li style="background-color:midnightblue">
+                                                <li style="background-color: #007565">
                                                     @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                             </ul>
@@ -226,14 +229,21 @@
                                             @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUES</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
                                         </li>
-
                                         <li>
                                             @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                            @Html.ActionLink("ADMINISTRATION", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                     </ul>
                                 </div>

@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+<style>
+    .icons i {
+        color: #b5b3b3;
+        border: 1px solid #b5b3b3;
+        padding: 6px;
+        margin-left: 4px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .activity-done {
+        font-weight: 600;
+    }
+
+    .list-group li {
+        margin-bottom: 12px;
+    }
+
+    .list li {
+        list-style: none;
+        padding: 10px;
+        border: 1px solid #e3dada;
+        margin-top: 12px;
+        border-radius: 5px;
+        background: #fff;
+    }
+
+    .checkicon {
+        color: green;
+        font-size: 19px;
+    }
+
+    .date-time {
+        font-size: 12px;
+    }
+
+    .profile-image img {
+        margin-left: 3px;
+    }
+    a {
+        text-decoration:none;
+    }
+</style>
+<section>
+    <center>
+        <h3 style="padding:20px 0px 20px 0px">
+            Collecte de données
+        </h3>
+    </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-3">
+                        <ul class="list list-inline">
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form1", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">CARTOGRAPHIE ET GUIDE D'ENTRETIEN</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form2", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">FICHE DE PRE-IDENTIFICATION DES ENFANTS TRAVAILLEURS ET LEUR UTILISATEUR</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form3", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form4", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">ETABLISSEMENT SCOLAIRE ET CENTRE DE FORMATION</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form5", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">STRUCTUR VERSION FINALE</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <a href="@Url.Action("Form6", "AcCollecteDonnees")">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <i class="fa fa-check-circle checkicon"></i>
+                                        <div class="ml-2" style="padding: 10px">
+                                            <h6 class="mb-0">ENFANTS ASSISTES</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

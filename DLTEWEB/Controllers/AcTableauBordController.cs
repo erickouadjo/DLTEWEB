@@ -14,6 +14,11 @@ namespace DLTEv3.Controllers
             return View();
         }
 
+        public ActionResult Synthese()
+        {
+            return View();
+        }
+
         // GET: AcTableauBord/Details/5
         public ActionResult Details(int id)
         {

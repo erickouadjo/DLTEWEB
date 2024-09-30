@@ -1,0 +1,173 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Sidebar et Contenu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #343A40;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #999999;
+        }
+
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #fff;
+            background: #279B3E;
+        }
+
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+
+        @@media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+
+                #wrapper.toggled {
+                    padding-left: 0;
+                }
+
+            #sidebar-wrapper {
+                width: 250px;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        .underline-effect-2 {
+            display: inline;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-decoration: underline;
+            text-decoration-color: black;
+            background-image: linear-gradient(white, white); /* Crée une bande blanche */
+            background-position: 0 90%; /* Positionne la bande sous le texte */
+            background-size: 100% 6px; /* Largeur de la bande et hauteur */
+            background-repeat: no-repeat; /* Pas de répétition */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="sidebar-nav">
+                <li>
+                    @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li>
+                    <a href="#">CARTOGRAPHIE</a>
+                    <ul>
+                        <li style="background-color:midnightblue">
+                            @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li style="background-color:midnightblue">
+                            @Html.ActionLink("ORGANE DU SIGOSTECI", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                </li>
+
+                <li>
+                    @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li>
+                    @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                </li>
+            </ul>
+        </aside>
+
+        <div class="content">
+
+            @RenderBody()
+        </div>
+    </div>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>
+

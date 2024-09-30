@@ -16,8 +16,12 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -56,6 +60,24 @@
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
 
     <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+            gap: 10px; /* Espacement entre les éléments */
+        }
+
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media query pour passer à une seule colonne sur les petits écrans */
+        @@media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* 1 colonne pour les écrans plus petits */
+            }
+        }
+
         .image {
             border: 1px solid #555;
         }
@@ -181,7 +203,10 @@
                     </div>
 
                     <div class="p-2">
-                        <h3 style="color:orangered; padding-top:20px">Direction de la Lutte Contre le Travail des Enfants</h3>
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
                     </div>
                     <div class="p-2">
                         <img src="~/Images/LOGO-MEPS4_278x90.png" />
@@ -191,65 +216,77 @@
             </div>
             <nav class="main-menu main-menu-four" style="background-color:forestgreen">
                 <div class="main-menu-four__wrapper">
-                    
-                        <div class="main-menu-four__wrapper-inner">
-                            <div class="main-menu-four__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+
+                    <div class="main-menu-four__wrapper-inner">
+                        <div class="main-menu-four__logo">
+                            <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+                        </div>
+                        <div class="main-menu-four__left">
+                            <div class="main-menu-four__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li>
+                                        @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUES</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("ADMINISTRATION", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="main-menu-four__left">
-                                <div class="main-menu-four__main-menu-box">
-                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                    <ul class="main-menu__list">
-                                        <li>
-                                            @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
-                                            <ul>
-                                                <li style="background-color:midnightblue">
-                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color:midnightblue">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
+                        </div>
+                        <div class="main-menu-four__right">
+                            <div class="main-menu-four__search-btn-box">
 
-                                        <li>
-                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="main-menu-four__right">
-                                <div class="main-menu-four__search-btn-box">
+                                <div class="main-menu-four__btn-box">
 
-                                    <div class="main-menu-four__btn-box">
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </nav>
-        
         </header>
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding:20px 20px 0px 20px">
+            <center>
+                <h3 style="text-transform:uppercase">
+                    Cartographie des incidents
+                </h3>
+            </center>
+            <br />
             <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
                 <div class="col-md">
                     <label for="exampleInputPassword1" class="form-label">Région</label>
@@ -266,7 +303,7 @@
                         <option selected>Tout</option>
                         <option value="1">Adzopé</option>
                         <option value="2">Akoupé</option>
-                        <option value="3">yakassé-Attobrou</option>
+                        <option value="3">Yakassé-Attobrou</option>
                     </select>
                 </div>
                 <div class="col">
@@ -280,156 +317,97 @@
                     </select>
                 </div>
                 <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Localité</label>
+                    <label for="exampleInputPassword1" class="form-label">Lieu d’exercice</label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Tout</option>
-                        <option value="1">Angré</option>
-                        <option value="2">Koumassi</option>
-                        <option value="3">Yopougon</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Genre</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tout</option>
-                        <option value="1">Homme</option>
-                        <option value="2">Femme</option>
+                        <option value="1">Au marché</option>
+                        <option value="2">Dans la rue</option>
+                        <option value="3">A domicile</option>
+                        <option value="3">Dans un magazin</option>
+                        <option value="3">Au champ</option>
                         <option value="3">Autre</option>
                     </select>
                 </div>
                 <div class="col">
                     <div class="col-md">
-                        <label for="exampleInputPassword1" class="form-label">Domaine d'activité</label>
+                        <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Tout</option>
-                            <option value="1">Ferronnerie</option>
-                            <option value="2">Travaux champêtres</option>
+                            <option value="1">Agriculture</option>
+                            <option value="2">Commerce</option>
+                            <option value="3">Domestique</option>
                             <option value="3">Minier</option>
+                            <option value="3">Artisanat</option>
+                            <option value="3">Transport</option>
                         </select>
                     </div>
                 </div>
-                <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Etat</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tous</option>
-                        <option value="1">Confirmé</option>
-                        <option value="2">Infirmé</option>
-                        <option value="3">En attente</option>
-                    </select>
-                </div>
             </div>
-            <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
 
-                <div class="col-md">
-                    <label class="form-label">Date debut</label>
-                    <input type="date" class="form-control" />
-                </div>
-                <div class="col-md">
-                    <label class="form-label">Date fin</label>
-                    <input type="date" class="form-control" />
-                </div>
-                <div class="col-md">
+            <div class="row justify-content-start img-fluid" style="padding-top:10px">
+                <div class="col" style="display: flex; justify-content: end; max-width: 900px">
+                    <div>
 
-                </div>
-                <div class="col-md">
-
-                </div>
-                <div class="col-md">
-
-                </div>
-                <div class="col-md">
-
-                </div>
-            </div>
-            <center>
-                <h3 style="padding:20px 0px 20px 0px">
-                    Cartographie : Incidents
-                </h3>
-            </center>
-            <div class="row" style="padding-bottom: 20px; padding-top: 20px;">
-                <div class="col" style="display: flex; justify-content: flex-end;">
-                    <img src="~/Images/carte.png" class="image" />
-                </div>
-                <div class="col" style="justify-content: flex-start; padding: 20px">
-                    <figure class="highcharts-figure">
-                        <div id="container"></div>
-
-                    </figure>
-                    <p class="highcharts-description">
-                        <center>
-                            Taux d'incidents par mois
-                        </center>
-                    </p>
-                </div>
-            </div>
-            <br />
-            <table class="table table-hover">
-                <tr style="background-color: #D3E3FD">
-                    <th scope="col">ID</th>
-                    <th scope="col">Régions</th>
-                    <th scope="col">Départements</th>
-                    <th scope="col">Communes</th>
-                    <th scope="col">Localités</th>
-                    <th scope="col">Genres</th>
-                    <th scope="col">Années</th>
-                    <th scope="col">Etats</th>
-                    <th scope="col">Secteurs d'activités</th>
-                </tr>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Gbêkè</td>
-                        <td>Bouaké</td>
-                        <td>Bouaké</td>
-                        <td>R France2</td>
-                        <td>Homme</td>
-                        <td>2020</td>
-                        <td>
-                            <span class="badge text-bg-primary">Confirmé</span>
-                        </td>
-                        <td>Travaux champêtres</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Montagne</td>
-                        <td>Man</td>
-                        <td>Man</td>
-                        <td>Domorauld</td>
-                        <td>Femme</td>
-                        <td>2020</td>
-                        <td><span class="badge text-bg-danger">Rejeté</span></td>
-                        <td>Mécanique</td>
-                    </tr>
-            </table>
-        </div>
-            <footer class="site-footer site-footer-four">
-                <div class="site-footer__shape-1">
-                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
-                </div>
-                <div class="site-footer__bottom">
-                    <div class="container">
-                        <div class="site-footer__bottom-inner">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__social">
-                                    <a href="#"><span class="icon-facebook"></span></a>
-                                    <a href="#"><span class="icon-twitter"></span></a>
-                                    <a href="#"><span class="icon-linkin"></span></a>
-                                    <a href="#"><span class="icon-pinterest"></span></a>
-                                </div>
-                            </div>
-                            <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
-                            <ul class="list-unstyled site-footer__bottom-menu">
-                                <li>
-                                    <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
-                                    <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
-                                    <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
-                                </li>
-                            </ul>
-                        </div>
+                        <img src="~/Images/carte_incident.png" style="border:1px solid #555" height="760" />
                     </div>
                 </div>
-            </footer>
+                <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
+                    <br />
+                    <div class="row">
+                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
+                            <div id="containerPie" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                           
+
+                            @*<div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
+                        </div>
+                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
+                            <div id="containerBar" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                           
+                            @*<div id="container2" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
+                        </div>
+                        <div class=" col-lg-6  wow fadeInRight" data-wow-delay="500ms">
+                            <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            @*<div id="container1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
+                        </div>
+                        <div class=" col-lg-6 wow fadeInRight" data-wow-delay="500ms">
+                            <div id="containerBar1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+
+                            @*<div id="container4" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
+        <footer class="site-footer site-footer-four">
+            <div class="site-footer__shape-1">
+                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__social">
+                                <a href="#"><span class="icon-facebook"></span></a>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="#"><span class="icon-linkin"></span></a>
+                                <a href="#"><span class="icon-pinterest"></span></a>
+                            </div>
+                        </div>
+                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                        <ul class="list-unstyled site-footer__bottom-menu">
+                            <li>
+                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -456,385 +434,502 @@
     <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <script>
+        // Diagramme en secteurs (Pie)
+        Highcharts.chart('containerPie', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'POURCENTAGE D\'ALERTE PAR SECTEUR D\'ACTIVITE'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %', // Format pour afficher les pourcentages
+                        style: {
+                            fontSize: '14px',
+                            fontWeight: 'bold'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Part',
+                colorByPoint: true,
+                data: [{
+                    name: 'Agriculture',
+                    y: 61.41,
+                }, {
+                    name: 'Commerce',
+                    y: 11.84,
+                }, {
+                    name: 'Domestique',
+                    y: 10.85,
+                }, {
+                    name: 'Minier',
+                    y: 4.67,
+                }, {
+                    name: 'Transport',
+                    y: 4.67,
+                }]
+            }]
+        });
+
+
+        // Diagramme en barres (Bar)
+        Highcharts.chart('containerBar', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'NOMBRE D\'ALERTE PAR SECTEUR D\'ACTIVITE'
+            },
+            xAxis: {
+                categories: ['Agriculture', 'Commerce', 'Domestique', 'Minier','Artisanat','Transport']
+            },
+            yAxis: {
+                title: {
+                    text: 'Valeurs'
+                }
+            },
+            series: [{
+                name: 'Série 1',
+                data: [15, 13, 14, 17]
+            }]
+        });
+
+        // Diagramme en barres (Bar)
+        Highcharts.chart('containerBar1', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'NOMBRE D\'ALERTE PAR LIEU DE SERVICE PAR SEXE'
+            },
+            xAxis: {
+                categories: ['Au marché', 'Dans la rue', 'Au champ', 'Dans un magazin']
+            },
+            yAxis: {
+                title: {
+                    text: 'Valeurs'
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [5, 3, 4, 7]
+            }, {
+                    name: 'Fille',
+                    data: [15, 3, 24, 2]
+                }]
+        });
+
+        // Diagramme en colonnes (Column)
+        Highcharts.chart('containerColumn', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'TAUX D\'ALERTE PAR SECTEUR D\'ACTIVITE'
+            },
+            xAxis: {
+                categories: ['Agriculture', 'Commerce', 'Domestique', 'Minier', 'Artisanat', 'Transport']
+            },
+            yAxis: {
+                title: {
+                    text: 'Valeurs'
+                }
+            },
+            series: [{
+                name: 'Série 1',
+                data: [15, 13, 14, 10,19, 29]
+            }]
+        });
+    </script>
+
     <script type="text/javascript">
 
 
-    // Create the chart
-    Highcharts.chart('container', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            align: 'left',
-            text: ''
-        },
-        subtitle: {
-            align: 'left',
-            text: ''
-        },
-        accessibility: {
-            announceNewData: {
-                enabled: true
-            }
-        },
-        xAxis: {
-            type: 'category'
-        },
-        yAxis: {
-            title: {
-                text: 'Total percent market share'
-            }
 
-        },
-        legend: {
-            enabled: false
-        },
-        plotOptions: {
-            series: {
-                borderWidth: 0,
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.y:.1f}%'
-                }
-            }
-        },
+        $(document).ready(function () {
 
-        tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
-                '<b>{point.y:.2f}%</b> of total<br/>'
-        },
-
-        series: [
-            {
-                name: 'Browsers',
-                colorByPoint: true,
-                data: [
-                    {
-                        name: 'Janv',
-                        y: 63.06,
-                        drilldown: 'Janvier'
-                    },
-                    {
-                        name: 'Fev',
-                        y: 19.84,
-                        drilldown: 'Fev'
-                    },
-                    {
-                        name: 'Mars',
-                        y: 4.18,
-                        drilldown: 'Mars'
-                    },
-                    {
-                        name: 'Avr',
-                        y: 13.12,
-                        drilldown: 'Avr'
-                    },
-                    {
-                        name: 'Mais',
-                        y: 25.33,
-                        drilldown: 'Mais'
-                    },
-                    {
-                        name: 'Juin',
-                        y: 10.45,
-                        drilldown: 'Juin'
-                    },
-                    {
-                        name: 'Juil',
-                        y: 55.33,
-                        drilldown: 'Juil'
-                    },
-                    {
-                        name: 'Aout',
-                        y: 6.33,
-                        drilldown: 'Aout'
-                    },
-                    {
-                        name: 'Sept',
-                        y: 6.33,
-                        drilldown: 'Sept'
-                    },
-                    {
-                        name: 'Oct',
-                        y: 8.33,
-                        drilldown: 'Oct'
-                    },
-                    {
-                        name: 'Nov',
-                        y: 2.33,
-                        drilldown: 'Nov'
-                    },
-                    {
-                        name: 'Dec',
-                        y: 5.33,
-                        drilldown: 'Dec'
-                    },
-                  
-                ]
-            }
-        ],
-        drilldown: {
-            breadcrumbs: {
-                position: {
-                    align: 'right'
-                }
-            },
-            series: [
-                {
-                    name: 'Chrome',
-                    id: 'Chrome',
-                    data: [
-                        [
-                            'v65.0',
-                            0.1
-                        ],
-                        [
-                            'v64.0',
-                            1.3
-                        ],
-                        [
-                            'v63.0',
-                            53.02
-                        ],
-                        [
-                            'v62.0',
-                            1.4
-                        ],
-                        [
-                            'v61.0',
-                            0.88
-                        ],
-                        [
-                            'v60.0',
-                            0.56
-                        ],
-                        [
-                            'v59.0',
-                            0.45
-                        ],
-                        [
-                            'v58.0',
-                            0.49
-                        ],
-                        [
-                            'v57.0',
-                            0.32
-                        ],
-                        [
-                            'v56.0',
-                            0.29
-                        ],
-                        [
-                            'v55.0',
-                            0.79
-                        ],
-                        [
-                            'v54.0',
-                            0.18
-                        ],
-                        [
-                            'v51.0',
-                            0.13
-                        ],
-                        [
-                            'v49.0',
-                            2.16
-                        ],
-                        [
-                            'v48.0',
-                            0.13
-                        ],
-                        [
-                            'v47.0',
-                            0.11
-                        ],
-                        [
-                            'v43.0',
-                            0.17
-                        ],
-                        [
-                            'v29.0',
-                            0.26
-                        ]
-                    ]
+            Highcharts.chart('container3', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 150
                 },
-                {
-                    name: 'Firefox',
-                    id: 'Firefox',
-                    data: [
-                        [
-                            'v58.0',
-                            1.02
-                        ],
-                        [
-                            'v57.0',
-                            7.36
-                        ],
-                        [
-                            'v56.0',
-                            0.35
-                        ],
-                        [
-                            'v55.0',
-                            0.11
-                        ],
-                        [
-                            'v54.0',
-                            0.1
-                        ],
-                        [
-                            'v52.0',
-                            0.95
-                        ],
-                        [
-                            'v51.0',
-                            0.15
-                        ],
-                        [
-                            'v50.0',
-                            0.1
-                        ],
-                        [
-                            'v48.0',
-                            0.31
-                        ],
-                        [
-                            'v47.0',
-                            0.12
-                        ]
-                    ]
+                title: {
+                    text: 'Most popular ideas by April 2016'
                 },
-                {
-                    name: 'Internet Explorer',
-                    id: 'Internet Explorer',
-                    data: [
-                        [
-                            'v11.0',
-                            6.2
-                        ],
-                        [
-                            'v10.0',
-                            0.29
-                        ],
-                        [
-                            'v9.0',
-                            0.27
-                        ],
-                        [
-                            'v8.0',
-                            0.47
-                        ]
-                    ]
+                subtitle: {
+                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
                 },
-                {
-                    name: 'Safari',
-                    id: 'Safari',
-                    data: [
-                        [
-                            'v11.0',
-                            3.39
-                        ],
-                        [
-                            'v10.1',
-                            0.96
-                        ],
-                        [
-                            'v10.0',
-                            0.36
-                        ],
-                        [
-                            'v9.1',
-                            0.54
-                        ],
-                        [
-                            'v9.0',
-                            0.13
-                        ],
-                        [
-                            'v5.1',
-                            0.2
-                        ]
-                    ]
+                xAxis: {
+                    type: 'category',
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        style: {
+                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                        }
+                    },
+                    min: 0,
+                    max: 4,
+                    scrollbar: {
+                        enabled: true
+                    },
+                    tickLength: 0,
                 },
-                {
-                    name: 'Edge',
-                    id: 'Edge',
-                    data: [
-                        [
-                            'v16',
-                            2.6
-                        ],
-                        [
-                            'v15',
-                            0.92
-                        ],
-                        [
-                            'v14',
-                            0.4
-                        ],
-                        [
-                            'v13',
-                            0.1
-                        ]
-                    ]
+                yAxis: {
+                    min: 0,
+                    max: 1200,
+                    title: {
+                        text: 'Votes',
+                        align: 'high'
+                    }
                 },
-                {
-                    name: 'Opera',
-                    id: 'Opera',
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                fontSize: '14px'  // Taille de la police des labels de données
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Votes',
                     data: [
-                        [
-                            'v50.0',
-                            0.96
-                        ],
-                        [
-                            'v49.0',
-                            0.82
-                        ],
-                        [
-                            'v12.1',
-                            0.14
-                        ]
+                        ["Gantt chart", 1000],
+                        ["Autocalculation and plotting of trend lines", 575],
+                        ["Allow navigator to have multiple data series", 523],
+                        ["Implement dynamic font size", 427],
+                        ["Multiple axis alignment control", 399],
+                        ["Stacked area (spline etc) in irregular datetime series", 309],
+                        ["Adapt chart height to legend height", 278],
+                        ["Export charts in excel sheet", 239],
+                        ["Toggle legend box", 235],
+                        ["Venn Diagram", 203],
+                        ["Add ability to change Rangeselector position", 182],
+                        ["Draggable legend box", 157],
+                        ["Sankey Diagram", 149],
+                        ["Add Navigation bar for Y-Axis in Highstock", 144],
+                        ["Grouped x-axis", 143],
+                        ["ReactJS plugin", 137],
+                        ["3D surface charts", 134],
+                        ["Draw lines over a stock chart, for analysis purpose", 118],
+                        ["Data module for database tables", 118],
+                        ["Draggable points", 117]
                     ]
-                }
-            ]
-        }
-    });
+                }]
+            });
+
+            Highcharts.chart('container2', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 150
+                },
+                title: {
+                    text: 'Most popular ideas by April 2016'
+                },
+                subtitle: {
+                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+                },
+                xAxis: {
+                    type: 'category',
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        style: {
+                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                        }
+                    },
+                    min: 0,
+                    max: 4,
+                    scrollbar: {
+                        enabled: true
+                    },
+                    tickLength: 0,
+                },
+                yAxis: {
+                    min: 0,
+                    max: 1200,
+                    title: {
+                        text: 'Votes',
+                        align: 'high'
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                fontSize: '14px'  // Taille de la police des labels de données
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Votes',
+                    data: [
+                        ["Gantt chart", 1000],
+                        ["Autocalculation and plotting of trend lines", 575],
+                        ["Allow navigator to have multiple data series", 523],
+                        ["Implement dynamic font size", 427],
+                        ["Multiple axis alignment control", 399],
+                        ["Stacked area (spline etc) in irregular datetime series", 309],
+                        ["Adapt chart height to legend height", 278],
+                        ["Export charts in excel sheet", 239],
+                        ["Toggle legend box", 235],
+                        ["Venn Diagram", 203],
+                        ["Add ability to change Rangeselector position", 182],
+                        ["Draggable legend box", 157],
+                        ["Sankey Diagram", 149],
+                        ["Add Navigation bar for Y-Axis in Highstock", 144],
+                        ["Grouped x-axis", 143],
+                        ["ReactJS plugin", 137],
+                        ["3D surface charts", 134],
+                        ["Draw lines over a stock chart, for analysis purpose", 118],
+                        ["Data module for database tables", 118],
+                        ["Draggable points", 117]
+                    ]
+                }]
+            });
+
+            Highcharts.chart('container1', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 150
+                },
+                title: {
+                    text: 'Most popular ideas by April 2016'
+                },
+                subtitle: {
+                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+                },
+                xAxis: {
+                    type: 'category',
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        style: {
+                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                        }
+                    },
+                    min: 0,
+                    max: 4,
+                    scrollbar: {
+                        enabled: true
+                    },
+                    tickLength: 0,
+                },
+                yAxis: {
+                    min: 0,
+                    max: 1200,
+                    title: {
+                        text: 'Votes',
+                        align: 'high'
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                fontSize: '14px'  // Taille de la police des labels de données
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Votes',
+                    data: [
+                        ["Gantt chart", 1000],
+                        ["Autocalculation and plotting of trend lines", 575],
+                        ["Allow navigator to have multiple data series", 523],
+                        ["Implement dynamic font size", 427],
+                        ["Multiple axis alignment control", 399],
+                        ["Stacked area (spline etc) in irregular datetime series", 309],
+                        ["Adapt chart height to legend height", 278],
+                        ["Export charts in excel sheet", 239],
+                        ["Toggle legend box", 235],
+                        ["Venn Diagram", 203],
+                        ["Add ability to change Rangeselector position", 182],
+                        ["Draggable legend box", 157],
+                        ["Sankey Diagram", 149],
+                        ["Add Navigation bar for Y-Axis in Highstock", 144],
+                        ["Grouped x-axis", 143],
+                        ["ReactJS plugin", 137],
+                        ["3D surface charts", 134],
+                        ["Draw lines over a stock chart, for analysis purpose", 118],
+                        ["Data module for database tables", 118],
+                        ["Draggable points", 117]
+                    ]
+                }]
+            });
+
+            Highcharts.chart('container4', {
+                chart: {
+                    type: 'bar',
+                    marginLeft: 150
+                },
+                title: {
+                    text: 'Most popular ideas by April 2016'
+                },
+                subtitle: {
+                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+                },
+                xAxis: {
+                    type: 'category',
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        style: {
+                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                        }
+                    },
+                    min: 0,
+                    max: 4,
+                    scrollbar: {
+                        enabled: true
+                    },
+                    tickLength: 0,
+                },
+                yAxis: {
+                    min: 0,
+                    max: 1200,
+                    title: {
+                        text: 'Votes',
+                        align: 'high'
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                fontSize: '14px'  // Taille de la police des labels de données
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Votes',
+                    data: [
+                        ["Gantt chart", 1000],
+                        ["Autocalculation and plotting of trend lines", 575],
+                        ["Allow navigator to have multiple data series", 523],
+                        ["Implement dynamic font size", 427],
+                        ["Multiple axis alignment control", 399],
+                        ["Stacked area (spline etc) in irregular datetime series", 309],
+                        ["Adapt chart height to legend height", 278],
+                        ["Export charts in excel sheet", 239],
+                        ["Toggle legend box", 235],
+                        ["Venn Diagram", 203],
+                        ["Add ability to change Rangeselector position", 182],
+                        ["Draggable legend box", 157],
+                        ["Sankey Diagram", 149],
+                        ["Add Navigation bar for Y-Axis in Highstock", 144],
+                        ["Grouped x-axis", 143],
+                        ["ReactJS plugin", 137],
+                        ["3D surface charts", 134],
+                        ["Draw lines over a stock chart, for analysis purpose", 118],
+                        ["Data module for database tables", 118],
+                        ["Draggable points", 117]
+                    ]
+                }]
+            });
+            Highcharts.chart('container5', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Graphique 2'
+                },
+                xAxis: {
+                    categories: ['Catégorie 1', 'Catégorie 2', 'Catégorie 3', 'Catégorie 4']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Valeurs'
+                    }
+                },
+                series: [{
+                    name: 'Série 1',
+                    data: [5, 3, 4, 7]
+                }]
+            });
 
 
-    $(document).ready(function () {
+            // Select the header element using jQuery
+            var $header = $('.navbar');
 
-        // Select the header element using jQuery
-        var $header = $('.navbar');
-
-        // Function to toggle the sticky class based on scroll position
-        function checkScroll() {
-            var currentPosition = $header.css('position');
-            if (window.scrollY >= 131) {
-                // Toggle position
-                if (currentPosition === 'static') {
+            // Function to toggle the sticky class based on scroll position
+            function checkScroll() {
+                var currentPosition = $header.css('position');
+                if (window.scrollY >= 131) {
+                    // Toggle position
+                    if (currentPosition === 'static') {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': '0', // Optional: add this if you want it to stick at the top
+                            'width': '100%' // Optional: ensure it spans the full width
+                        });
+                    }
+                } else {
+                    // Reset to static position
                     $header.css({
-                        'position': 'fixed',
-                        'top': '0', // Optional: add this if you want it to stick at the top
-                        'width': '100%' // Optional: ensure it spans the full width
+                        'position': 'static',
+                        'top': '', // Optional: remove top if set before
+                        'width': '' // Optional: remove width if set before
                     });
                 }
-            } else {
-                // Reset to static position
-                $header.css({
-                    'position': 'static',
-                    'top': '', // Optional: remove top if set before
-                    'width': '' // Optional: remove width if set before
-                });
             }
-        }
 
-        // Event listener to call checkScroll function on scroll
-        $(window).on('scroll', checkScroll);
+            // Event listener to call checkScroll function on scroll
+            $(window).on('scroll', checkScroll);
 
-        // Initial check in case the page is loaded at the top
-        checkScroll();
-    });
+            // Initial check in case the page is loaded at the top
+            checkScroll();
+        });
 
     </script>
 
