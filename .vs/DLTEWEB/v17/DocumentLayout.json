@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\actraitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\actraitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\shared\\_applayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\shared\\_applayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\collectedonnees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\collectedonnees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\cartographie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\cartographie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\actableaubord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\actableaubord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accommunication\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accommunication\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\acsuivievaluation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\acsuivievaluation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\actraitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\actraitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accartographie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -43,100 +35,8 @@
       "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accartographie\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accommunication\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accommunication\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\actraitementalertecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\actraitementalertecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\traitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\traitementalerte\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form6.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form6.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\form2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\form2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\accollectedonneescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\accollectedonneescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\collectedonneescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\collectedonneescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\utilisateur\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\utilisateur\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\accollectedonnees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\accollectedonnees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\accartographiecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\accartographiecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\dlteweb\\views\\actableaubord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}|DLTEWEB\\DLTEWEB.csproj|solutionrelative:dlteweb\\views\\actableaubord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -146,424 +46,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TraitementActivit\u00E9.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcTraitementAlerte\\TraitementActivit\u00E9.cshtml",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAcwI0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T16:07:51.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTraitementAlerte\\Index.cshtml",
               "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcTraitementAlerte\\Index.cshtml",
               "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTraitementAlerte\\Index.cshtml",
               "RelativeToolTip": "DLTEWEB\\Views\\AcTraitementAlerte\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAAALYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T08:43:38.644Z"
+              "WhenOpened": "2024-09-25T08:43:38.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DLTEWEB\\Views\\Home\\Index.cshtml",
               "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DLTEWEB\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAANkAAAAAAAAAAAAswPQAAABpAAAAAAAAAA==",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAABcBAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-18T14:56:27.316Z"
+              "WhenOpened": "2024-09-18T14:56:27.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "_AppLayout.cshtml",
               "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Shared\\_AppLayout.cshtml",
               "RelativeDocumentMoniker": "DLTEWEB\\Views\\Shared\\_AppLayout.cshtml",
               "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Shared\\_AppLayout.cshtml",
               "RelativeToolTip": "DLTEWEB\\Views\\Shared\\_AppLayout.cshtml",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAswNYAAABpAAAAAAAAAA==",
+              "ViewState": "AgIAANMAAAAAAAAAAAAswPQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:49:35.069Z"
+              "WhenOpened": "2024-09-25T13:49:35.069Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Index1.cshtml",
               "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index1.cshtml",
               "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCartographie\\Index1.cshtml",
               "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index1.cshtml",
               "RelativeToolTip": "DLTEWEB\\Views\\AcCartographie\\Index1.cshtml",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAswNQAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAswAsBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T15:23:25.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAswNQAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T10:19:10.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T10:28:06.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T08:44:25.87Z"
+              "WhenOpened": "2024-09-25T15:23:25.727Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAAABABAABpAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
+              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
+              "RelativeToolTip": "DLTEWEB\\Views\\AcCartographie\\Index.cshtml",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAswA0BAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T10:54:02.88Z"
+              "WhenOpened": "2024-09-25T10:19:10.509Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Cartographie\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\Cartographie\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Cartographie\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\Cartographie\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAOAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
+              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
+              "RelativeToolTip": "DLTEWEB\\Views\\AcCommunication\\Index.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGcAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T09:35:52.993Z"
+              "WhenOpened": "2024-09-25T10:28:06.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\CollecteDonnees\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\CollecteDonnees\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\CollecteDonnees\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\CollecteDonnees\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
+              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
+              "RelativeToolTip": "DLTEWEB\\Views\\AcSuiviEvaluation\\Index.cshtml",
+              "ViewState": "AgIAAN0BAAAAAAAAAAAqwCACAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T09:37:11.016Z"
+              "WhenOpened": "2024-09-25T08:44:25.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AcTraitementAlerteController.cs",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcTraitementAlerteController.cs",
-              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\AcTraitementAlerteController.cs",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcTraitementAlerteController.cs",
-              "RelativeToolTip": "DLTEWEB\\Controllers\\AcTraitementAlerteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T16:05:01.106Z"
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
+              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
+              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
+              "RelativeToolTip": "DLTEWEB\\Views\\AcTableauBord\\Index.cshtml",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAqwP4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T10:54:02.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DLTEWEB\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DLTEWEB\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHcAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAHcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:49:57.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "listeForm6.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm6.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:50:03.513Z",
+              "WhenOpened": "2024-09-25T13:49:57.462Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Form4.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form4.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form4.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form4.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form4.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:41:58.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "listeForm3.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm3.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:49:20.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "listeForm4.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm4.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:49:39.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\TraitementAlerte\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\TraitementAlerte\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\TraitementAlerte\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\TraitementAlerte\\Index.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T09:35:18.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "listeForm5.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm5.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:49:53.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form6.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form6.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form6.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form6.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form6.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:42:18.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "listeForm1.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm1.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:48:25.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Form1.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form1.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form1.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form1.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form1.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAowBEAAACeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T09:58:12.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "listeForm7.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm7.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:58:12.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Form7.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form7.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T10:00:05.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Form3.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form3.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form3.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form3.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form3.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:41:45.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "listeForm2.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\listeForm2.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-26T09:49:00.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Form2.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form2.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form2.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form2.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form2.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:41:32.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form5.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form5.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Form5.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Form5.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Form5.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T13:42:09.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AcCollecteDonneesController.cs",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcCollecteDonneesController.cs",
-              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\AcCollecteDonneesController.cs",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcCollecteDonneesController.cs",
-              "RelativeToolTip": "DLTEWEB\\Controllers\\AcCollecteDonneesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:31:50.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CollecteDonneesController.cs",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\CollecteDonneesController.cs",
-              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\CollecteDonneesController.cs",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\CollecteDonneesController.cs",
-              "RelativeToolTip": "DLTEWEB\\Controllers\\CollecteDonneesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:33:54.421Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Utilisateur\\Login.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\Utilisateur\\Login.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\Utilisateur\\Login.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\Utilisateur\\Login.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T17:10:35.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Index.cshtml",
-              "RelativeDocumentMoniker": "DLTEWEB\\Views\\AcCollecteDonnees\\Index.cshtml",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Views\\AcCollecteDonnees\\Index.cshtml",
-              "RelativeToolTip": "DLTEWEB\\Views\\AcCollecteDonnees\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T10:19:39.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AcCartographieController.cs",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcCartographieController.cs",
-              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\AcCartographieController.cs",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\AcCartographieController.cs",
-              "RelativeToolTip": "DLTEWEB\\Controllers\\AcCartographieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:21:30.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "DLTEWEB\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\EricKOUADJO\\2024\\PROJETS\\DLTEWEB\\DLTEWEB\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "DLTEWEB\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T14:55:47.147Z"
             }
           ]
         }

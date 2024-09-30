@@ -227,9 +227,6 @@
                                         @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
                                         @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
@@ -261,7 +258,15 @@
                                         @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("ADMINISTRATION", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -392,26 +397,26 @@
                         <input type="date" class="form-control" />
                     </div>
                     <div class="col">
-                    
+
                     </div>
                     <div class="col">
                         <div class="col-md">
-                           
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="col-md">
-                           
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="col-md">
-                           
+
                         </div>
                     </div>
                     <div class="col">
                         <div class="col-md">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -419,10 +424,12 @@
             <div class="row justify-content-start img-fluid" style="padding-top: 10px;">
                 <div class="col" style="display: flex; justify-content: start; max-width: 1000px; border: 1px solid #555">
                     <div>
-                        <img src="~/Images/carte_initiative.png"  class="img-fluid"/>
+                        <img src="~/Images/carte_initiative.png" class="img-fluid" />
+                        <center><h3>Cartographie des initiatives</h3></center>
                     </div>
                 </div>
                 <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
+                    <center><h3>Liste des initiatives</h3></center>
                     <table class="table">
                         <thead>
                             <tr>
@@ -437,37 +444,49 @@
                                 <td>Sensibilisation et éducation</td>
                                 <td>700 000</td>
                                 <td>15%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Réinsertion scolaire</td>
                                 <td>45 000 000</td>
                                 <td>13%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Formation professionnelle</td>
                                 <td>5 000 000</td>
                                 <td>49%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Protection et de réhabilitation des enfants travailleurs</td>
                                 <td>4 000 000</td>
                                 <td>23%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Inspection et de régulation des activité</td>
                                 <td>19 000 000</td>
                                 <td>15%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Suivi et évaluation des activité</td>
                                 <td>69 000 000</td>
                                 <td>18%</td>
-                                <td><button class="btn btn-outline-primary">Evaluer</button></td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -490,6 +509,44 @@
                         </div>
                         <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
                             <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            @* Modal *@
+            <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Recommandation</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">TDR</label>
+                                    <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Rapport d'évaluation'</label>
+                                    <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                            <button type="button" class="btn btn-primary">Valider</button>
                         </div>
                     </div>
                 </div>

@@ -227,9 +227,6 @@
                                         @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
                                         @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
@@ -261,7 +258,15 @@
                                         @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("ADMINISTRATION", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
