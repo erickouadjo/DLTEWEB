@@ -125,6 +125,7 @@
     <Compile Include="Controllers\AcCommunicationController.cs" />
     <Compile Include="Controllers\AcSuiviEvaluationController.cs" />
     <Compile Include="Controllers\AcTableauBordController.cs" />
+    <Compile Include="Controllers\ActiviteController.cs" />
     <Compile Include="Controllers\AcTraitementAlerteController.cs" />
     <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\CartographieController.cs" />
@@ -661,6 +662,8 @@
     <Content Include="Views\AcCollecteDonnees\listeForm6.cshtml" />
     <Content Include="Views\AcCollecteDonnees\listeForm7.cshtml" />
     <Content Include="Views\AcCollecteDonnees\Form7.cshtml" />
+    <Content Include="Views\AcTableauBord\Synthese.cshtml" />
+    <Content Include="Views\Activite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
