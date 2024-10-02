@@ -56,135 +56,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-            gap: 10px; /* Espacement entre les éléments */
-        }
-
-        .grid-item {
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Media query pour passer à une seule colonne sur les petits écrans */
-        @@media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: 1fr; /* 1 colonne pour les écrans plus petits */
-            }
-        }
-
-        .image {
-            border: 1px solid #555;
-        }
-
-        .highcharts-figure,
-        .highcharts-data-table table {
-            min-width: 310px;
-            max-width: 800px;
-            margin: 1em auto;
-        }
-
-        #container {
-            height: 400px;
-        }
-
-        .highcharts-data-table table {
-            font-family: Verdana, sans-serif;
-            border-collapse: collapse;
-            border: 1px solid #ebebeb;
-            margin: 10px auto;
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .highcharts-data-table caption {
-            padding: 1em 0;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .highcharts-data-table th {
-            font-weight: 600;
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table td,
-        .highcharts-data-table th,
-        .highcharts-data-table caption {
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table thead tr,
-        .highcharts-data-table tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-
-        .highcharts-data-table tr:hover {
-            background: #f1f7ff;
-        }
-
-
-        /* Optional: Fade effect for carousel */
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .nav-logo {
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .nav-link {
-            color: white !important;
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar-toggler-icon {
-            background-color: white;
-        }
-
-        @@media (min-width: 992px) {
-            .navbar {
-                padding: 1rem;
-            }
-        }
-
-        @@media (max-width: 991px) {
-            .navbar {
-                padding: 0.5rem;
-            }
-        }
-
-        .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li {
-            margin-left: 0px;
-        }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <div class="custom-cursor__cursor"></div>
@@ -193,7 +65,6 @@
         <header class="main-header-three">
             <div class="first-menu">
                 <div class="d-flex justify-content-around">
-
                     <div class="p-1">
                         <center>
                             <img src="~/Images/armoirie278x90.png" />
@@ -214,7 +85,6 @@
             </div>
             <nav class="main-menu main-menu-four" style="background-color:forestgreen">
                 <div class="main-menu-four__wrapper">
-
                     <div class="main-menu-four__wrapper-inner">
                         <div class="main-menu-four__logo">
                             <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
@@ -285,305 +155,359 @@
                     </div>
                 </div>
             </nav>
-
         </header>
-        <div class="container-fluid" style="padding:20px 20px 0px 20px">
-            <center>
-                <h3 style="text-transform:uppercase">
-                    SUIVI ET EVALUATION
-                </h3>
-            </center>
-            <br />
-            <div class="container-fluid" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
+        <div style="background-color: #D3E3FD;">
+            <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
+                Accueil > Suivi et Evaluation
+            </div>
+            <div class="container-fluid mt-1" style="padding-top:-5px">
                 <div class="row">
-                    <div class="col-md">
-                        <label for="exampleInputPassword1" class="form-label">Région</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Gbêkè</option>
-                            <option value="2">Haut Sassandra</option>
-                            <option value="3">Grand Pont</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Département</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Adzopé</option>
-                            <option value="2">Akoupé</option>
-                            <option value="3">Yakassé-Attobrou</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Commune</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Aboisso</option>
-                            <option value="2">Abidjan</option>
-                            <option value="3">Bouaké</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tout</option>
-                                <option value="1">Agriculture</option>
-                                <option value="2">Commerce</option>
-                                <option value="3">Domestique</option>
-                                <option value="3">Minier</option>
-                                <option value="3">Artisanat</option>
-                                <option value="3">Transport</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">Activité</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tout</option>
-                                <option value="1">Sensibilisation et éducation</option>
-                                <option value="2">Réinsertion scolaire</option>
-                                <option value="3">Formation professionnelle</option>
-                                <option value="3">Protection et de réhabilitation des enfants travailleurs</option>
-                                <option value="3">Inspection et de régulation des activité</option>
-                                <option value="3">Inspection et de régulation des activité</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">Taux exécution physique</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tout</option>
-                                <option value="1">0%</option>
-                                <option value="2">10%</option>
-                                <option value="3">20%</option>
-                                <option value="3">30%</option>
-                                <option value="3">40%</option>
-                                <option value="3">50%</option>
-                                <option value="3">60%</option>
-                                <option value="3">70%</option>
-                                <option value="3">80%</option>
-                                <option value="3">90%</option>
-                                <option value="3">100%</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">Taux exécution financier</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tout</option>
-                                <option value="1">0%</option>
-                                <option value="2">10%</option>
-                                <option value="3">20%</option>
-                                <option value="3">30%</option>
-                                <option value="3">40%</option>
-                                <option value="3">50%</option>
-                                <option value="3">60%</option>
-                                <option value="3">70%</option>
-                                <option value="3">80%</option>
-                                <option value="3">90%</option>
-                                <option value="3">100%</option>
-                            </select>
+                    <!-- Première carte occupant 70% -->
+                    <div class="col-md-12">
+                        <div class="card fixed-height-l">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Région</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Gbêkè</option>
+                                            <option value="2">Haut Sassandra</option>
+                                            <option value="3">Grand Pont</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Département</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Adzopé</option>
+                                            <option value="2">Akoupé</option>
+                                            <option value="3">Yakassé-Attobrou</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Commune</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Aboisso</option>
+                                            <option value="2">Abidjan</option>
+                                            <option value="3">Bouaké</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Agriculture</option>
+                                            <option value="2">Commerce</option>
+                                            <option value="3">Domestique</option>
+                                            <option value="3">Minier</option>
+                                            <option value="3">Artisanat</option>
+                                            <option value="3">Transport</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Activité</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Sensibilisation et éducation</option>
+                                            <option value="2">Réinsertion scolaire</option>
+                                            <option value="3">Formation professionnelle</option>
+                                            <option value="3">Protection et de réhabilitation des enfants travailleurs</option>
+                                            <option value="3">Inspection et de régulation des activité</option>
+                                            <option value="3">Inspection et de régulation des activité</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Taux exécution physique</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">0%</option>
+                                            <option value="2">10%</option>
+                                            <option value="3">20%</option>
+                                            <option value="3">30%</option>
+                                            <option value="3">40%</option>
+                                            <option value="3">50%</option>
+                                            <option value="3">60%</option>
+                                            <option value="3">70%</option>
+                                            <option value="3">80%</option>
+                                            <option value="3">90%</option>
+                                            <option value="3">100%</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Taux exécution financier</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">0%</option>
+                                            <option value="2">10%</option>
+                                            <option value="3">20%</option>
+                                            <option value="3">30%</option>
+                                            <option value="3">40%</option>
+                                            <option value="3">50%</option>
+                                            <option value="3">60%</option>
+                                            <option value="3">70%</option>
+                                            <option value="3">80%</option>
+                                            <option value="3">90%</option>
+                                            <option value="3">100%</option>
+                                        </select>
+                                    </div>                                  
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Date debut</label>
+                                        <input type="date" class="form-control" />
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Date fin</label>
+                                        <input type="date" class="form-control" />
+                                    </div>
+                                    <div class="col">
+
+                                    </div>
+                                    <div class="col">
+                                        <div class="col-md">
+
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col-md">
+
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col-md">
+
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col-md">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid mt-4">
                 <div class="row">
-                    <div class="col-md">
-                        <label for="exampleInputPassword1" class="form-label">Date debut</label>
-                        <input type="date" class="form-control" />
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Date fin</label>
-                        <input type="date" class="form-control" />
-                    </div>
-                    <div class="col">
-
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-
+                    <!-- Première carte occupant 70% -->
+                    <div class="col-md-7">
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <h5 class="card-title">Carte 70%</h5>
+                                <p class="card-text">Contenu de la première carte...</p>
+                                <img src="~/Images/carte_initiative.png" class="img-fluid" />
+                                <center><h3>Cartographie des initiatives</h3></center>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="col-md">
 
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-
+                    <!-- Deuxième carte occupant 30% -->
+                    <div class="col-md-5">
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <h5 class="card-title">Carte 30%</h5>
+                                <p class="card-text">Contenu de la deuxième carte...</p>
+                                <table class="table" style="font-size:12px">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ACTIVITES</th>
+                                            <th scope="col">COUTS</th>
+                                            <th scope="col">TAUX D'AVANCEMENTS</th>
+                                            <th scope="col">ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sensibilisation et éducation</td>
+                                            <td>700 000</td>
+                                            <td>15%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Réinsertion scolaire</td>
+                                            <td>45 000 000</td>
+                                            <td>13%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Formation professionnelle</td>
+                                            <td>5 000 000</td>
+                                            <td>49%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Protection et de réhabilitation des enfants travailleurs</td>
+                                            <td>4 000 000</td>
+                                            <td>23%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inspection et de régulation des activité</td>
+                                            <td>19 000 000</td>
+                                            <td>15%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suivi et évaluation des activité</td>
+                                            <td>69 000 000</td>
+                                            <td>18%</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-start img-fluid" style="padding-top: 10px;">
-                <div class="col" style="display: flex; justify-content: start; max-width: 1000px; border: 1px solid #555">
-                    <div>
-                        <img src="~/Images/carte_initiative.png" class="img-fluid" />
-                        <center><h3>Cartographie des initiatives</h3></center>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <!-- Première carte occupant 70% -->
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
-                    <center><h3>Liste des initiatives</h3></center>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">ACTIVITES</th>
-                                <th scope="col">COUTS</th>
-                                <th scope="col">TAUX D'AVANCEMENTS</th>
-                                <th scope="col">ACTION</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sensibilisation et éducation</td>
-                                <td>700 000</td>
-                                <td>15%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Réinsertion scolaire</td>
-                                <td>45 000 000</td>
-                                <td>13%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Formation professionnelle</td>
-                                <td>5 000 000</td>
-                                <td>49%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Protection et de réhabilitation des enfants travailleurs</td>
-                                <td>4 000 000</td>
-                                <td>23%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Inspection et de régulation des activité</td>
-                                <td>19 000 000</td>
-                                <td>15%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suivi et évaluation des activité</td>
-                                <td>69 000 000</td>
-                                <td>18%</td>
-                                <td>
-                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Evaluer</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-            <div class="row justify-content-start img-fluid" style="padding-top:10px">
-
-                <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
-                    <br />
-                    <div class="row">
-                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
-                            <div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                        </div>
-                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
-                            <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                        </div>
-                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
-                            <div id="containerColumn1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                        </div>
-                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
-                            <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            @* Modal *@
-            <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <!-- Première carte occupant 70% -->
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="containerColumn1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Recommandation</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">TDR</label>
-                                    <input class="form-control" type="file" id="formFile" style="max-width:800px">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Rapport d'évaluation'</label>
-                                    <input class="form-control" type="file" id="formFile" style="max-width:800px">
-                                </div>
-                            </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                            <button type="button" class="btn btn-primary">Valider</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer class="site-footer site-footer-four">
-            <div class="site-footer__shape-1">
-                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
-            </div>
-            <div class="site-footer__bottom">
-                <div class="container">
-                    <div class="site-footer__bottom-inner">
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="footer-widget__social">
-                                <a href="#"><span class="icon-facebook"></span></a>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                                <a href="#"><span class="icon-linkin"></span></a>
-                                <a href="#"><span class="icon-pinterest"></span></a>
+               
+        @* Modal *@
+        <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
                             </div>
-                        </div>
-                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
-                        <ul class="list-unstyled site-footer__bottom-menu">
-                            <li>
-                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
-                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
-                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
-                            </li>
-                        </ul>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Recommandation</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">TDR</label>
+                                <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Rapport d'évaluation'</label>
+                                <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary">Valider</button>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
+
+    <footer class="site-footer site-footer-four">
+        <div class="site-footer__shape-1">
+            <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <div class="container">
+                <div class="site-footer__bottom-inner">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__social">
+                            <a href="#"><span class="icon-facebook"></span></a>
+                            <a href="#"><span class="icon-twitter"></span></a>
+                            <a href="#"><span class="icon-linkin"></span></a>
+                            <a href="#"><span class="icon-pinterest"></span></a>
+                        </div>
+                    </div>
+                    <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                    <ul class="list-unstyled site-footer__bottom-menu">
+                        <li>
+                            <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                            <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                            <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+                        
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -610,242 +534,242 @@
     <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            Highcharts.chart('container3', {
-                chart: {
-                    type: 'bar',
-                    marginLeft: 150
-                },
+        Highcharts.chart('container3', {
+            chart: {
+                type: 'bar',
+                marginLeft: 150
+            },
+            title: {
+                text: 'INDICATEUR DE PERFORMANCE TEMPORELLE (Délai)'
+            },
+            subtitle: {
+                text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+            },
+            xAxis: {
+                type: 'category',
                 title: {
-                    text: 'INDICATEUR DE PERFORMANCE TEMPORELLE (Délai)'
+                    text: null
                 },
-                subtitle: {
-                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+                labels: {
+                    style: {
+                        fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                        fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                    }
                 },
-                xAxis: {
-                    type: 'category',
-                    title: {
-                        text: null
-                    },
-                    labels: {
+                min: 0,
+                max: 4,
+                scrollbar: {
+                    enabled: true
+                },
+                tickLength: 0,
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'Votes',
+                    align: 'high'
+                }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
                         style: {
-                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
-                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
-                        }
-                    },
-                    min: 0,
-                    max: 4,
-                    scrollbar: {
-                        enabled: true
-                    },
-                    tickLength: 0,
-                },
-                yAxis: {
-                    min: 0,
-                    max: 100,
-                    title: {
-                        text: 'Votes',
-                        align: 'high'
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        dataLabels: {
-                            enabled: true,
-                            style: {
-                                fontSize: '14px'  // Taille de la police des labels de données
-                            }
+                            fontSize: '14px'  // Taille de la police des labels de données
                         }
                     }
-                },
-                legend: {
-                    enabled: false
-                },
-                credits: {
-                    enabled: false
-                },
-                series: [{
-                    name: 'Votes',
-                    data: [
-                        ["Sensibilisation et éducation", 80],
-                        ["Réinsertion scolaire", 55],
-                        ["Formation professionnelle", 93],
-                        ["Protection et de réhabilitation des enfants travailleurs", 7],
-                        ["Inspection et de régulation des activité", 9],
-                    ]
-                }]
-            });
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Votes',
+                data: [
+                    ["Sensibilisation et éducation", 80],
+                    ["Réinsertion scolaire", 55],
+                    ["Formation professionnelle", 93],
+                    ["Protection et de réhabilitation des enfants travailleurs", 7],
+                    ["Inspection et de régulation des activité", 9],
+                ]
+            }]
+        });
 
-            Highcharts.chart('container33', {
-                chart: {
-                    type: 'bar',
-                    marginLeft: 150
-                },
+        Highcharts.chart('container33', {
+            chart: {
+                type: 'bar',
+                marginLeft: 150
+            },
+            title: {
+                text: 'INDICATEUR DE SATISFACTION DES PARTIES PRENANTES'
+            },
+            subtitle: {
+                text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+            },
+            xAxis: {
+                type: 'category',
                 title: {
-                    text: 'INDICATEUR DE SATISFACTION DES PARTIES PRENANTES'
+                    text: null
                 },
-                subtitle: {
-                    text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+                labels: {
+                    style: {
+                        fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                        fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                    }
                 },
-                xAxis: {
-                    type: 'category',
-                    title: {
-                        text: null
-                    },
-                    labels: {
+                min: 0,
+                max: 4,
+                scrollbar: {
+                    enabled: true
+                },
+                tickLength: 0,
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'Votes',
+                    align: 'high'
+                }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
                         style: {
-                            fontSize: '19px',  // Taille de la police des libellés de l'axe X
-                            fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                            fontSize: '14px'  // Taille de la police des labels de données
                         }
                     },
-                    min: 0,
-                    max: 4,
-                    scrollbar: {
-                        enabled: true
-                    },
-                    tickLength: 0,
-                },
-                yAxis: {
-                    min: 0,
-                    max: 100,
-                    title: {
-                        text: 'Votes',
-                        align: 'high'
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        dataLabels: {
-                            enabled: true,
-                            style: {
-                                fontSize: '14px'  // Taille de la police des labels de données
-                            }
-                        },
-                        color: '#F15C80'
-                    }
-                },
-                legend: {
-                    enabled: false
-                },
-                credits: {
-                    enabled: false
-                },
-                series: [{
-                    name: 'Votes',
-                    data: [
-                        ["Sensibilisation et éducation", 80],
-                        ["Réinsertion scolaire", 18],
-                        ["Formation professionnelle", 23],
-                        ["Protection et de réhabilitation des enfants travailleurs", 77],
-                        ["Inspection et de régulation des activité", 9],
-                    ]
-                }]
-            });
+                    color: '#F15C80'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Votes',
+                data: [
+                    ["Sensibilisation et éducation", 80],
+                    ["Réinsertion scolaire", 18],
+                    ["Formation professionnelle", 23],
+                    ["Protection et de réhabilitation des enfants travailleurs", 77],
+                    ["Inspection et de régulation des activité", 9],
+                ]
+            }]
+        });
 
 
-            // Diagramme en colonnes (Column)
-            Highcharts.chart('containerColumn', {
-                chart: {
-                    type: 'column'
-                },
+        // Diagramme en colonnes (Column)
+        Highcharts.chart('containerColumn', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'INDICATEUR FINANCIER (Budget)'
+            },
+            xAxis: {
+                categories: ['Sensibilisation et éducation', 'Réinsertion scolaire', 'Formation professionnelle', 'Protection et de réhabilitation des enfants travailleurs', 'Suivi et évaluation des activité', 'Activité 7']
+            },
+            yAxis: {
                 title: {
-                    text: 'INDICATEUR FINANCIER (Budget)'
-                },
-                xAxis: {
-                    categories: ['Sensibilisation et éducation', 'Réinsertion scolaire', 'Formation professionnelle', 'Protection et de réhabilitation des enfants travailleurs', 'Suivi et évaluation des activité', 'Activité 7']
-                },
-                yAxis: {
-                    title: {
-                        text: 'Valeurs'
-                    }
-                },
-                plotOptions: {
-                    column: {
-                        dataLabels: {
-                            enabled: true, // Activer l'affichage des valeurs sur les colonnes
-                            style: {
-                                fontSize: '14px', // Taille de la police pour les valeurs affichées
-                                fontWeight: 'bold' // Facultatif : mettre en gras
-                            }
+                    text: 'Valeurs'
+                }
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: true, // Activer l'affichage des valeurs sur les colonnes
+                        style: {
+                            fontSize: '14px', // Taille de la police pour les valeurs affichées
+                            fontWeight: 'bold' // Facultatif : mettre en gras
                         }
                     }
-                },
-                series: [{
-                    name: '',
-                    data: [15, 13, 14, 10, 19, 29]
-                }]
-            });
+                }
+            },
+            series: [{
+                name: '',
+                data: [15, 13, 14, 10, 19, 29]
+            }]
+        });
 
 
-            // Diagramme en colonnes (Column)
-            Highcharts.chart('containerColumn1', {
-                chart: {
-                    type: 'column'
-                },
+        // Diagramme en colonnes (Column)
+        Highcharts.chart('containerColumn1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'INDICATEUR DE QUALITE'
+            },
+            xAxis: {
+                categories: ['Sensibilisation et éducation', 'Réinsertion scolaire', 'Formation professionnelle', 'Protection et de réhabilitation des enfants travailleurs', 'Suivi et évaluation des activité', 'Activité 7']
+            },
+            yAxis: {
                 title: {
-                    text: 'INDICATEUR DE QUALITE'
-                },
-                xAxis: {
-                    categories: ['Sensibilisation et éducation', 'Réinsertion scolaire', 'Formation professionnelle', 'Protection et de réhabilitation des enfants travailleurs', 'Suivi et évaluation des activité', 'Activité 7']
-                },
-                yAxis: {
-                    title: {
-                        text: 'Valeurs'
-                    }
-                },
-                plotOptions: {
-                    column: {
-                        dataLabels: {
-                            enabled: true, // Activer l'affichage des valeurs sur les colonnes
-                            style: {
-                                fontSize: '14px', // Taille de la police pour les valeurs affichées
-                                fontWeight: 'bold' // Facultatif : mettre en gras
-                            }
-                        },
-                        color: '#F15C80'
-                    }
-                },
-                series: [{
-                    name: 'Série 1',
-                    data: [15, 13, 14, 10, 19, 29]
-                }]
-            });
+                    text: 'Valeurs'
+                }
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: true, // Activer l'affichage des valeurs sur les colonnes
+                        style: {
+                            fontSize: '14px', // Taille de la police pour les valeurs affichées
+                            fontWeight: 'bold' // Facultatif : mettre en gras
+                        }
+                    },
+                    color: '#F15C80'
+                }
+            },
+            series: [{
+                name: 'Série 1',
+                data: [15, 13, 14, 10, 19, 29]
+            }]
+        });
 
-            // Select the header element using jQuery
-            var $header = $('.navbar');
+        // Select the header element using jQuery
+        var $header = $('.navbar');
 
-            // Function to toggle the sticky class based on scroll position
-            function checkScroll() {
-                var currentPosition = $header.css('position');
-                if (window.scrollY >= 131) {
-                    // Toggle position
-                    if (currentPosition === 'static') {
-                        $header.css({
-                            'position': 'fixed',
-                            'top': '0', // Optional: add this if you want it to stick at the top
-                            'width': '100%' // Optional: ensure it spans the full width
-                        });
-                    }
-                } else {
-                    // Reset to static position
+        // Function to toggle the sticky class based on scroll position
+        function checkScroll() {
+            var currentPosition = $header.css('position');
+            if (window.scrollY >= 131) {
+                // Toggle position
+                if (currentPosition === 'static') {
                     $header.css({
-                        'position': 'static',
-                        'top': '', // Optional: remove top if set before
-                        'width': '' // Optional: remove width if set before
+                        'position': 'fixed',
+                        'top': '0', // Optional: add this if you want it to stick at the top
+                        'width': '100%' // Optional: ensure it spans the full width
                     });
                 }
+            } else {
+                // Reset to static position
+                $header.css({
+                    'position': 'static',
+                    'top': '', // Optional: remove top if set before
+                    'width': '' // Optional: remove width if set before
+                });
             }
+        }
 
-            // Event listener to call checkScroll function on scroll
-            $(window).on('scroll', checkScroll);
+        // Event listener to call checkScroll function on scroll
+        $(window).on('scroll', checkScroll);
 
-            // Initial check in case the page is loaded at the top
-            checkScroll();
-        });
-    </script>
+        // Initial check in case the page is loaded at the top
+        checkScroll();
+    });
+</script>
 
 </body>
 </html>

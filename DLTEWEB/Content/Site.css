@@ -1,20 +1,177 @@
-﻿/* Set padding to keep content from hitting the edges */
-.body-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+﻿label {
+    font-size: 0.9vw; /* La taille du label s'ajuste automatiquement à la largeur du viewport */
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+/* Ajout de media queries pour ajuster encore plus finement */
+@@media (max-width: 1200px) {
+    label {
+        font-size: 0.7vw; /* Ajustement pour les écrans plus petits */
+    }
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+@@media (max-width: 992px) {
+    label {
+        font-size: 0.5vw; /* Ajustement pour les tablettes */
+    }
+}
+
+@@media (max-width: 768px) {
+    label {
+        font-size: 0.2vw; /* Ajustement pour les petits écrans */
+    }
+}
+
+@@media (max-width: 576px) {
+    label {
+        font-size: 4vw; /* Ajustement pour les très petits écrans */
+    }
+}
+
+.fixed-height {
+    height: 650px; /* Hauteur fixe pour les cartes */
+}
+
+.fixed-height-l {
+    height: 200px; /* Hauteur fixe pour les cartes */
+}
+
+.fixed-height-l2 {
+    height: 150px; /* Hauteur fixe pour les cartes */
+}
+
+.fixed-height-p {
+    height: 400px; /* Hauteur fixe pour les cartes */
+}
+
+.dt-button {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin: 5px;
+}
+
+    .dt-button:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Styles pour le bouton PDF */
+.buttons-pdf {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+    .buttons-pdf:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+/* Styles pour le bouton Excel */
+.buttons-excel {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+    .buttons-excel:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Styles pour le bouton Copy */
+.buttons-copy {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+    .buttons-copy:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media query pour passer à une seule colonne sur les petits écrans */
+@@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 colonne pour les écrans plus petits */
+    }
+}
+
+.image {
+    border: 1px solid #555;
+}
+
+#container {
+    height: 400px;
+}
+
+/* Optional: Fade effect for carousel */
+.carousel-item {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+.carousel-item {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+.nav-logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+@@media (min-width: 992px) {
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+@@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+}
+
+.main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li {
+    margin-left: 0px;
 }
