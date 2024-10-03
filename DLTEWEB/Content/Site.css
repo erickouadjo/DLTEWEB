@@ -2,33 +2,12 @@
     font-size: 0.9vw; /* La taille du label s'ajuste automatiquement à la largeur du viewport */
 }
 
-/* Ajout de media queries pour ajuster encore plus finement */
-@@media (max-width: 1200px) {
-    label {
-        font-size: 0.7vw; /* Ajustement pour les écrans plus petits */
-    }
-}
-
-@@media (max-width: 992px) {
-    label {
-        font-size: 0.5vw; /* Ajustement pour les tablettes */
-    }
-}
-
-@@media (max-width: 768px) {
-    label {
-        font-size: 0.2vw; /* Ajustement pour les petits écrans */
-    }
-}
-
-@@media (max-width: 576px) {
-    label {
-        font-size: 4vw; /* Ajustement pour les très petits écrans */
-    }
-}
-
 .fixed-height {
     height: 650px; /* Hauteur fixe pour les cartes */
+}
+
+.fixed-height_flex {
+    min-height: 60px; /* Hauteur fixe pour les cartes */
 }
 
 .fixed-height-l {
@@ -43,6 +22,42 @@
     height: 400px; /* Hauteur fixe pour les cartes */
 }
 
+/* Ajout de media queries pour ajuster encore plus finement */
+@media (max-width: 1200px) {
+    label {
+        font-size: 0.7vw; /* Ajustement pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 992px) {
+    label {
+        font-size: 0.5vw; /* Ajustement pour les tablettes */
+    }
+    .fixed-height-l {
+        height: 400px; /* Hauteur fixe pour les cartes */
+    }
+   
+}
+
+@media (max-width: 768px) {
+    label {
+        font-size: 0.2vw; /* Ajustement pour les petits écrans */
+    }
+    .fixed-height-l {
+        height: 600px; /* Hauteur fixe pour les cartes */
+    }
+}
+
+@media (max-width: 576px) {
+    label {
+        font-size: 4vw; /* Ajustement pour les très petits écrans */
+    }
+    .fixed-height-l {
+        height: 800px; /* Hauteur fixe pour les cartes */
+    }
+}
+
+
 .dt-button {
     background-color: #28a745;
     border-color: #28a745;
@@ -52,10 +67,10 @@
     margin: 5px;
 }
 
-    .dt-button:hover {
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
+.dt-button:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
 
 /* Styles pour le bouton PDF */
 .buttons-pdf {
@@ -64,10 +79,10 @@
     color: white;
 }
 
-    .buttons-pdf:hover {
-        background-color: #c82333;
-        border-color: #bd2130;
-    }
+.buttons-pdf:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
 
 /* Styles pour le bouton Excel */
 .buttons-excel {
@@ -76,10 +91,10 @@
     color: white;
 }
 
-    .buttons-excel:hover {
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
+.buttons-excel:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
 
 /* Styles pour le bouton Copy */
 .buttons-copy {
@@ -88,10 +103,10 @@
     color: white;
 }
 
-    .buttons-copy:hover {
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
+.buttons-copy:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
 
 .grid-container {
     display: grid;
@@ -105,7 +120,7 @@
 }
 
 /* Media query pour passer à une seule colonne sur les petits écrans */
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* 1 colonne pour les écrans plus petits */
     }
@@ -175,3 +190,67 @@
 .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li {
     margin-left: 0px;
 }
+
+.containerc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2800px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.cardc {
+    background-color: #4FA5A0;
+    padding: 20px;
+    flex-grow: 1; /* Permet à la carte de s'étendre */
+    min-width: 200px; /* Largeur minimale des cartes */
+    max-width: 400px; /* Largeur maximale des cartes */
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.number {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.text {
+    font-size: 16px;
+    color: white;
+}
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    gap: 20px; /* Espace entre les colonnes et les lignes */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .form-container label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-container input, .form-container select, .form-container textarea, .form-container button {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-container a {
+        grid-column: 1 / span 2; /* Bouton qui s'étend sur les deux colonnes */
+        padding: 10px;
+        cursor: pointer;
+    }

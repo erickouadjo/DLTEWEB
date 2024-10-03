@@ -135,6 +135,7 @@
     <Compile Include="Controllers\ParametreController.cs" />
     <Compile Include="Controllers\SuiviEvaluationController.cs" />
     <Compile Include="Controllers\TableauBordController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\TraitementAlerteController.cs" />
     <Compile Include="Controllers\UtilisateurController.cs" />
     <Compile Include="Global.asax.cs">
@@ -494,6 +495,7 @@
     <Content Include="Images\enfants.jpg" />
     <Content Include="Images\fanion.jpg" />
     <Content Include="Images\graph.png" />
+    <Content Include="Images\imageEnfant.jpg" />
     <Content Include="Images\info1.png" />
     <Content Include="Images\info2.png" />
     <Content Include="Images\info3.png" />
@@ -636,7 +638,7 @@
     <Content Include="Views\Utilisateur\Login.cshtml" />
     <Content Include="Views\Cartographie\Index.cshtml" />
     <Content Include="Views\CollecteDonnees\Index.cshtml" />
-    <Content Include="Views\Communication\Index.cshtml" />
+    <Content Include="Views\Test\Test.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\AcCartographie\Index.cshtml" />
     <Content Include="Views\Shared\_AppLayout.cshtml" />
@@ -644,26 +646,27 @@
     <Content Include="Views\AcSuiviEvaluation\Index.cshtml" />
     <Content Include="Views\AcTableauBord\Index.cshtml" />
     <Content Include="Views\AcTraitementAlerte\Index.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form1.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form2.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form3.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form4.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form5.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form6.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form1.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form2.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form3.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form4.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form5.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form6.cshtml" />
     <Content Include="Views\AcCollecteDonnees\Index.cshtml" />
     <Content Include="Views\AcCommunication\Details.cshtml" />
-    <Content Include="Views\AcCartographie\Index1.cshtml" />
+    <Content Include="Views\AcCartographie\OrganeSIGOSTECI.cshtml" />
     <Content Include="Views\AcTraitementAlerte\TraitementActivité.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm1.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm2.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm3.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm4.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm5.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm6.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\listeForm7.cshtml" />
-    <Content Include="Views\AcCollecteDonnees\Form7.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm1.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm2.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm3.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm4.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm5.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm6.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_listeForm7.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\_Form7.cshtml" />
     <Content Include="Views\AcTableauBord\Synthese.cshtml" />
     <Content Include="Views\Activite\Index.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

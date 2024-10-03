@@ -41,147 +41,8 @@
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    <style>
-        .highcharts-text-outline {
-            color: red !important;
-        }
-        .highcharts-figure,
-        .highcharts-data-table table {
-            min-width: 320px;
-            max-width: 800px;
-            margin: 1em auto;
-        }
-
-            .highcharts-data-table table {
-                font-family: Verdana, sans-serif;
-                border-collapse: collapse;
-                border: 1px solid #ebebeb;
-                margin: 10px auto;
-                text-align: center;
-                width: 100%;
-                max-width: 500px;
-            }
-
-            .highcharts-data-table caption {
-                padding: 1em 0;
-                font-size: 2.2em;
-                color: #555;
-            }
-
-            .highcharts-data-table th {
-                font-weight: 600;
-                padding: 0.5em;
-            }
-
-            .highcharts-data-table td,
-            .highcharts-data-table th,
-            .highcharts-data-table caption {
-                padding: 0.5em;
-            }
-
-            .highcharts-data-table thead tr,
-            .highcharts-data-table tr:nth-child(even) {
-                background: #f8f8f8;
-            }
-
-            .highcharts-data-table tr:hover {
-                background: #f1f7ff;
-            }
-
-            input[type="number"] {
-                min-width: 50px;
-            }
-
-    
-            .carousel-item {
-                transition: opacity 1s ease-in-out;
-                opacity: 0;
-            }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-            .carousel-item {
-                transition: opacity 1s ease-in-out;
-                opacity: 0;
-            }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-            .nav-logo {
-                color: white;
-                font-size: 1.5rem;
-                text-decoration: none;
-            }
-
-            .navbar {
-                background-color: #343a40;
-            }
-
-            .nav-link {
-                color: white !important;
-            }
-
-            .navbar-toggler {
-                border-color: rgba(255, 255, 255, 0.1);
-            }
-
-            .navbar-toggler-icon {
-                background-color: white;
-            }
-
-            @@media (min-width: 992px) {
-                .navbar {
-                    padding: 1rem;
-                }
-            }
-
-            @@media (max-width: 991px) {
-                .navbar {
-                    padding: 0.5rem;
-                }
-            }
-
-            .underline-effect-2 {
-                display: inline;
-                font-size: 24px;
-                font-weight: bold;
-                color: black;
-                text-decoration: underline;
-                text-decoration-color: black;
-                background-image: linear-gradient(white, white); /* Crée une bande blanche */
-                background-position: 0 90%; /* Positionne la bande sous le texte */
-                background-size: 100% 6px; /* Largeur de la bande et hauteur */
-                background-repeat: no-repeat; /* Pas de répétition */
-            }
-
-        ul.main-menu__list li a {
-            color: #fff !important;
-        }
-        .services-five__single {
-            background-color: #228b22;
-            padding: 10px;
-            box-shadow: #b0b0b0 0px 19px 29px 0px;
-            color: aliceblue
-        }
-        .services-five__single::before a{
-            background-color: #228A22;
- 
-        }
-        .services-five__single::after{
-            background-color: #228A22;
-            color: aliceblue
-        }
-        .main-menu .main-menu__list > li > a, .stricky-header .main-menu__list > li > a{
-            
-        }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+  
 </head>
 <body>
 
@@ -248,7 +109,7 @@
                                                     @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                             </ul>
                                         </li>

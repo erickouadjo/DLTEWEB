@@ -54,139 +54,10 @@
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
-
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-            gap: 10px; /* Espacement entre les éléments */
-        }
-
-        .grid-item {
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Media query pour passer à une seule colonne sur les petits écrans */
-        @@media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: 1fr; /* 1 colonne pour les écrans plus petits */
-            }
-        }
-
-        .image {
-            border: 1px solid #555;
-        }
-
-        .highcharts-figure,
-        .highcharts-data-table table {
-            min-width: 310px;
-            max-width: 800px;
-            margin: 1em auto;
-        }
-
-        #container {
-            height: 400px;
-        }
-
-        .highcharts-data-table table {
-            font-family: Verdana, sans-serif;
-            border-collapse: collapse;
-            border: 1px solid #ebebeb;
-            margin: 10px auto;
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .highcharts-data-table caption {
-            padding: 1em 0;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .highcharts-data-table th {
-            font-weight: 600;
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table td,
-        .highcharts-data-table th,
-        .highcharts-data-table caption {
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table thead tr,
-        .highcharts-data-table tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-
-        .highcharts-data-table tr:hover {
-            background: #f1f7ff;
-        }
-
-
-        /* Optional: Fade effect for carousel */
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .nav-logo {
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .nav-link {
-            color: white !important;
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar-toggler-icon {
-            background-color: white;
-        }
-
-        @@media (min-width: 992px) {
-            .navbar {
-                padding: 1rem;
-            }
-        }
-
-        @@media (max-width: 991px) {
-            .navbar {
-                padding: 0.5rem;
-            }
-        }
-
-        .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li {
-            margin-left: 0px;
-        }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <div class="custom-cursor__cursor"></div>
@@ -238,7 +109,7 @@
                                                 @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
                                             <li style="background-color: #007565">
-                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
                                         </ul>
                                     </li>
@@ -288,102 +159,115 @@
                 </div>
             </nav>
         </header>
-        <div class="container-fluid" style="padding:20px 20px 0px 20px">
-            <center>
-                <h3 style="text-transform:uppercase">
-                    Cartographie des incidents
-                </h3>
-            </center>
-            <br />
-            <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
-                <div class="col-md">
-                    <label for="exampleInputPassword1" class="form-label">Région</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tout</option>
-                        <option value="1">Gbêkè</option>
-                        <option value="2">Haut Sassandra</option>
-                        <option value="3">Grand Pont</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Département</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tout</option>
-                        <option value="1">Adzopé</option>
-                        <option value="2">Akoupé</option>
-                        <option value="3">Yakassé-Attobrou</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Commune</label>
-                    <select class="form-select" aria-label="Default select example">
+      
+        <div style="background-color: #D3E3FD;">
+            <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
+                Accueil > Cartographie des incidents
+            </div>
+            <div class="container-fluid mt-1" style="padding-top:-5px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card fixed-height-l2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Région</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Gbêkè</option>
+                                            <option value="2">Haut Sassandra</option>
+                                            <option value="3">Grand Pont</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Département</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Adzopé</option>
+                                            <option value="2">Akoupé</option>
+                                            <option value="3">Yakassé-Attobrou</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Sous-préfecture</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Adzopé</option>
+                                            <option value="2">Akoupé</option>
+                                            <option value="3">Yakassé-Attobrou</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Commune</label>
+                                        <select class="form-select" aria-label="Default select example">
 
-                        <option selected>Tout</option>
-                        <option value="1">Aboisso</option>
-                        <option value="2">Abidjan</option>
-                        <option value="3">Bouaké</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="exampleInputPassword1" class="form-label">Lieu d’exercice</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tout</option>
-                        <option value="1">Au marché</option>
-                        <option value="2">Dans la rue</option>
-                        <option value="3">A domicile</option>
-                        <option value="3">Dans un magazin</option>
-                        <option value="3">Au champ</option>
-                        <option value="3">Autre</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <div class="col-md">
-                        <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Agriculture</option>
-                            <option value="2">Commerce</option>
-                            <option value="3">Domestique</option>
-                            <option value="3">Minier</option>
-                            <option value="3">Artisanat</option>
-                            <option value="3">Transport</option>
-                        </select>
+                                            <option selected>Tout</option>
+                                            <option value="1">Aboisso</option>
+                                            <option value="2">Abidjan</option>
+                                            <option value="3">Bouaké</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Lieu d’exercice</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Au marché</option>
+                                            <option value="2">Dans la rue</option>
+                                            <option value="3">A domicile</option>
+                                            <option value="3">Dans un magazin</option>
+                                            <option value="3">Au champ</option>
+                                            <option value="3">Autre</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Tout</option>
+                                                <option value="1">Agriculture</option>
+                                                <option value="2">Commerce</option>
+                                                <option value="3">Domestique</option>
+                                                <option value="3">Minier</option>
+                                                <option value="3">Artisanat</option>
+                                                <option value="3">Transport</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row justify-content-start img-fluid" style="padding-top:10px">
-                <div class="col" style="display: flex; justify-content: end; max-width: 900px">
-                    <div>
-
-                        <img src="~/Images/carte_incident.png" style="border:1px solid #555" height="760" />
-                    </div>
-                </div>
-                <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
-                    <br />
-                    <div class="row">
-                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
-                            <div id="containerPie" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                           
-
-                            @*<div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
-                        </div>
-                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
-                            <div id="containerBar" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                           
-                            @*<div id="container2" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
-                        </div>
-                        <div class=" col-lg-6  wow fadeInRight" data-wow-delay="500ms">
-                            <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-                            @*<div id="container1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
-                        </div>
-                        <div class=" col-lg-6 wow fadeInRight" data-wow-delay="500ms">
-                            <div id="containerBar1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
-
-                            @*<div id="container4" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>*@
+            <div class="container-fluid mt-4" style="padding-bottom:20px">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <img src="~/Images/carte_incident.png" height="600" />
+                            </div>
                         </div>
                     </div>
-
+                    <div class="col-md-7" >
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6" style="border: 1px">
+                                        <div id="containerPie" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto; border: 1px solid #555" class="img-fluid"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="containerBar" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto; border: 1px solid #555" class="img-fluid"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto; border: 1px solid #555" class="img-fluid"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="containerBar1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto; border: 1px solid #555" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

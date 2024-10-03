@@ -1,0 +1,475 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="description" content="topfloor HTML 5 Template " />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style>
+        /* Style pour le menu latéral */
+        .sidebar {
+            min-height: 200px; /* Prend toute la hauteur de la page */
+            width: 250px; /* Largeur du menu */
+            position: fixed; /* Fixé sur le côté gauche */
+            top: 0;
+            left: 0;
+            background-color: green; /* Couleur de fond */
+            padding-top: 20px; /* Espacement en haut */
+            margin-top: 250px;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: left;
+        }
+
+            .sidebar ul li a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                font-size: 15px;
+            }
+
+            .sidebar ul li:hover {
+                background-color: #18600B; /* Couleur au survol */
+            }
+
+        /* Contenu principal */
+        .content {
+            margin-left: 220px; /* Ajoute un espace pour ne pas être sous le menu */
+            padding: 20px;
+            min-height:800px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="page-wrapper">
+        <header class="main-header-three">
+            <div class="first-menu">
+                <div class="d-flex justify-content-around">
+                    <div class="p-1">
+                        <center>
+                            <img src="~/Images/armoirie278x90.png" />
+                        </center>
+                    </div>
+
+                    <div class="p-2">
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
+                    </div>
+                    <div class="p-2">
+                        <img src="~/Images/LOGO-MEPS4_278x90.png" />
+                    </div>
+                </div>
+
+            </div>
+            <nav class="main-menu main-menu-four" style="background-color:forestgreen">
+                <div class="main-menu-four__wrapper">
+                    <div class="main-menu-four__wrapper-inner">
+                        <div class="main-menu-four__logo">
+                            <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+                        </div>
+                        <div class="main-menu-four__left">
+                            <div class="main-menu-four__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li>
+                                        @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-menu-four__right">
+                            <div class="main-menu-four__search-btn-box">
+
+                                <div class="main-menu-four__btn-box">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid" style="background-color: #D3E3FD;">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#home"> CARTOGRAPHIE ET GUIDE D'ENTRETIEN </a></li>
+                    <li><a href="#services" style="padding:10px 0px 10px 0px">FICHE DE PRE-IDENTIFICATION DES ENF...</a></li>
+                    <li><a href="#about" style="padding:10px 0px 10px 0px">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</a></li>
+                    <li><a href="#contact" style="padding:10px 0px 10px 0px" >ETABLISSEMENT SCOLAIRE ET CENTRE...</a></li>
+                    <li><a href="#contact" style="padding:10px 0px 10px 0px" >STRUCTUR VERSION FINALE</a></li>
+                    <li><a href="#contact" style="padding:10px 0px 10px 0px" >ENFANTS ASSISTES</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                
+                <div class="container-fluid">
+                    <h1>COLLECTE DE DONNEES</h1>
+               <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card fixed-height_flex">
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#activ" data-whatever="@@mdo">Ajouter une activité</button>
+                                        <hr />
+                                        <table id="example" class="table table-striped" style="width:100%;">
+                                            <thead style="border-color:gray">
+                                                <tr>
+                                                    <th>Nom de l'activité</th>
+                                                    <th>Description </th>
+                                                    <th>Date de l'activité</th>
+                                                    <th>Nombre de participants</th>
+                                                    <th>Coût </th>
+                                                    <th>Lieu </th>
+                                                    <th>Coordonnées GPS</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sensibilisation en milieu rural</td>
+                                                    <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
+                                                    <td>2024-09-25</td>
+                                                    <td>150</td>
+                                                    <td>3000 000</td>
+                                                    <td>Aboisso</td>
+                                                    <td>9.5511, 1.1865</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Formation des enseignants</td>
+                                                    <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
+                                                    <td>2024-10-01</td>
+                                                    <td>50</td>
+                                                    <td>2000 000</td>
+                                                    <td>Biankouman</td>
+                                                    <td>6.1725, 1.2313</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Conférence nationale</td>
+                                                    <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
+                                                    <td>2024-11-15</td>
+                                                    <td>300</td>
+                                                    <td>5000 €</td>
+                                                    <td>kablaké</td>
+                                                    <td>5.6037, -0.1870</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sensibilisation en milieu rural</td>
+                                                    <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
+                                                    <td>2024-09-25</td>
+                                                    <td>150</td>
+                                                    <td>3000 000</td>
+                                                    <td>Aboisso</td>
+                                                    <td>9.5511, 1.1865</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Formation des enseignants</td>
+                                                    <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
+                                                    <td>2024-10-01</td>
+                                                    <td>50</td>
+                                                    <td>2000 000</td>
+                                                    <td>Biankouman</td>
+                                                    <td>6.1725, 1.2313</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Conférence nationale</td>
+                                                    <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
+                                                    <td>2024-11-15</td>
+                                                    <td>300</td>
+                                                    <td>5000 €</td>
+                                                    <td>kablaké</td>
+                                                    <td>5.6037, -0.1870</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sensibilisation en milieu rural</td>
+                                                    <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
+                                                    <td>2024-09-25</td>
+                                                    <td>150</td>
+                                                    <td>3000 000</td>
+                                                    <td>Aboisso</td>
+                                                    <td>9.5511, 1.1865</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Formation des enseignants</td>
+                                                    <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
+                                                    <td>2024-10-01</td>
+                                                    <td>50</td>
+                                                    <td>2000 000</td>
+                                                    <td>Biankouman</td>
+                                                    <td>6.1725, 1.2313</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Conférence nationale</td>
+                                                    <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
+                                                    <td>2024-11-15</td>
+                                                    <td>300</td>
+                                                    <td>5000 €</td>
+                                                    <td>kablaké</td>
+                                                    <td>5.6037, -0.1870</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Sensibilisation en milieu rural</td>
+                                                    <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
+                                                    <td>2024-09-25</td>
+                                                    <td>150</td>
+                                                    <td>3000 000</td>
+                                                    <td>Aboisso</td>
+                                                    <td>9.5511, 1.1865</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Formation des enseignants</td>
+                                                    <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
+                                                    <td>2024-10-01</td>
+                                                    <td>50</td>
+                                                    <td>2000 000</td>
+                                                    <td>Biankouman</td>
+                                                    <td>6.1725, 1.2313</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Conférence nationale</td>
+                                                    <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
+                                                    <td>2024-11-15</td>
+                                                    <td>300</td>
+                                                    <td>5000 €</td>
+                                                    <td>kablaké</td>
+                                                    <td>5.6037, -0.1870</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Sensibilisation en milieu rural</td>
+                                                    <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
+                                                    <td>2024-09-25</td>
+                                                    <td>150</td>
+                                                    <td>3000 000</td>
+                                                    <td>Aboisso</td>
+                                                    <td>9.5511, 1.1865</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Formation des enseignants</td>
+                                                    <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
+                                                    <td>2024-10-01</td>
+                                                    <td>50</td>
+                                                    <td>2000 000</td>
+                                                    <td>Biankouman</td>
+                                                    <td>6.1725, 1.2313</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Conférence nationale</td>
+                                                    <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
+                                                    <td>2024-11-15</td>
+                                                    <td>300</td>
+                                                    <td>5000 €</td>
+                                                    <td>kablaké</td>
+                                                    <td>5.6037, -0.1870</td>
+
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Nom de l'activité</th>
+                                                    <th>Description de l'activité</th>
+                                                    <th>Date de l'activité</th>
+                                                    <th>Nombre de participants estimé</th>
+                                                    <th>Coût de l'activité</th>
+                                                    <th>Lieu de l'activité</th>
+                                                    <th>Coordonnées GPS</th>
+
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <footer class="site-footer site-footer-four">
+                <div class="site-footer__shape-1">
+                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+                </div>
+                <div class="site-footer__bottom">
+                    <div class="container">
+                        <div class="site-footer__bottom-inner">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__social">
+                                    <a href="#"><span class="icon-facebook"></span></a>
+                                    <a href="#"><span class="icon-twitter"></span></a>
+                                    <a href="#"><span class="icon-linkin"></span></a>
+                                    <a href="#"><span class="icon-pinterest"></span></a>
+                                </div>
+                            </div>
+                            <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                            <ul class="list-unstyled site-footer__bottom-menu">
+                                <li>
+                                    <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                    <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                    <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/marque/marquee.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
+        <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
+</body>
+</html>
+
+
+

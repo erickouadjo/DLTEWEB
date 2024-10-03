@@ -56,8 +56,9 @@
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
 
-    <style>
+    @*<style>
 
         .containerc {
             display: flex;
@@ -85,50 +86,51 @@
             font-size: 18px;
         }
 
-    .number {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: white;
-    }
-
-    .text {
-        font-size: 16px;
-        color: white;
-    }
-
-    /* Responsiveness */
-    @@media (max-width: 768px) {
-        .card {
-            min-width: 150px;
-            max-width: 250px;
-            height: 120px;
-        }
-
         .number {
-            font-size: 28px;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
         }
 
         .text {
-            font-size: 14px;
+            font-size: 16px;
+            color: white;
         }
-    }
 
-    @@media (max-width: 480px) {
-        .container {
-            flex-direction: column;
-        }
-        .card {
-            width: 100%;
-            max-width: 100%;
-        }
-    }
+        /* Responsiveness */
+        @@media (max-width: 768px) {
+            .card {
+                min-width: 150px;
+                max-width: 250px;
+                height: 120px;
+            }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-        gap: 10px; /* Espacement entre les éléments */
-    }
+            .number {
+                font-size: 28px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+        }
+
+        @@media (max-width: 480px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+            gap: 10px; /* Espacement entre les éléments */
+        }
 
         .grid-item {
             padding: 20px;
@@ -250,7 +252,7 @@
         .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li {
             margin-left: 0px;
         }
-    </style>
+    </style>*@
 
 </head>
 <body>
@@ -281,7 +283,6 @@
             </div>
             <nav class="main-menu main-menu-four" style="background-color:forestgreen">
                 <div class="main-menu-four__wrapper">
-
                     <div class="main-menu-four__wrapper-inner">
                         <div class="main-menu-four__logo">
                             <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
@@ -294,9 +295,6 @@
                                         @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
                                         @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
@@ -306,7 +304,7 @@
                                                 @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
                                             <li style="background-color: #007565">
-                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
                                         </ul>
                                     </li>
@@ -328,80 +326,123 @@
                                         @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
                                     </li>
                                     <li>
-                                        @Html.ActionLink("ADMINISTRATION", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="main-menu-four__right">
                             <div class="main-menu-four__search-btn-box">
+
                                 <div class="main-menu-four__btn-box">
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-
         </header>
-        <div class="container-fluid" style="padding:20px 0px 0px 0px">
-            <center>
-                <h3 style="text-transform:uppercase">
-                    SYNTHESE
-                </h3>
-            </center>
-            <br />
 
-            <div class="containerc" style="padding:20px 10px 20px 10px;background-color: #D3E3FD">
-                <div class="cardc">
-                    <div class="number">21%</div>
-                    <div class="text">5-10 ans</div>
-                </div>
-                <div class="cardc">
-                    <div class="number">32%</div>
-                    <div class="text">10-12 ans</div>
-                </div>
-                <div class="cardc">
-                    <div class="number">45%</div>
-                    <div class="text">12-14 ans</div>
-                </div>
-                <div class="cardc">
-                    <div class="number">14%</div>
-                    <div class="text">14-16 ans</div>
-                </div>
-                <div class="cardc">
-                    <div class="number">58%</div>
-                    <div class="text">16-18 ans</div>
-                </div>
+        <div style="background-color: #D3E3FD;">
+            <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
+                Accueil > Synthèse
             </div>
-
-            <div class="row justify-content-start img-fluid" style="padding-top: 10px;">
-                <div class="col" style="display: flex; justify-content: start; max-width: 1100px; border: 1px solid #555">
-                    <div>
-                        <img src="~/Images/carte_evolution_par_region.png" class="img-fluid" />
-                        <center><h3> Cartographie de l'évolution de l'impacte des activités menées par la DLTE su le travail des enfants</h3></center>
+            <div class="container-fluid mt-1" style="padding-top:-5px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card fixed-height-l">
+                            <div class="card-body">
+                                <div class="containerc">
+                                    <div class="cardc">
+                                        <div class="number">21%</div>
+                                        <div class="text">5-10 ans</div>
+                                    </div>
+                                    <div class="cardc">
+                                        <div class="number">32%</div>
+                                        <div class="text">10-12 ans</div>
+                                    </div>
+                                    <div class="cardc">
+                                        <div class="number">45%</div>
+                                        <div class="text">12-14 ans</div>
+                                    </div>
+                                    <div class="cardc">
+                                        <div class="number">14%</div>
+                                        <div class="text">14-16 ans</div>
+                                    </div>
+                                    <div class="cardc">
+                                        <div class="number">58%</div>
+                                        <div class="text">16-18 ans</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col" style="border: 1px solid #555; background-color: white">
-                    <center><h4 style="text-transform:uppercase; color:darkslategrey">Taux des enfants travailleurs par secteur d'activité</h4></center>
-                    <div id="containerPie" style=" min-width: 300px; max-width: 1000px; margin: 10px auto" class="img-fluid"></div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <img src="~/Images/carte_evolution_par_region.png" class="img-fluid" />
+                                <center><h3> Cartographie de l'évolution de l'impacte des activités menées par la DLTE su le travail des enfants</h3></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card fixed-height">
+                            <div class="card-body">
+                                <center><h4 style="text-transform:uppercase; color:darkslategrey">Taux des enfants travailleurs par secteur d'activité</h4></center>
+                                <div id="containerPie" style=" min-width: 300px; max-width: 1000px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row justify-content-start img-fluid" style="padding-top:10px">
-                <div class="col" style="border: 1px solid #555; background-color: #EFF8FF">
-                    <br />
-                    <div class="row">
-                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
-                            <div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
-                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
-                            <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
-                        <div class=" col-lg-6 wow fadeInUp" data-wow-delay="500ms">
-                            <div id="containerColumn1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4" style="padding-bottom:20px">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="containerColumn1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
-                        <div class=" col-lg-6   wow fadeInLeft" data-wow-delay="500ms">
-                            <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card fixed-height-p">
+                            <div class="card-body">
+                                <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

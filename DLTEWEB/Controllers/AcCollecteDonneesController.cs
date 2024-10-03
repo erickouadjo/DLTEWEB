@@ -8,6 +8,7 @@ namespace DLTEv3.Controllers
 {
     public class AcCollecteDonneesController : Controller
     {
+
         // GET: AcCollecteDonnees
         public ActionResult Index()
         {
@@ -20,7 +21,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm1()
         {
-            return View();
+            return PartialView("_listeForm1");
         }
 
         public ActionResult Form2()
@@ -29,7 +30,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm2()
         {
-            return View();
+            return PartialView("_listeForm2");
         }
         public ActionResult Form3()
         {
@@ -37,7 +38,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm3()
         {
-            return View();
+            return PartialView("_listeForm3");
         }
         public ActionResult Form4()
         {
@@ -45,7 +46,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm4()
         {
-            return View();
+            return PartialView("_listeForm4");
         }
         public ActionResult Form5()
         {
@@ -53,7 +54,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm5()
         {
-            return View();
+            return PartialView("_listeForm5");
         }
         public ActionResult Form6()
         {
@@ -61,7 +62,7 @@ namespace DLTEv3.Controllers
         }
         public ActionResult listeForm6()
         {
-            return View();
+            return PartialView("_listeForm6");
         }
 
         // GET: AcCollecteDonnees/Details/5
