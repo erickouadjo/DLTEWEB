@@ -108,6 +108,9 @@
                                             <li style="background-color: #007565">
                                                 @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
                                         </ul>
                                     </li>
                                     <li>
@@ -138,6 +141,12 @@
                                             </li>
                                             <li style="background-color: #007565">
                                                 @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
                                             </li>
                                         </ul>
                                     </li>
@@ -297,10 +306,9 @@
                     <div class="col-md-7">
                         <div class="card fixed-height">
                             <div class="card-body">
-                                <h5 class="card-title">Carte 70%</h5>
-                                <p class="card-text">Contenu de la première carte...</p>
+                                <h5 class="card-title" style="text-transform:uppercase;">Cartographie des initiatives</h5>
                                 <img src="~/Images/carte_initiative.png" class="img-fluid" />
-                                <center><h3>Cartographie des initiatives</h3></center>
+                                <center><h3></h3></center>
                             </div>
                         </div>
                     </div>
@@ -309,9 +317,8 @@
                     <div class="col-md-5">
                         <div class="card fixed-height">
                             <div class="card-body">
-                                <h5 class="card-title">Carte 30%</h5>
-                                <p class="card-text">Contenu de la deuxième carte...</p>
-                                <table class="table" style="font-size:12px">
+                                <h5 class="card-title" style="text-transform:uppercase;">Liste des activités</h5>
+                                <table class="table" style="font-size:13px">
                                     <thead>
                                         <tr>
                                             <th scope="col">ACTIVITES</th>
@@ -395,7 +402,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid mt-4">
+            <div class="container-fluid mt-4" style="padding-bottom:20px">
                 <div class="row">
                     <!-- Première carte occupant 70% -->
                     <div class="col-md-6">
@@ -414,28 +421,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid mt-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card fixed-height-p">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card fixed-height-p">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card fixed-height-p">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
                
         @* Modal *@

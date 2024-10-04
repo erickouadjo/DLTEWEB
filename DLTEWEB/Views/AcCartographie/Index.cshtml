@@ -111,6 +111,9 @@
                                             <li style="background-color: #007565">
                                                 @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                             </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
                                         </ul>
                                     </li>
                                     <li>
@@ -142,6 +145,12 @@
                                             <li style="background-color: #007565">
                                                 @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
                                             </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -170,7 +179,7 @@
                         <div class="card fixed-height-l2">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md">
+                                    <div class="col-md" >
                                         <label for="exampleInputPassword1" class="form-label">Région</label>
                                         <select class="form-select" aria-label="Default select example">
                                             <option selected>Tout</option>
@@ -244,6 +253,7 @@
                     <div class="col-md-5">
                         <div class="card fixed-height">
                             <div class="card-body">
+                                <h4 style="text-transform:uppercase;"> Cartographie des incidents</h4>
                                 <img src="~/Images/carte_incident.png" height="600" />
                             </div>
                         </div>

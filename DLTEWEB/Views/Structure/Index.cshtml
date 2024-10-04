@@ -31,21 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+
 
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
@@ -297,7 +283,7 @@
         </header>
         <div style="background-color: #D3E3FD; padding:10px">
             <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
-                Accueil > Administration > Activités
+                Accueil > Administration > Structure
             </div>
             <div class="container-fluid mt-1">
                 <div class="row">
@@ -305,177 +291,97 @@
                     <div class="col-md-12">
                         <div class="card fixed-height-l">
                             <div class="card-body">
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#activ" data-whatever="@@mdo">Ajouter une activité</button>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#activ" data-whatever="@@mdo">Ajouter une structure</button>
                                 <hr />
                                 <table id="example" class="table table-striped" style="width:100%;">
                                     <thead style="border-color:gray">
                                         <tr>
-                                            <th>Nom de l'activité</th>
+                                            <th>Nom de la structure</th>
                                             <th>Description </th>
-                                            <th>Date de l'activité</th>
-                                            <th>Nombre de participants</th>
-                                            <th>Coût </th>
-                                            <th>Lieu </th>
-                                            <th>Coordonnées GPS</th>
-
+                                            <th>Mission</th>
+                                            <th>Budget</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Sensibilisation en milieu rural</td>
-                                            <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
-                                            <td>2024-09-25</td>
-                                            <td>150</td>
-                                            <td>3000 000</td>
-                                            <td>Aboisso</td>
-                                            <td>9.5511, 1.1865</td>
+                                            <td>Direction Générale</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing..</td>
+                                            <td>Amet, consectetur adipiscing..</td>
+                                            <td>5 000 000</td>
+                                            <td>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1b751a" data-toggle="modal" data-target="#modif" data-whatever="@@mdo"><path d="M240-120v-80l40-40H160q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h320v80H160v440h640v-120h80v120q0 33-23.5 56.5T800-240H680l40 40v80H240Zm360-240L400-560l56-56 104 103v-327h80v327l104-103 56 56-200 200Z" /></svg>
+                                                </a>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" /></svg>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Formation des enseignants</td>
-                                            <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
-                                            <td>2024-10-01</td>
-                                            <td>50</td>
-                                            <td>2000 000</td>
-                                            <td>Biankouman</td>
-                                            <td>6.1725, 1.2313</td>
+                                            <td>Direction Régionale</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing..</td>
+                                            <td>Amet, consectetur adipiscing..</td>
+                                            <td>4 000 000</td>
+                                            <td>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1b751a" data-toggle="modal" data-target="#modif" data-whatever="@@mdo"><path d="M240-120v-80l40-40H160q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h320v80H160v440h640v-120h80v120q0 33-23.5 56.5T800-240H680l40 40v80H240Zm360-240L400-560l56-56 104 103v-327h80v327l104-103 56 56-200 200Z" /></svg>
+                                                </a>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" /></svg>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Conférence nationale</td>
-                                            <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
-                                            <td>2024-11-15</td>
-                                            <td>300</td>
-                                            <td>5000 €</td>
-                                            <td>kablaké</td>
-                                            <td>5.6037, -0.1870</td>
+                                            <td>Direction Centrale</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing..</td>
+                                            <td>Amet, consectetur adipiscing..</td>
+                                            <td>3 000 000</td>
+                                            <td>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1b751a" data-toggle="modal" data-target="#modif" data-whatever="@@mdo"><path d="M240-120v-80l40-40H160q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h320v80H160v440h640v-120h80v120q0 33-23.5 56.5T800-240H680l40 40v80H240Zm360-240L400-560l56-56 104 103v-327h80v327l104-103 56 56-200 200Z" /></svg>
+                                                </a>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" /></svg>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Sensibilisation en milieu rural</td>
-                                            <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
-                                            <td>2024-09-25</td>
-                                            <td>150</td>
-                                            <td>3000 000</td>
-                                            <td>Aboisso</td>
-                                            <td>9.5511, 1.1865</td>
-
+                                            <td>Antenne communale</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing..</td>
+                                            <td>Amet, consectetur adipiscing..</td>
+                                            <td>3 000 000</td>
+                                            <td>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1b751a" data-toggle="modal" data-target="#modif" data-whatever="@@mdo"><path d="M240-120v-80l40-40H160q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h320v80H160v440h640v-120h80v120q0 33-23.5 56.5T800-240H680l40 40v80H240Zm360-240L400-560l56-56 104 103v-327h80v327l104-103 56 56-200 200Z" /></svg>
+                                                </a>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" /></svg>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Formation des enseignants</td>
-                                            <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
-                                            <td>2024-10-01</td>
-                                            <td>50</td>
-                                            <td>2000 000</td>
-                                            <td>Biankouman</td>
-                                            <td>6.1725, 1.2313</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Conférence nationale</td>
-                                            <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
-                                            <td>2024-11-15</td>
-                                            <td>300</td>
-                                            <td>5000 €</td>
-                                            <td>kablaké</td>
-                                            <td>5.6037, -0.1870</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sensibilisation en milieu rural</td>
-                                            <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
-                                            <td>2024-09-25</td>
-                                            <td>150</td>
-                                            <td>3000 000</td>
-                                            <td>Aboisso</td>
-                                            <td>9.5511, 1.1865</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Formation des enseignants</td>
-                                            <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
-                                            <td>2024-10-01</td>
-                                            <td>50</td>
-                                            <td>2000 000</td>
-                                            <td>Biankouman</td>
-                                            <td>6.1725, 1.2313</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Conférence nationale</td>
-                                            <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
-                                            <td>2024-11-15</td>
-                                            <td>300</td>
-                                            <td>5000 €</td>
-                                            <td>kablaké</td>
-                                            <td>5.6037, -0.1870</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Sensibilisation en milieu rural</td>
-                                            <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
-                                            <td>2024-09-25</td>
-                                            <td>150</td>
-                                            <td>3000 000</td>
-                                            <td>Aboisso</td>
-                                            <td>9.5511, 1.1865</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Formation des enseignants</td>
-                                            <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
-                                            <td>2024-10-01</td>
-                                            <td>50</td>
-                                            <td>2000 000</td>
-                                            <td>Biankouman</td>
-                                            <td>6.1725, 1.2313</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Conférence nationale</td>
-                                            <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
-                                            <td>2024-11-15</td>
-                                            <td>300</td>
-                                            <td>5000 €</td>
-                                            <td>kablaké</td>
-                                            <td>5.6037, -0.1870</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Sensibilisation en milieu rural</td>
-                                            <td>Campagne de sensibilisation sur les droits des enfants dans les zones rurales.</td>
-                                            <td>2024-09-25</td>
-                                            <td>150</td>
-                                            <td>3000 000</td>
-                                            <td>Aboisso</td>
-                                            <td>9.5511, 1.1865</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Formation des enseignants</td>
-                                            <td>Atelier de formation pour les enseignants sur la reconnaissance du travail des enfants.</td>
-                                            <td>2024-10-01</td>
-                                            <td>50</td>
-                                            <td>2000 000</td>
-                                            <td>Biankouman</td>
-                                            <td>6.1725, 1.2313</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Conférence nationale</td>
-                                            <td>Conférence pour discuter des stratégies de lutte contre le travail des enfants.</td>
-                                            <td>2024-11-15</td>
-                                            <td>300</td>
-                                            <td>5000 €</td>
-                                            <td>kablaké</td>
-                                            <td>5.6037, -0.1870</td>
-
+                                            <td>Antenne</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing..</td>
+                                            <td>Amet, consectetur adipiscing..</td>
+                                            <td>1 000 000</td>
+                                            <td>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1b751a" data-toggle="modal" data-target="#modif" data-whatever="@@mdo"><path d="M240-120v-80l40-40H160q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h320v80H160v440h640v-120h80v120q0 33-23.5 56.5T800-240H680l40 40v80H240Zm360-240L400-560l56-56 104 103v-327h80v327l104-103 56 56-200 200Z" /></svg>
+                                                </a>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" /></svg>
+                                                </a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Nom de l'activité</th>
-                                            <th>Description de l'activité</th>
-                                            <th>Date de l'activité</th>
-                                            <th>Nombre de participants estimé</th>
-                                            <th>Coût de l'activité</th>
-                                            <th>Lieu de l'activité</th>
-                                            <th>Coordonnées GPS</th>
-
+                                            <th>Nom de la structure</th>
+                                            <th>Description </th>
+                                            <th>Mission</th>
+                                            <th>Budget</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -489,15 +395,16 @@
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Activité</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Zone</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form>
+
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Nom de l'activité</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Nom de la structure</label>
                                     <input type="text" class="form-control" rows="2" style="max-width:800px">
                                 </div>
                                 <div class="mb-3">
@@ -505,38 +412,50 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Date</label>
-                                    <input type="date" class="form-control" rows="2" style="max-width:800px">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Nombre de participants</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Mission</label>
                                     <input type="text" class="form-control" rows="2" style="max-width:800px">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Coût</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Budget</label>
                                     <input type="number" class="form-control" rows="2" style="max-width:800px">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Localité</label>
-                                    <input type="text" class="form-control" rows="2" style="max-width:800px">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Coordonnées GPS</label>
-                                    <input type="text" class="form-control" rows="2" style="max-width:800px">
-                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                            <button type="button" class="btn btn-primary">Valider</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                @*<div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Recommandation</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label">TDR</label>
-                                <input class="form-control" type="file" id="formFile" style="max-width:800px">
-                            </div>
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label">Rapport d'évaluation'</label>
-                                <input class="form-control" type="file" id="formFile" style="max-width:800px">
-                            </div>*@
+            <div class="modal fade" id="modif" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Zone</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Nom de la structure</label>
+                                    <input type="text" class="form-control" rows="2" style="max-width:800px" value="Direction Régionale">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px">Lorem ipsum dolor sit amet, consectetur adipiscing..</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Mission</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px">Lorem ipsum dolor sit amet, consectetur adipiscing..</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Budget</label>
+                                    <input type="number" class="form-control" rows="2" style="max-width:800px" value="500000">
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">

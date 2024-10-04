@@ -1,5 +1,5 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -10,22 +10,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mon application ASP.NET</title>
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <meta name="description" content="topfloor HTML 5 Template " />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
@@ -41,194 +53,11 @@
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    <style>
-        .highcharts-figure,
-        .highcharts-data-table table {
-            min-width: 320px;
-            max-width: 800px;
-            margin: 1em auto;
-        }
-
-        .highcharts-data-table table {
-            font-family: Verdana, sans-serif;
-            border-collapse: collapse;
-            border: 1px solid #ebebeb;
-            margin: 10px auto;
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .highcharts-data-table caption {
-            padding: 1em 0;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .highcharts-data-table th {
-            font-weight: 600;
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table td,
-        .highcharts-data-table th,
-        .highcharts-data-table caption {
-            padding: 0.5em;
-        }
-
-        .highcharts-data-table thead tr,
-        .highcharts-data-table tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-
-        .highcharts-data-table tr:hover {
-            background: #f1f7ff;
-        }
-
-        input[type="number"] {
-            min-width: 50px;
-        }
-
-        /*        .highcharts-figure,
-                .highcharts-data-table table {
-                    min-width: 310px;
-                    max-width: 800px;
-                    margin: 1em auto;
-                }
-
-                #container {
-                    height: 400px;
-                }
-
-                .highcharts-data-table table {
-                    font-family: Verdana, sans-serif;
-                    border-collapse: collapse;
-                    border: 1px solid #ebebeb;
-                    margin: 10px auto;
-                    text-align: center;
-                    width: 100%;
-                    max-width: 500px;
-                }
-
-                .highcharts-data-table caption {
-                    padding: 1em 0;
-                    font-size: 1.2em;
-                    color: #555;
-                }
-
-                .highcharts-data-table th {
-                    font-weight: 600;
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table td,
-                .highcharts-data-table th,
-                .highcharts-data-table caption {
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table thead tr,
-                .highcharts-data-table tr:nth-child(even) {
-                    background: #f8f8f8;
-                }
-
-                .highcharts-data-table tr:hover {
-                    background: #f1f7ff;
-                }
-        */
-
-        /* Optional: Fade effect for carousel */
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .carousel-item {
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-            .carousel-item.active {
-                opacity: 1;
-            }
-
-        .nav-logo {
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .nav-link {
-            color: white !important;
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar-toggler-icon {
-            background-color: white;
-        }
-
-        @@media (min-width: 992px) {
-            .navbar {
-                padding: 1rem;
-            }
-        }
-
-        @@media (max-width: 991px) {
-            .navbar {
-                padding: 0.5rem;
-            }
-        }
-
-        .underline-effect-2 {
-            display: inline;
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-            text-decoration: underline;
-            text-decoration-color: black;
-            background-image: linear-gradient(white, white); /* Crée une bande blanche */
-            background-position: 0 90%; /* Positionne la bande sous le texte */
-            background-size: 100% 6px; /* Largeur de la bande et hauteur */
-            background-repeat: no-repeat; /* Pas de répétition */
-        }
-
-        ul.main-menu__list li a {
-            color: #fff !important;
-        }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
-
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
-
-    <!-- preloader -->
-    <div class="loader-wrap">
-        <div class="preloader">
-            <div id="handle-preloader" class="handle-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- preloader end -->
-
     <div class="page-wrapper">
         <header class="main-header-three">
             <div class="first-menu">
@@ -241,276 +70,326 @@
                     </div>
 
                     <div class="p-2">
-                        <h3 style="color:orangered; padding-top:20px">Direction de la Lutte Contre le Travail des Enfants</h3>
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
                     </div>
                     <div class="p-2">
                         <img src="~/Images/LOGO-MEPS4_278x90.png" />
                     </div>
                 </div>
-            </div>
 
+            </div>
             <nav class="main-menu main-menu-four" style="background-color:forestgreen">
                 <div class="main-menu-four__wrapper">
-                    <div class="container">
-                        <div class="main-menu-four__wrapper-inner">
-                            <div class="main-menu-four__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
-                            </div>
-                            <div class="main-menu-four__left">
-                                <div class="main-menu-four__main-menu-box">
-                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                    <ul class="main-menu__list">
-                                        <li>
-                                            @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            <a href="#">CARTOGRAPHIE</a>
-                                            <ul>
-                                                <li style="background-color:midnightblue">
-                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color:midnightblue">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
 
-                                        <li>
-                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="main-menu-four__wrapper-inner">
+                        <div class="main-menu-four__logo">
+                            <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+                        </div>
+                        <div class="main-menu-four__left">
+                            <div class="main-menu-four__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li>
+                                        @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                    </li>
+                                    <li>
+                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                        <ul>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                            <li style="background-color: #007565">
+                                                @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="main-menu-four__right">
-                                <div class="main-menu-four__search-btn-box">
-                                    <div class="main-menu-four__btn-box">
+                        </div>
+                        <div class="main-menu-four__right">
+                            <div class="main-menu-four__search-btn-box">
 
-                                    </div>
+                                <div class="main-menu-four__btn-box">
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-
         </header>
-
-        <div class="stricky-header stricked-menu main-menu main-menu-three">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-
-        <div class="">
-            <section>
-                <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
-                    <div class="col-md">
-                        <label for="exampleInputPassword1" class="form-label">Région</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Gbêkè</option>
-                            <option value="2">Haut Sassandra</option>
-                            <option value="3">Grand Pont</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Département</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Adzopé</option>
-                            <option value="2">Akoupé</option>
-                            <option value="3">yakassé-Attobrou</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Commune</label>
-                        <select class="form-select" aria-label="Default select example">
-
-                            <option selected>Tout</option>
-                            <option value="1">Aboisso</option>
-                            <option value="2">Abidjan</option>
-                            <option value="3">Bouaké</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Localité</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Angré</option>
-                            <option value="2">Koumassi</option>
-                            <option value="3">Yopougon</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Genre</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tout</option>
-                            <option value="1">Homme</option>
-                            <option value="2">Femme</option>
-                            <option value="3">Autre</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <div class="col-md">
-                            <label for="exampleInputPassword1" class="form-label">Domaine d'activité</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Tout</option>
-                                <option value="1">Ferronnerie</option>
-                                <option value="2">Travaux champêtres</option>
-                                <option value="3">Minier</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="exampleInputPassword1" class="form-label">Etat</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Tous</option>
-                            <option value="1">Confirmé</option>
-                            <option value="2">Infirmé</option>
-                            <option value="3">En attente</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row" style="padding:20px 0px 20px 0px;background-color: #D3E3FD">
-
-                    <div class="col-md">
-                        <label class="form-label">Date debut</label>
-                        <input type="date" class="form-control" />
-                    </div>
-                    <div class="col-md">
-                        <label class="form-label">Date fin</label>
-                        <input type="date" class="form-control" />
-                    </div>
-                    <div class="col-md">
-
-                    </div>
-                    <div class="col-md">
-
-                    </div>
-                    <div class="col-md">
-
-                    </div>
-                    <div class="col-md">
-
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <center>
-                        <h3 style="padding:20px 0px 20px 0px">
-                            Tableau de bord
-                        </h3>
-                    </center>
-                    <div class="row">
-                        <div class="col" style="display: flex; justify-content:center;">
-                            <div>
-                                <img src="~/Images/carteAlerte.JPG" />
-                                <center>
-                                    <h4>
-                                        Carte des alertes liées au enfants en activité
-                                    </h4>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
-                            <figure class="highcharts-figure">
-                                <div id="containerM"></div>
-                                <h4>Liste des régions avec leur pourcentage des enfants en activité</h4>
-                            </figure>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <figure class="highcharts-figure">
-                                <div id="container1"></div>
-                                <h4>Liste des régions avec leur pourcentage des enfants en activité</h4>
-                            </figure>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
-                            <figure class="highcharts-figure wow fadeInUp" data-wow-delay="200ms">
-                                <div id="container"></div>
-                                <h4>Nombre d'enfant en activité recencés en 2022 en fonction des regions</h4>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!--Site Footer Start-->
-            <footer class="site-footer site-footer-four">
-                <div class="site-footer__shape-1">
-                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
-                </div>
-                <div class="site-footer__bottom">
-                    <div class="container">
-                        <div class="site-footer__bottom-inner">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__social">
-                                    <a href="#"><span class="icon-facebook"></span></a>
-                                    <a href="#"><span class="icon-twitter"></span></a>
-                                    <a href="#"><span class="icon-linkin"></span></a>
-                                    <a href="#"><span class="icon-pinterest"></span></a>
+        <div style="background-color: #D3E3FD;">
+            <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
+                Accueil > Tableau de bord
+            </div>
+            <div class="container-fluid mt-1" style="padding-top:-5px">
+                <div class="row">
+                    <!-- Première carte occupant 70% -->
+                    <div class="col-md-12">
+                        <div class="card fixed-height-l2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Région</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Gbêkè</option>
+                                            <option value="2">Haut Sassandra</option>
+                                            <option value="3">Grand Pont</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Département</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Adzopé</option>
+                                            <option value="2">Akoupé</option>
+                                            <option value="3">Yakassé-Attobrou</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Commune</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Tout</option>
+                                            <option value="1">Aboisso</option>
+                                            <option value="2">Abidjan</option>
+                                            <option value="3">Bouaké</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Tout</option>
+                                                <option value="1">Agriculture</option>
+                                                <option value="2">Commerce</option>
+                                                <option value="3">Domestique</option>
+                                                <option value="3">Minier</option>
+                                                <option value="3">Artisanat</option>
+                                                <option value="3">Transport</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1" class="form-label">Activité</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Tout</option>
+                                                <option value="1">Sensibilisation et éducation</option>
+                                                <option value="2">Réinsertion scolaire</option>
+                                                <option value="3">Formation professionnelle</option>
+                                                <option value="3">Protection et de réhabilitation des enfants travailleurs</option>
+                                                <option value="3">Inspection et de régulation des activité</option>
+                                                <option value="3">Inspection et de régulation des activité</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="exampleInputPassword1" class="form-label">Date debut</label>
+                                        <input type="date" class="form-control" />
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputPassword1" class="form-label">Date fin</label>
+                                        <input type="date" class="form-control" />
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
-                            <ul class="list-unstyled site-footer__bottom-menu">
-                                <li>
-                                    <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
-                                    <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
-                                    <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
-                                </li>
-                            </ul>
-
                         </div>
                     </div>
                 </div>
-            </footer>
-            <!--Site Footer End-->
-        </div>
-    </div>
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler">
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms" style="color:black">
-                <div class="footer-widget__social" style="color:black">
-
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <!-- Première carte occupant 70% -->
+                        <div class="col-md-7">
+                            <div class="card fixed-height">
+                                <div class="card-body">
+                                    <img src="~/Images/carte_regionale.png" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card fixed-height">
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">REGIONS</th>
+                                                <th scope="col">GARCONS</th>
+                                                <th scope="col">FILLES</th>
+                                                <th scope="col">TOTAL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Gbêkê</td>
+                                                <td>123</td>
+                                                <td>312</td>
+                                                <th>435</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Tonkpi</td>
+                                                <td>452</td>
+                                                <td>130</td>
+                                                <th>582</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Cavally</td>
+                                                <td>432</td>
+                                                <td>412</td>
+                                                <th>844</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Nawa</td>
+                                                <td>112</td>
+                                                <td>230</td>
+                                                <th>342</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Grand Pont</td>
+                                                <td>190</td>
+                                                <td>156</td>
+                                                <th>346</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Hambol</td>
+                                                <td>692</td>
+                                                <td>182</td>
+                                                <th>874</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Bagoué</td>
+                                                <td>698</td>
+                                                <td>180</td>
+                                                <th>878</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Béré</td>
+                                                <td>690</td>
+                                                <td>188</td>
+                                                <th>878</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <!-- Première carte occupant 70% -->
+                        <div class="col-md-6">
+                            <div class="card fixed-height-p">
+                                <div class="card-body">
+                                    <div id="container3" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fixed-height-p">
+                                <div class="card-body">
+                                    <div id="containerColumn" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt-4" style="padding-bottom:20px">
+                    <div class="row">
+                        <!-- Première carte occupant 70% -->
+                        <div class="col-md-6">
+                            <div class="card fixed-height-p">
+                                <div class="card-body">
+                                    <div id="containerColumn1" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fixed-height-p">
+                                <div class="card-body">
+                                    <div id="container33" style="height: 300px; min-width: 300px; max-width: 800px; margin: 10px auto" class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
+
+        <footer class="site-footer site-footer-four">
+            <div class="site-footer__shape-1">
+                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__social">
+                                <a href="#"><span class="icon-facebook"></span></a>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="#"><span class="icon-linkin"></span></a>
+                                <a href="#"><span class="icon-pinterest"></span></a>
+                            </div>
+                        </div>
+                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                        <ul class="list-unstyled site-footer__bottom-menu">
+                            <li>
+                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <div class="scroll-to-top">
-        <svg class="scroll-top-inner" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
 
     <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -537,617 +416,251 @@
     <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
     <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
 
-    <!-- template js -->
-    <script src="~/Content/FichierAsset/assets/js/topfloor.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script type="text/javascript">
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    $(document).ready(function () {
 
-    <script type="text/javascript">
-
-        Highcharts.chart('container', {
+        Highcharts.chart('container3', {
             chart: {
-                type: 'column'
+                type: 'bar',
+                marginLeft: 150
             },
             title: {
-                align: 'left',
-                text: ''
+                text: 'NOMBRE D\'ENFANT TRAVAILLEUR PAR SECTEUR D\'ACTIVITE ET PAR SEXE'
             },
             subtitle: {
-                align: 'left',
-                text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
-            },
-            accessibility: {
-                announceNewData: {
-                    enabled: true
-                }
+                text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
             },
             xAxis: {
-                type: 'category'
+                type: 'category',
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                        fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                    }
+                },
+                min: 0,
+                max: 4,
+                scrollbar: {
+                    enabled: true
+                },
+                tickLength: 0,
             },
             yAxis: {
+                min: 0,
+                max: 100,
                 title: {
-                    text: 'Total percent market share'
+                    text: 'Votes',
+                    align: 'high'
                 }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        style: {
+                            fontSize: '14px'  // Taille de la police des labels de données
+                        }
+                    }
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Garçon',
+                data: [
+                    ["Agriculture", 80],
+                    ["Commerce", 55],
+                    ["Domestique", 13],
+                    ["Minier", 7],
+                    ["Transport", 9],
+                ]
+            }, {
+                name: 'Fille',
+                data: [
+                    ["Agriculture", 30],
+                    ["Commerce", 5],
+                    ["Domestique", 73],
+                    ["Minier", 17],
+                    ["Transport", 93],
+                ]
+            }]
+        });
 
+        Highcharts.chart('container33', {
+            chart: {
+                type: 'bar',
+                marginLeft: 150
+            },
+            title: {
+                text: 'INDICATEUR DE SATISFACTION DES PARTIES PRENANTES'
+            },
+            subtitle: {
+                text: 'Source: <a href="https://highcharts.uservoice.com/forums/55896-highcharts-javascript-api">UserVoice</a>'
+            },
+            xAxis: {
+                type: 'category',
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        fontSize: '19px',  // Taille de la police des libellés de l'axe X
+                        fontWeight: 'bold' // Vous pouvez également ajouter du style (facultatif)
+                    }
+                },
+                min: 0,
+                max: 4,
+                scrollbar: {
+                    enabled: true
+                },
+                tickLength: 0,
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'Votes',
+                    align: 'high'
+                }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        style: {
+                            fontSize: '14px'  // Taille de la police des labels de données
+                        }
+                    },
+                    color: '#F15C80'
+                }
             },
             legend: {
                 enabled: false
             },
-            plotOptions: {
-                series: {
-                    borderWidth: 0,
-                    dataLabels: {
-                        enabled: true,
-                        format: '{point.y:.1f}%'
-                    }
-                }
+            credits: {
+                enabled: false
             },
-
-            tooltip: {
-                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
-                    '<b>{point.y:.2f}%</b> of total<br/>'
-            },
-
-            series: [
-                {
-                    name: 'Browsers',
-                    colorByPoint: true,
-                    data: [
-                        {
-                            name: '2009',
-                            y: 63.06,
-                            drilldown: '2009'
-                        },
-                        {
-                            name: '2010',
-                            y: 19.84,
-                            drilldown: '2010'
-                        },
-                        {
-                            name: '2011',
-                            y: 4.18,
-                            drilldown: '2011'
-                        },
-                        {
-                            name: '2012',
-                            y: 4.12,
-                            drilldown: '2012'
-                        },
-                        {
-                            name: '2013',
-                            y: 2.33,
-                            drilldown: '2013'
-                        },
-                        {
-                            name: '2014',
-                            y: 0.45,
-                            drilldown: '2014'
-                        },
-
-                    ]
-                }
-            ],
-            drilldown: {
-                breadcrumbs: {
-                    position: {
-                        align: 'right'
-                    }
-                },
-                series: [
-                    {
-                        name: 'Chrome',
-                        id: 'Chrome',
-                        data: [
-                            [
-                                'v65.0',
-                                0.1
-                            ],
-                            [
-                                'v64.0',
-                                1.3
-                            ],
-                            [
-                                'v63.0',
-                                53.02
-                            ],
-                            [
-                                'v62.0',
-                                1.4
-                            ],
-                            [
-                                'v61.0',
-                                0.88
-                            ],
-                            [
-                                'v60.0',
-                                0.56
-                            ],
-                            [
-                                'v59.0',
-                                0.45
-                            ],
-                            [
-                                'v58.0',
-                                0.49
-                            ],
-                            [
-                                'v57.0',
-                                0.32
-                            ],
-                            [
-                                'v56.0',
-                                0.29
-                            ],
-                            [
-                                'v55.0',
-                                0.79
-                            ],
-                            [
-                                'v54.0',
-                                0.18
-                            ],
-                            [
-                                'v51.0',
-                                0.13
-                            ],
-                            [
-                                'v49.0',
-                                2.16
-                            ],
-                            [
-                                'v48.0',
-                                0.13
-                            ],
-                            [
-                                'v47.0',
-                                0.11
-                            ],
-                            [
-                                'v43.0',
-                                0.17
-                            ],
-                            [
-                                'v29.0',
-                                0.26
-                            ]
-                        ]
-                    },
-                    {
-                        name: 'Firefox',
-                        id: 'Firefox',
-                        data: [
-                            [
-                                'v58.0',
-                                1.02
-                            ],
-                            [
-                                'v57.0',
-                                7.36
-                            ],
-                            [
-                                'v56.0',
-                                0.35
-                            ],
-                            [
-                                'v55.0',
-                                0.11
-                            ],
-                            [
-                                'v54.0',
-                                0.1
-                            ],
-                            [
-                                'v52.0',
-                                0.95
-                            ],
-                            [
-                                'v51.0',
-                                0.15
-                            ],
-                            [
-                                'v50.0',
-                                0.1
-                            ],
-                            [
-                                'v48.0',
-                                0.31
-                            ],
-                            [
-                                'v47.0',
-                                0.12
-                            ]
-                        ]
-                    },
-                    {
-                        name: 'Internet Explorer',
-                        id: 'Internet Explorer',
-                        data: [
-                            [
-                                'v11.0',
-                                6.2
-                            ],
-                            [
-                                'v10.0',
-                                0.29
-                            ],
-                            [
-                                'v9.0',
-                                0.27
-                            ],
-                            [
-                                'v8.0',
-                                0.47
-                            ]
-                        ]
-                    },
-                    {
-                        name: 'Safari',
-                        id: 'Safari',
-                        data: [
-                            [
-                                'v11.0',
-                                3.39
-                            ],
-                            [
-                                'v10.1',
-                                0.96
-                            ],
-                            [
-                                'v10.0',
-                                0.36
-                            ],
-                            [
-                                'v9.1',
-                                0.54
-                            ],
-                            [
-                                'v9.0',
-                                0.13
-                            ],
-                            [
-                                'v5.1',
-                                0.2
-                            ]
-                        ]
-                    },
-                    {
-                        name: 'Edge',
-                        id: 'Edge',
-                        data: [
-                            [
-                                'v16',
-                                2.6
-                            ],
-                            [
-                                'v15',
-                                0.92
-                            ],
-                            [
-                                'v14',
-                                0.4
-                            ],
-                            [
-                                'v13',
-                                0.1
-                            ]
-                        ]
-                    },
-                    {
-                        name: 'Opera',
-                        id: 'Opera',
-                        data: [
-                            [
-                                'v50.0',
-                                0.96
-                            ],
-                            [
-                                'v49.0',
-                                0.82
-                            ],
-                            [
-                                'v12.1',
-                                0.14
-                            ]
-                        ]
-                    }
+            series: [{
+                name: 'Votes',
+                data: [
+                    ["Sensibilisation et éducation", 80],
+                    ["Réinsertion scolaire", 18],
+                    ["Formation professionnelle", 23],
+                    ["Protection et de réhabilitation des enfants travailleurs", 77],
+                    ["Inspection et de régulation des activité", 9],
                 ]
-            }
+            }]
         });
-        Highcharts.chart('containerM', {
+
+
+        // Diagramme en colonnes (Column)
+        Highcharts.chart('containerColumn', {
             chart: {
-                type: 'pie'
+                type: 'column'
             },
             title: {
-                text: ''
+                text: 'NOMBRE D\'ENFANT TRAVAILLEUR PAR TRANCHE D\'AGE'
             },
-            tooltip: {
-                valueSuffix: '%'
+            xAxis: {
+                categories: ['5-10', '10-12', '12-14', '14-16', '16-18']
             },
-            subtitle: {
-                text:
-                    'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>'
+            yAxis: {
+                title: {
+                    text: 'Valeurs'
+                }
             },
             plotOptions: {
-                series: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: [{
-                        enabled: true,
-                        distance: 20
-                    }, {
-                        enabled: true,
-                        distance: -40,
-                        format: '{point.percentage:.1f}%',
+                column: {
+                    dataLabels: {
+                        enabled: true, // Activer l'affichage des valeurs sur les colonnes
                         style: {
-                            fontSize: '1.2em',
-                            textOutline: 'none',
-                            opacity: 0.7
-                        },
-                        filter: {
-                            operator: '>',
-                            property: 'percentage',
-                            value: 10
+                            fontSize: '14px', // Taille de la police pour les valeurs affichées
+                            fontWeight: 'bold' // Facultatif : mettre en gras
                         }
-                    }]
-                }
-            },
-            series: [
-                {
-                    name: 'Percentage',
-                    colorByPoint: true,
-                    data: [
-                        {
-                            name: 'Guémon',
-                            y: 55.02
-                        },
-                        {
-                            name: 'Bélier',
-                            sliced: true,
-                            selected: true,
-                            y: 26.71
-                        },
-                        {
-                            name: 'Nawa',
-                            y: 1.09
-                        },
-                        {
-                            name: 'Haut sassandra',
-                            y: 15.5
-                        },
-                        {
-                            name: 'Lagune',
-                            y: 1.68
-                        }
-                    ]
-                }
-            ]
-        });
-
-        Highcharts.chart('container1', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: '',
-                align: 'left'
-            },
-            subtitle: {
-                text: 'Source: <a target="_blank" ' +
-                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-                align: 'left'
-            },
-            xAxis: {
-                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
-                crosshair: true,
-                accessibility: {
-                    description: 'Countries'
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: '1000 metric tons (MT)'
-                }
-            },
-            tooltip: {
-                valueSuffix: ' (1000 MT)'
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Garçon',
-                data: [187749, 387749, 129000, 34300, 54000, 34300]
-            },
-            {
-                name: 'Fille',
-                data: [45321, 140000, 10000, 140500, 19500, 113500]
-            }
-            ]
-        });
-        Highcharts.chart('container2', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Nombre d\'enfant travailleur recencés en 2023 en fonction des regions',
-                align: 'left'
-            },
-            subtitle: {
-                text: 'Source: <a target="_blank" ' +
-                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-                align: 'left'
-            },
-            xAxis: {
-                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
-                crosshair: true,
-                accessibility: {
-                    description: 'Countries'
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: '1000 metric tons (MT)'
-                }
-            },
-            tooltip: {
-                valueSuffix: ' (1000 MT)'
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Gorçon',
-                data: [387749, 280000, 829000, 64300, 14000, 34300]
-            },
-            {
-                name: 'Fille',
-                data: [5321, 140000, 10000, 140500, 19500, 713500]
-            }
-            ]
-        });
-        Highcharts.chart('container3', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
-                align: 'left'
-            },
-            subtitle: {
-                text: 'Source: <a target="_blank" ' +
-                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-                align: 'left'
-            },
-            xAxis: {
-                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
-                crosshair: true,
-                accessibility: {
-                    description: 'Countries'
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: '1000 metric tons (MT)'
-                }
-            },
-            tooltip: {
-                valueSuffix: ' (1000 MT)'
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Garçon',
-                data: [387749, 280000, 129000, 84300, 54000, 34300]
-            },
-            {
-                name: 'Fille',
-                data: [45321, 140000, 10000, 290500, 19500, 213500]
-            }
-            ]
-        });
-        Highcharts.chart('container4', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
-                align: 'left'
-            },
-            subtitle: {
-                text: 'Source: <a target="_blank" ' +
-                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-                align: 'left'
-            },
-            xAxis: {
-                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
-                crosshair: true,
-                accessibility: {
-                    description: 'Countries'
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: '1000 metric tons (MT)'
-                }
-            },
-            tooltip: {
-                valueSuffix: ' (1000 MT)'
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Garçon',
-                data: [387749, 280000, 129000, 84300, 54000, 34300]
-            },
-            {
-                name: 'Fille',
-                data: [45321, 140000, 10000, 290500, 19500, 213500]
-            }
-            ]
-        });
-
-        $(document).ready(function () {
-
-            // Select the header element using jQuery
-            var $header = $('.navbar');
-
-            // Function to toggle the sticky class based on scroll position
-            function checkScroll() {
-                var currentPosition = $header.css('position');
-                if (window.scrollY >= 131) {
-                    // Toggle position
-                    if (currentPosition === 'static') {
-                        $header.css({
-                            'position': 'fixed',
-                            'top': '0', // Optional: add this if you want it to stick at the top
-                            'width': '100%' // Optional: ensure it spans the full width
-                        });
                     }
-                } else {
-                    // Reset to static position
+                }
+            },
+            series: [{
+                name: '',
+                data: [15, 13, 34, 120, 149]
+            }]
+        });
+
+
+        // Diagramme en colonnes (Column)
+        Highcharts.chart('containerColumn1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'NOMBRE D\'ENFANT REINSERE PAR ACTIVITE'
+            },
+            xAxis: {
+                categories: ['Agriculture', 'Commerce', 'Domestique', 'Minier', 'Transport']
+            },
+            yAxis: {
+                title: {
+                    text: 'Valeurs'
+                }
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: true, // Activer l'affichage des valeurs sur les colonnes
+                        style: {
+                            fontSize: '14px', // Taille de la police pour les valeurs affichées
+                            fontWeight: 'bold' // Facultatif : mettre en gras
+                        }
+                    },
+                    color: '#F15C80'
+                }
+            },
+            series: [{
+                name: 'Série 1',
+                data: [55, 13, 24, 10, 49]
+            }]
+        });
+
+        // Select the header element using jQuery
+        var $header = $('.navbar');
+
+        // Function to toggle the sticky class based on scroll position
+        function checkScroll() {
+            var currentPosition = $header.css('position');
+            if (window.scrollY >= 131) {
+                // Toggle position
+                if (currentPosition === 'static') {
                     $header.css({
-                        'position': 'static',
-                        'top': '', // Optional: remove top if set before
-                        'width': '' // Optional: remove width if set before
+                        'position': 'fixed',
+                        'top': '0', // Optional: add this if you want it to stick at the top
+                        'width': '100%' // Optional: ensure it spans the full width
                     });
                 }
+            } else {
+                // Reset to static position
+                $header.css({
+                    'position': 'static',
+                    'top': '', // Optional: remove top if set before
+                    'width': '' // Optional: remove width if set before
+                });
             }
+        }
 
-            // Event listener to call checkScroll function on scroll
-            $(window).on('scroll', checkScroll);
+        // Event listener to call checkScroll function on scroll
+        $(window).on('scroll', checkScroll);
 
-            // Initial check in case the page is loaded at the top
-            checkScroll();
-        });
-
-    </script>
+        // Initial check in case the page is loaded at the top
+        checkScroll();
+    });
+</script>
 
 </body>
 </html>

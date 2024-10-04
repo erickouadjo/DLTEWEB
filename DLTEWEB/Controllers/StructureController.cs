@@ -6,38 +6,27 @@ using System.Web.Mvc;
 
 namespace DLTEv3.Controllers
 {
-    public class AcCartographieController : Controller
+    public class StructureController : Controller
     {
-        // GET: AcCartographie
+        // GET: Structure
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: AcCartographie
-        public ActionResult OrganeSIGOSTECI()
-        {
-            return View();
-        }
-
-        public ActionResult Zone()
-        {
-            return View();
-        }
-
-        // GET: AcCartographie/Details/5
+        // GET: Structure/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: AcCartographie/Create
+        // GET: Structure/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AcCartographie/Create
+        // POST: Structure/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -53,13 +42,13 @@ namespace DLTEv3.Controllers
             }
         }
 
-        // GET: AcCartographie/Edit/5
+        // GET: Structure/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: AcCartographie/Edit/5
+        // POST: Structure/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -75,13 +64,13 @@ namespace DLTEv3.Controllers
             }
         }
 
-        // GET: AcCartographie/Delete/5
+        // GET: Structure/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: AcCartographie/Delete/5
+        // POST: Structure/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

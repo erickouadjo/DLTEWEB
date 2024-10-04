@@ -41,175 +41,8 @@
     <!-- template styles -->
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
     <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    <style>
-                .highcharts-figure,
-                .highcharts-data-table table {
-                    min-width: 320px;
-                    max-width: 800px;
-                    margin: 1em auto;
-                }
-
-                .highcharts-data-table table {
-                    font-family: Verdana, sans-serif;
-                    border-collapse: collapse;
-                    border: 1px solid #ebebeb;
-                    margin: 10px auto;
-                    text-align: center;
-                    width: 100%;
-                    max-width: 500px;
-                }
-
-                .highcharts-data-table caption {
-                    padding: 1em 0;
-                    font-size: 1.2em;
-                    color: #555;
-                }
-
-                .highcharts-data-table th {
-                    font-weight: 600;
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table td,
-                .highcharts-data-table th,
-                .highcharts-data-table caption {
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table thead tr,
-                .highcharts-data-table tr:nth-child(even) {
-                    background: #f8f8f8;
-                }
-
-                .highcharts-data-table tr:hover {
-                    background: #f1f7ff;
-                }
-
-                input[type="number"] {
-                    min-width: 50px;
-                }
-
-                /*        .highcharts-figure,
-                .highcharts-data-table table {
-                    min-width: 310px;
-                    max-width: 800px;
-                    margin: 1em auto;
-                }
-
-                #container {
-                    height: 400px;
-                }
-
-                .highcharts-data-table table {
-                    font-family: Verdana, sans-serif;
-                    border-collapse: collapse;
-                    border: 1px solid #ebebeb;
-                    margin: 10px auto;
-                    text-align: center;
-                    width: 100%;
-                    max-width: 500px;
-                }
-
-                .highcharts-data-table caption {
-                    padding: 1em 0;
-                    font-size: 1.2em;
-                    color: #555;
-                }
-
-                .highcharts-data-table th {
-                    font-weight: 600;
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table td,
-                .highcharts-data-table th,
-                .highcharts-data-table caption {
-                    padding: 0.5em;
-                }
-
-                .highcharts-data-table thead tr,
-                .highcharts-data-table tr:nth-child(even) {
-                    background: #f8f8f8;
-                }
-
-                .highcharts-data-table tr:hover {
-                    background: #f1f7ff;
-                }
-        */
-
-                /* Optional: Fade effect for carousel */
-                .carousel-item {
-                    transition: opacity 1s ease-in-out;
-                    opacity: 0;
-                }
-
-                    .carousel-item.active {
-                        opacity: 1;
-                    }
-
-                .carousel-item {
-                    transition: opacity 1s ease-in-out;
-                    opacity: 0;
-                }
-
-                    .carousel-item.active {
-                        opacity: 1;
-                    }
-
-                .nav-logo {
-                    color: white;
-                    font-size: 1.5rem;
-                    text-decoration: none;
-                }
-
-                .navbar {
-                    background-color: #343a40;
-                }
-
-                .nav-link {
-                    color: white !important;
-                }
-
-                .navbar-toggler {
-                    border-color: rgba(255, 255, 255, 0.1);
-                }
-
-                .navbar-toggler-icon {
-                    background-color: white;
-                }
-
-                @@media (min-width: 992px) {
-                    .navbar {
-                        padding: 1rem;
-                    }
-                }
-
-                @@media (max-width: 991px) {
-                    .navbar {
-                        padding: 0.5rem;
-                    }
-                }
-
-                .underline-effect-2 {
-                    display: inline;
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: black;
-                    text-decoration: underline;
-                    text-decoration-color: black;
-                    background-image: linear-gradient(white, white); /* Crée une bande blanche */
-                    background-position: 0 90%; /* Positionne la bande sous le texte */
-                    background-size: 100% 6px; /* Largeur de la bande et hauteur */
-                    background-repeat: no-repeat; /* Pas de répétition */
-                }
-
-                ul.main-menu__list li a {
-                    color: #fff !important;
-                }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+  
 </head>
 <body>
 
@@ -241,7 +74,10 @@
                     </div>
 
                     <div class="p-2">
-                        <h3 style="color:orangered; padding-top:20px">Direction de la Lutte Contre le Travail des Enfants</h3>
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
                     </div>
                     <div class="p-2">
                         <img src="~/Images/LOGO-MEPS4_278x90.png" />
@@ -264,34 +100,58 @@
                                             @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
                                             @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                         </li>
-                                        <li >
+                                        <li>
                                             <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
                                             <ul>
-                                                <li style="background-color:midnightblue">
+                                                <li style="background-color: #007565">
                                                     @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
-                                                <li  style="background-color:midnightblue">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "Index1", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            @Html.ActionLink("SUIVI EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                            @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                            <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
                                         </li>
-
                                         <li>
                                             @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("LOGIN", "Login", "Utilisateur", new { area = "" }, new { @class = "nav-link" })
+                                            <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div>
@@ -352,67 +212,62 @@
                 </div>
             </section>
 
-            @*<section style="padding-top:50px; padding-bottom:50px">
+            <section style="padding-top:50px; padding-bottom:50px">
                 <div class="d-flex justify-content-center">
                     <div class="container text-center">
-
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <div class="p-2" style="background-color: #E6E2EB; ">
-                                    <div class="about-two__count count-box">
-                                        <center>
-                                            <h3 class="count-text" data-stop="451" data-speed="1500" style="padding-left:20px">00</h3>
-                                            <h4>Alertes</h4>
-                                        </center>
-                                    </div>
+                        <div class="row">
+                            <div class="col" style="display: flex; justify-content: flex-end;">
+                                <div class="wow fadeInLeft" data-wow-delay="100ms" style="box-shadow: #b0b0b0 0px 7px 29px 0px;">
+                                    <img src="~/Images/DG.png" height="400" />
+                                    <h4>Kouakou Kra Martin N’GUETTIA</h4>
+                                    <h6>Directeur de la Lutte contre le Travail des Enfants</h6>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="p-2" style="background-color: #D1C9DA">
-                                    <div class="about-two__count count-box">
-                                        <center>
-                                            <h3 class="count-text" data-stop="219" data-speed="1500">00</h3>
-                                            <h4>Alertes confirmées</h4>
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="p-2" style="background-color: #E6E2EB">
-                                    <div class="about-two__count count-box">
-                                        <center>
-                                            <h3 class="count-text" data-stop="101" data-speed="1500">00</h3>
-                                            <h4>Sujets réinsérés</h4>
-                                        </center>
-                                    </div>
+                            <div class="col" style="display: flex; justify-content: flex-start;">
+                                <div style=" text-align: start" class="wow fadeInRight" data-wow-delay="500ms">
+                                    <h2 style="color:#228B22">Direction de la lutte contre le travail des Enfants(DLTE)</h2>
+                                    <p class="wow fadeInDown" data-wow-delay="100ms" style="font-size:22px">
+                                        La DLTE a pour mission d’élaborer, de suivre et de contrôler l’application des normes, des lois et règlements en matière de travail des enfants.
+                                        D’identifier de coordonner et mettre en œuvre des mesures dans le domaine de la lutte contre les pires formes du travail des enfants et
+                                        d’assurer la prévention et la protection contre les pires formes du travail des enfants.
+                                    </p>
+                                    <button class="btn" style="background-color:orangered; color:white; padding :5px 20px 5px 20px">Lire +</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>*@
+            </section>
             <!-- Why Choose One Start -->
 
             <section class="testimonial-two">
-                <div class="container">
-                    <h2 class="section-title" style="font-size:48px">NOS STATISTIQUES</h2>
+                <div class="container-fluid">
+                    <center>
+                        <h3 style="font-size:48px">NOS STATISTIQUES</h3>
+                    </center>
                     <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
-                            <figure class="highcharts-figure">
+                        <div class="col-xl-4 col-lg-5 col-md-5  wow fadeInLeft" data-wow-delay="500ms" >
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
                                 <div id="containerM"></div>
-                                <h4>Pourcentage des enfants en activités par région</h4>
+                                <center>
+                                    <h4>Pourcentage des enfants en activités par région</h4>
+                                </center>
                             </figure>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <figure class="highcharts-figure">
+                        <div class="col-xl-4 col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="500ms" >
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
                                 <div id="container1"></div>
-                                <h4>Effectif des enfants en activités par sexe et par région</h4>
+                                <center>
+                                    <h4>Effectif des enfants en activités par sexe et par région</h4>
+                                </center>                 
                             </figure>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
-                            <figure class="highcharts-figure wow fadeInUp" data-wow-delay="200ms">
+                        <div class="col-xl-4 col-lg-6 col-md-5 wow fadeInRight" data-wow-delay="500ms">
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
                                 <div id="container"></div>
-                                <h4>Pourcentage des enfants en activités en 2022 par regions</h4>
+                                <center>
+                                    <h4>Pourcentage des enfants en activités en 2022 par regions</h4>
+                                </center>                              
                             </figure>
                         </div>
                     </div>
@@ -420,8 +275,8 @@
             </section>
             <section class="services-two">
                 <div class="container">
-                    <div class="section-title text-left">
-                        <h2 class="section-title__title">ACTUALITE</h2>
+                    <div class="section-title text-center">
+                        <h3 class="section-title__title">ACTUALITE</h3>
                     </div>
                     <div class="services-two__bottom">
                         <div class="services-two__nav">
@@ -558,61 +413,72 @@
                     </div>
                 </div>
             </section>
-
             <section class="service-one" id="services" style="padding-top:20px">
-
                 <div class="container">
-                    <h2 class="section-title" style="font-size:48px">NOS MODULES</h2>
+                    <center>
+                        <h3 style="font-size:48px">NOS MODULES</h3>
+                    </center>
+
                     <div class="row">
                         <!--Services One Single Start-->
                         <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color:black">Tableau de bord</a></h3>
-
+                            <div class="services-five__single"  style="box-shadow: #b0b0b0 0px 19px 29px 0px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Tableau de bord</a></h3>
+                                </center>
                             </div>
                         </div>
-                        <!--Services One Single End-->
-                        <!--Services One Single Start-->
+
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-440 160-640v400h360v80H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v280h-80v-200L480-440Zm0-80 320-200H160l320 200ZM760-40l-56-56 63-64H600v-80h167l-64-64 57-56 160 160L760-40ZM160-640v440-240 3-283 80Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html">Communication</a></h3>
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-440 160-640v400h360v80H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v280h-80v-200L480-440Zm0-80 320-200H160l320 200ZM760-40l-56-56 63-64H600v-80h167l-64-64 57-56 160 160L760-40ZM160-640v440-240 3-283 80Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Communication</a></h3>
+                                </center>
                             </div>
                         </div>
-                        <!--Services One Single End-->
-                        <!--Services One Single Start-->
+
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q32 0 62-6t58-17l60 61q-41 20-86 31t-94 11Zm280-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM424-296 254-466l56-56 114 114 400-401 56 56-456 457Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color:black">Suivi et Evaluation</a></h3>
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q32 0 62-6t58-17l60 61q-41 20-86 31t-94 11Zm280-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM424-296 254-466l56-56 114 114 400-401 56 56-456 457Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white" >Suivi et Evaluation</a></h3>
+                                </center>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html">Traitement et Alerte</a></h3>
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Traitement et Alerte</a></h3>
+                                </center>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color:black">Cartographie</a></h3>
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Cartographie</a></h3>
+                                </center>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
+                        <div class="col-xl-4  wow fadeInRight" data-wow-delay="300ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-120q-151 0-255.5-46.5T120-280v-400q0-66 105.5-113T480-840q149 0 254.5 47T840-680v400q0 67-104.5 113.5T480-120Zm0-479q89 0 179-25.5T760-679q-11-29-100.5-55T480-760q-91 0-178.5 25.5T200-679q14 30 101.5 55T480-599Zm0 199q42 0 81-4t74.5-11.5q35.5-7.5 67-18.5t57.5-25v-120q-26 14-57.5 25t-67 18.5Q600-528 561-524t-81 4q-42 0-82-4t-75.5-11.5Q287-543 256-554t-56-25v120q25 14 56 25t66.5 18.5Q358-408 398-404t82 4Zm0 200q46 0 93.5-7t87.5-18.5q40-11.5 67-26t32-29.5v-98q-26 14-57.5 25t-67 18.5Q600-328 561-324t-81 4q-42 0-82-4t-75.5-11.5Q287-343 256-354t-56-25v99q5 15 31.5 29t66.5 25.5q40 11.5 88 18.5t94 7Z" /></svg>
-                                <h3 class="services-five__title"><a href="roof-repair-pros.html">Collecte de données</a></h3>
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-120q-151 0-255.5-46.5T120-280v-400q0-66 105.5-113T480-840q149 0 254.5 47T840-680v400q0 67-104.5 113.5T480-120Zm0-479q89 0 179-25.5T760-679q-11-29-100.5-55T480-760q-91 0-178.5 25.5T200-679q14 30 101.5 55T480-599Zm0 199q42 0 81-4t74.5-11.5q35.5-7.5 67-18.5t57.5-25v-120q-26 14-57.5 25t-67 18.5Q600-528 561-524t-81 4q-42 0-82-4t-75.5-11.5Q287-543 256-554t-56-25v120q25 14 56 25t66.5 18.5Q358-408 398-404t82 4Zm0 200q46 0 93.5-7t87.5-18.5q40-11.5 67-26t32-29.5v-98q-26 14-57.5 25t-67 18.5Q600-328 561-324t-81 4q-42 0-82-4t-75.5-11.5Q287-343 256-354t-56-25v99q5 15 31.5 29t66.5 25.5q40 11.5 88 18.5t94 7Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Collecte de données</a></h3>
+                                </center>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 

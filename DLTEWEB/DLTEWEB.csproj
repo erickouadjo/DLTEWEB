@@ -133,11 +133,13 @@
     <Compile Include="Controllers\CommunicationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParametreController.cs" />
+    <Compile Include="Controllers\StructureController.cs" />
     <Compile Include="Controllers\SuiviEvaluationController.cs" />
     <Compile Include="Controllers\TableauBordController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\TraitementAlerteController.cs" />
     <Compile Include="Controllers\UtilisateurController.cs" />
+    <Compile Include="Controllers\ZoneController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -667,6 +669,9 @@
     <Content Include="Views\AcTableauBord\Synthese.cshtml" />
     <Content Include="Views\Activite\Index.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Zone\Index.cshtml" />
+    <Content Include="Views\Structure\Index.cshtml" />
+    <Content Include="Views\AcCartographie\Zone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
