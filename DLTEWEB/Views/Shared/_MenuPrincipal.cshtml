@@ -113,19 +113,19 @@
                                             @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
-                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                            @Html.ActionLink("TRAITEMENT ALERTES", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
                                         </li>
                                         <li>
                                             <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
                                             <ul>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("INCIDENTS", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("ORGANES DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("ZONES", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                             </ul>
                                         </li>
@@ -153,16 +153,19 @@
                                                     @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("ACTIVITES", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
-                                                    @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                                    @Html.ActionLink("ZONES", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                                 <li style="background-color: #007565">
                                                     @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("UTILISATEURS", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("PARAMETRES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
                                                 </li>
                                             </ul>
                                         </li>
