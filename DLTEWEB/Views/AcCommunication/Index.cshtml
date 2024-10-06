@@ -1,7 +1,9 @@
 ﻿
 @{
-    Layout = "~/Views/Shared/_AppLayout.cshtml";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
 }
+
 <section>
     <center>
         <h3 style="padding:20px 0px 20px 0px">
@@ -17,7 +19,6 @@
                         <div class="team-one__img">
                             <img src="~/Images/actu1.png" />
                         </div>
-
                     </div>
                     <div class="team-one__content">
                         <h3 class="team-one__title">
@@ -111,3 +112,40 @@
         </div>
     </div>
 </section>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            // Select the header element using jQuery
+            var $header = $('.navbar');
+
+            // Function to toggle the sticky class based on scroll position
+            function checkScroll() {
+                var currentPosition = $header.css('position');
+                if (window.scrollY >= 131) {
+                    // Toggle position
+                    if (currentPosition === 'static') {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': '0', // Optional: add this if you want it to stick at the top
+                            'width': '100%' // Optional: ensure it spans the full width
+                        });
+                    }
+                } else {
+                    // Reset to static position
+                    $header.css({
+                        'position': 'static',
+                        'top': '', // Optional: remove top if set before
+                        'width': '' // Optional: remove width if set before
+                    });
+                }
+            }
+
+            // Event listener to call checkScroll function on scroll
+            $(window).on('scroll', checkScroll);
+
+            // Initial check in case the page is loaded at the top
+            checkScroll();
+        });
+    </script>
+
+}}

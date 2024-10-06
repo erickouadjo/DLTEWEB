@@ -637,7 +637,7 @@
     <Content Include="Views\SuiviEvaluation\Index.cshtml" />
     <Content Include="Views\TableauBord\Index.cshtml" />
     <Content Include="Views\TraitementAlerte\Index.cshtml" />
-    <Content Include="Views\Utilisateur\Login.cshtml" />
+    <Content Include="Views\Test\Login.cshtml" />
     <Content Include="Views\Cartographie\Index.cshtml" />
     <Content Include="Views\CollecteDonnees\Index.cshtml" />
     <Content Include="Views\Test\Test.cshtml" />
@@ -672,6 +672,8 @@
     <Content Include="Views\Zone\Index.cshtml" />
     <Content Include="Views\Structure\Index.cshtml" />
     <Content Include="Views\AcCartographie\Zone.cshtml" />
+    <Content Include="Views\Utilisateur\Index.cshtml" />
+    <Content Include="Views\Shared\_MenuPrincipal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
