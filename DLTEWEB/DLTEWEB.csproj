@@ -672,6 +672,18 @@
     <Content Include="Views\Zone\Index.cshtml" />
     <Content Include="Views\Structure\Index.cshtml" />
     <Content Include="Views\AcCartographie\Zone.cshtml" />
+    <Content Include="Views\AcCartographie\Index1.cshtml" />
+    <Content Include="Views\Communication\Index.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormStructure.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormFichePreIdentification.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormCartographie.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormEnfantAssiste.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormEnfantUtilisateur.cshtml" />
+    <Content Include="Views\AcCollecteDonnees\FormEtablissement.cshtml" />
+    <Content Include="Views\Shared\_MenuPrincipal.cshtml" />
+    <Content Include="Views\Utilisateur\Index.cshtml" />
+    <Content Include="Views\Test\Login.cshtml" />
+    <Content Include="Views\Test\formulaireMultipage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

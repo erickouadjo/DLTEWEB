@@ -1,6 +1,7 @@
 ﻿
 @{
-    Layout = "~/Views/Shared/_AppLayout.cshtml";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
 }
 
 <div style="background-color: #D3E3FD;">
@@ -160,7 +161,7 @@
                                     <td>Bouaké</td>
                                     <td>Au marché</td>
                                     <td>Artisanat</td>
-                                    <td><a href="#" data-target="#image" data-toggle="modal"  data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
+                                    <td><a href="#" data-target="#image" data-toggle="modal" data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
                                     <td>
                                         <span class="badge text-bg-primary">Vérifier</span>
                                     </td>
@@ -301,7 +302,7 @@
                 </div>
                 <div class="modal-body">
                     <img src="~/Images/imageEnfant.jpg" height="500" />
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -347,4 +348,43 @@
         </div>
     </div>
 </div>
+@section scripts{
+    <script>
+
+   
+    $(document).ready(function () {        // Select the header element using jQuery
+    var $header = $('.navbar');
+
+    // Function to toggle the sticky class based on scroll position
+    function checkScroll() {
+    var currentPosition = $header.css('position');
+    if (window.scrollY >= 131) {
+    // Toggle position
+    if (currentPosition === 'static') {
+    $header.css({
+    'position': 'fixed',
+    'top': '0', // Optional: add this if you want it to stick at the top
+    'width': '100%' // Optional: ensure it spans the full width
+    });
+    }
+    } else {
+    // Reset to static position
+    $header.css({
+    'position': 'static',
+    'top': '', // Optional: remove top if set before
+    'width': '' // Optional: remove width if set before
+    });
+    }
+    }
+
+    // Event listener to call checkScroll function on scroll
+    $(window).on('scroll', checkScroll);
+
+    // Initial check in case the page is loaded at the top
+    checkScroll();
+    });
+    </script>
+
+}
+    
 

@@ -1,0 +1,413 @@
+﻿@{
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+                color: white;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+
+        <div class="container">
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ CARTOGRAPHIE ET GUIDE D’ENTRETIEN</b>
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+                    <div class="form-group">
+                        <label for="point_focal_nom">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="point_focal_nom" class="text-input" placeholder="Nom et prénoms du point focal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="point_focal_code">0A2. Code point focal :</label>
+                        <input type="text" id="point_focal_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_nom">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="superviseur_nom" class="text-input" placeholder="Nom et prénoms du superviseur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_code">0A4. Code superviseur :</label>
+                        <input type="text" id="superviseur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_nom">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_nom" class="text-input" placeholder="Nom et prénoms du chef collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_code">0A6. Code chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_nom">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="collecteur_nom" class="text-input" placeholder="Nom et prénoms du collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_code">0A8. Code collecteur :</label>
+                        <input type="text" id="collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Section A : Généralité</h2>
+
+                    <label for="nom_repondant">A0.a Nom du répondant :</label>
+                    <input type="text" id="nom_repondant" placeholder="Nom du répondant">
+
+                    <label for="qualite_repondant">A0.b Qualité du répondant :</label>
+                    <input type="text" id="qualite_repondant" placeholder="Qualité du répondant">
+
+                    <label for="contact_repondant">A0.c Contact :</label>
+                    <input type="tel" id="contact_repondant" placeholder="Numéro de contact">
+
+                    <label for="nom_localite">A1.a Nom de la localité :</label>
+                    <input type="text" id="nom_localite" placeholder="Nom de la localité">
+
+                    <label for="code_localite">A1.b Code de la localité :</label>
+                    <input type="number" id="code_localite" placeholder="Code">
+
+                    <label for="type_localite">A2. Type de localité :</label>
+                    <label><input type="radio" name="type_localite" value="departement"> 1. Département</label>
+                    <label><input type="radio" name="type_localite" value="commune"> 2. Commune</label>
+                    <label><input type="radio" name="type_localite" value="sous_prefecture"> 3. Sous-préfecture</label>
+                    <label><input type="radio" name="type_localite" value="quartier"> 4. Quartier</label>
+                    <label><input type="radio" name="type_localite" value="village"> 5. Village</label>
+                    <label><input type="radio" name="type_localite" value="campement"> 6. Campement</label>
+
+                    <div id="village_campement_details">
+                        <label for="nb_campements">Si Village, nombre campements :</label>
+                        <input type="number" id="nb_campements" placeholder="Nombre de campements">
+
+                        <label for="nom_village">Si Campement, nom du village :</label>
+                        <input type="text" id="nom_village" placeholder="Nom du village">
+                    </div>
+
+                    <label for="sous_prefecture">A3. Sous-préfecture :</label>
+                    <input type="text" id="sous_prefecture" placeholder="Sous-préfecture">
+
+                    <label for="population_totale">A4.1 Population totale estimée :</label>
+                    <input type="number" id="population_totale" placeholder="Population totale">
+
+                    <label for="population_enfants">A4.2 Population d’enfants estimés :</label>
+                    <input type="number" id="population_enfants" placeholder="Population d'enfants">
+
+                    <label for="nb_menages">A5. Nombre de ménages estimés :</label>
+                    <input type="number" id="nb_menages" placeholder="Nombre de ménages">
+                </div>
+                <div class="section">
+                    <h2>Section B : Équipements et infrastructures de base</h2>
+                    <h4>B1. Éducation</h4>
+
+                    <label for="nb_ecoles_maternelles">B1.a.1 Nombre d’établissements maternelle/CPPE/CEC/CACE :</label>
+                    <input type="number" id="nb_ecoles_maternelles" placeholder="Nombre d'établissements">
+
+                    <label for="nb_primaires_publiques">B1.a.2 Primaire publique :</label>
+                    <input type="number" id="nb_primaires_publiques" placeholder="Primaire publique">
+
+                    <label for="nb_primaires_privees">B1.a.3 Primaire privée :</label>
+                    <input type="number" id="nb_primaires_privees" placeholder="Primaire privée">
+
+                    <label for="nb_secondaires_publiques">B1.a.4 Secondaire publique :</label>
+                    <input type="number" id="nb_secondaires_publiques" placeholder="Secondaire publique">
+
+                    <label for="nb_secondaires_privees">B1.a.5 Secondaire privée :</label>
+                    <input type="number" id="nb_secondaires_privees" placeholder="Secondaire privée">
+
+                    <label for="nb_formation_professionnelle">B1.a.6 Formation professionnelle :</label>
+                    <input type="number" id="nb_formation_professionnelle" placeholder="Formation professionnelle">
+
+                    <label for="nb_alphabetisation">B1.a.7 Alphabétisation :</label>
+                    <input type="number" id="nb_alphabetisation" placeholder="Alphabétisation">
+
+                    <label for="nb_classes_passerelles">B1.a.8 Classes passerelles :</label>
+                    <input type="number" id="nb_classes_passerelles" placeholder="Classes passerelles">
+
+                    <label for="nb_grandes_ecoles">B1.a.9 Grandes écoles/universités :</label>
+                    <input type="number" id="nb_grandes_ecoles" placeholder="Grandes écoles/universités">
+
+                    <h4>B1.b. Approvisionnement en eau, cantines et latrines</h4>
+
+                    <label>B1.b.1 Source d’approvisionnement en eau :</label>
+                    <label><input type="radio" name="source_eau" value="eau_courante"> Eau courante</label>
+                    <label><input type="radio" name="source_eau" value="puits_traditionnel"> Puits traditionnels</label>
+                    <label><input type="radio" name="source_eau" value="puits_moderne"> Puits modernes</label>
+                    <label><input type="radio" name="source_eau" value="pompes_hydrauliques"> Pompes hydrauliques</label>
+                    <label><input type="radio" name="source_eau" value="autre"> Autre (à préciser) :</label>
+                    <input type="text" id="autre_source_eau" placeholder="Préciser">
+
+                    <label for="nb_etablissements_eau_courante">Si eau courante, nombre d'établissements :</label>
+                    <input type="number" id="nb_etablissements_eau_courante" placeholder="Nombre d'établissements">
+
+                    <label>B1.b.2 Existence de cantines scolaires :</label>
+                    <label><input type="radio" name="cantines_scolaires" value="oui"> Oui</label>
+                    <label><input type="radio" name="cantines_scolaires" value="non"> Non</label>
+
+                    <label for="nb_cantines">Si oui, nombre d'établissements avec cantines :</label>
+                    <input type="number" id="nb_cantines" placeholder="Nombre de cantines">
+
+                    <label>B1.b.3 Existence de latrines :</label>
+                    <label><input type="radio" name="latrines" value="oui"> Oui</label>
+                    <label><input type="radio" name="latrines" value="non"> Non</label>
+
+                    <label for="nb_latrines">Si oui, nombre d'établissements avec latrines :</label>
+                    <input type="number" id="nb_latrines" placeholder="Nombre de latrines">
+
+                    <label>Type de latrines :</label>
+                    <label><input type="radio" name="type_latrines" value="traditionnelle"> Traditionnelle</label>
+                    <label><input type="radio" name="type_latrines" value="moderne"> Moderne</label>
+
+                    <label>Configuration des latrines :</label>
+                    <label><input type="radio" name="config_latrines" value="mixtes"> Latrines mixtes</label>
+                    <label><input type="radio" name="config_latrines" value="separees_filles_garcons"> Séparées filles/garçons</label>
+                    <label><input type="radio" name="config_latrines" value="separees_eleves_enseignants"> Séparées élèves/enseignants</label>
+
+                    <h2>B2. Santé</h2>
+
+                    <label for="nb_dispensaires">B2.a.1 Dispensaires :</label>
+                    <input type="number" id="nb_dispensaires" placeholder="Nombre de dispensaires">
+
+                    <label for="nb_maternites">B2.a.2 Maternités :</label>
+                    <input type="number" id="nb_maternites" placeholder="Nombre de maternités">
+
+                    <label for="nb_csr">B2.a.3 Centre de santé rural (CSR) :</label>
+                    <input type="number" id="nb_csr" placeholder="Centre de santé rural">
+
+                    <label for="nb_csu">B2.a.4 Centre de santé urbain (CSU) :</label>
+                    <input type="number" id="nb_csu" placeholder="Centre de santé urbain">
+
+                    <label for="nb_hopitaux">B2.a.5 Hôpitaux généraux :</label>
+                    <input type="number" id="nb_hopitaux" placeholder="Hôpitaux généraux">
+
+                    <label for="nb_cliniques_privees">B2.a.6 Cliniques privées :</label>
+                    <input type="number" id="nb_cliniques_privees" placeholder="Cliniques privées">
+
+                    <label for="nb_centres_sante_specialise">B2.a.7 Centres de santé spécialisé :</label>
+                    <input type="number" id="nb_centres_sante_specialise" placeholder="Centres de santé spécialisé">
+
+                    <label for="nb_chr">B2.a.8 Centre hospitalier régional (CHR) :</label>
+                    <input type="number" id="nb_chr" placeholder="Centre hospitalier régional">
+
+                    <label for="nb_chu">B2.a.9 Centre hospitalier universitaire (CHU) :</label>
+                    <input type="number" id="nb_chu" placeholder="Centre hospitalier universitaire">
+
+                    <label for="nb_autres_etablissements">B2.a.10 Autres :</label>
+                    <input type="text" id="nb_autres_etablissements" placeholder="Autres établissements sanitaires">
+
+                    <label for="specialites_1">Si Centre de santé spécialisé, préciser les spécialités :</label>
+                    <input type="text" id="specialites_1" placeholder="Spécialité 1">
+                    <input type="text" id="specialites_2" placeholder="Spécialité 2">
+                    <input type="text" id="specialites_3" placeholder="Spécialité 3">
+                    <h4>B2.b. Mode d’approvisionnement en médicaments</h4>
+
+                    <label>B2.b.1 Pharmacie publique :</label>
+                    <input type="checkbox" name="pharmacie_publique" value="1">
+
+                    <label>B2.b.2 Pharmacie privée :</label>
+                    <input type="checkbox" name="pharmacie_privee" value="1">
+
+                    <label>B2.b.3 Dépôt de médicaments :</label>
+                    <input type="checkbox" name="depot_medicaments" value="1">
+
+                    <label for="autre_approvisionnement_medicaments">B2.b.4.a Autre :</label>
+                    <input type="text" id="autre_approvisionnement_medicaments" placeholder="Autre source de médicaments">
+
+                    <label for="autre_medicament_source">B2.b.4.b Autre approvisionnement en médicaments :</label>
+                    <input type="text" id="autre_medicament_source" placeholder="Autre approvisionnement">
+
+                    <h4>B3. Infrastructures d’approvisionnement en eau de la communauté</h4>
+
+                    <label>B3.1 Eau de robinet :</label>
+                    <input type="checkbox" name="eau_robinet" value="1">
+
+                    <label>B3.2.a Pompes hydrauliques :</label>
+                    <input type="checkbox" name="pompes_hydrauliques" value="1">
+
+                    <label for="nb_pompes">B3.2.b Nombre de pompes hydrauliques :</label>
+                    <input type="number" id="nb_pompes" placeholder="Nombre de pompes">
+
+                    <label>B3.3 Puits traditionnels :</label>
+                    <input type="checkbox" name="puits_traditionnels" value="1">
+
+                    <label>B3.4 Puits modernes :</label>
+                    <input type="checkbox" name="puits_modernes" value="1">
+
+                    <label>B3.5 Marigots :</label>
+                    <input type="checkbox" name="marigots" value="1">
+
+                    <label for="autre_source_eau">B3.6.a Autre source d’eau :</label>
+                    <input type="text" id="autre_source_eau" placeholder="Autre source d’eau">
+
+                    <label for="autre_eau_source">B3.6.b Autre source d’eau (préciser) :</label>
+                    <input type="text" id="autre_eau_source" placeholder="Préciser autre source d'eau">
+
+                    <h4>B4. Éclairage</h4>
+
+                    <label>B4.1 Lampe à pétrole :</label>
+                    <input type="checkbox" name="lampe_petrole" value="1">
+
+                    <label>B4.2 Lampe à gaz :</label>
+                    <input type="checkbox" name="lampe_gaz" value="1">
+
+                    <label>B4.3 Torche à piles :</label>
+                    <input type="checkbox" name="torche_piles" value="1">
+
+                    <label>B4.4 Électricité :</label>
+                    <input type="checkbox" name="electricite" value="1">
+
+                    <label>B4.5 Énergie solaire :</label>
+                    <input type="checkbox" name="energie_solaire" value="1">
+
+                    <label for="autre_eclairage">B4.6.a Autre source d’éclairage :</label>
+                    <input type="text" id="autre_eclairage" placeholder="Autre source d'éclairage">
+
+                    <label for="preciser_autre_eclairage">B4.6.b Préciser autre source d’éclairage :</label>
+                    <input type="text" id="preciser_autre_eclairage" placeholder="Préciser autre source d'éclairage">
+
+                    <h4>B5. Accessibilité à la localité</h4>
+
+                    <label>B5.1.1 Routes bitumées :</label>
+                    <input type="checkbox" name="routes_bitumees" value="1">
+
+                    <label>B5.1.2 Routes non bitumées :</label>
+                    <input type="checkbox" name="routes_non_bitumees" value="1">
+
+                    <label>B5.1.3 Piste :</label>
+                    <input type="checkbox" name="piste" value="1">
+
+                    <label>B5.1.4 Sentier :</label>
+                    <input type="checkbox" name="sentier" value="1">
+
+                    <h4>B5.2 État de l’accès (pour la plupart des voies d’accès)</h4>
+
+                    <label><input type="radio" name="etat_acces" value="praticable_toute_saison"> Praticable en toute saison</label>
+                    <label><input type="radio" name="etat_acces" value="praticable_par_saison"> Praticable par saison</label>
+                    <label><input type="radio" name="etat_acces" value="non_praticable"> Non praticable en toute saison</label>
+                </div>
+                <div class="section">
+                    <h2>Section C : Activités économiques de la localité</h2>
+                    <h4>C.1 Secteurs d'activités</h4>
+                    <label>C.1.1 Agriculture :</label>
+                    <input type="checkbox" name="agriculture" value="1">
+
+                    <label>C.1.2 Commerce :</label>
+                    <input type="checkbox" name="commerce" value="1">
+
+                    <label>C.1.3 Domestique :</label>
+                    <input type="checkbox" name="domestique" value="1">
+
+                    <label>C.1.4 Artisanat :</label>
+                    <input type="checkbox" name="artisanat" value="1">
+
+                    <label>C.1.5 Mine :</label>
+                    <input type="checkbox" name="mine" value="1">
+
+                    <label>C.1.6 Transport :</label>
+                    <input type="checkbox" name="transport" value="1">
+
+                    <label>C.1.7 BTP :</label>
+                    <input type="checkbox" name="btp" value="1">
+
+                    <label for="autres_activites">C.1.8.a Autres secteurs d'activités :</label>
+                    <input type="text" id="autres_activites" placeholder="Autres secteurs">
+
+                    <label for="preciser_autres_activites">C.1.8.b Préciser autres activités :</label>
+                    <input type="text" id="preciser_autres_activites" placeholder="Préciser autres activités">
+                </div>
+
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

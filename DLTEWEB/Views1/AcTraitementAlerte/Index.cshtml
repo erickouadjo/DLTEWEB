@@ -1,0 +1,350 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AppLayout.cshtml";
+}
+
+<div style="background-color: #D3E3FD;">
+    <div style=" color: #3086C6; font-weight: bold; padding-left: 30px ">
+        Accueil > Traitement des Alertes sur l'exploitation des enfants
+    </div>
+    <div class="container-fluid mt-1" style="padding-top:-5px">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card fixed-height-l2">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="exampleInputPassword1" class="form-label">Région</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Tout</option>
+                                    <option value="1">Gbêkè</option>
+                                    <option value="2">Haut Sassandra</option>
+                                    <option value="3">Grand Pont</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="exampleInputPassword1" class="form-label">Département</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Tout</option>
+                                    <option value="1">Adzopé</option>
+                                    <option value="2">Akoupé</option>
+                                    <option value="3">Yakassé-Attobrou</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="exampleInputPassword1" class="form-label">Commune</label>
+                                <select class="form-select" aria-label="Default select example">
+
+                                    <option selected>Tout</option>
+                                    <option value="1">Aboisso</option>
+                                    <option value="2">Abidjan</option>
+                                    <option value="3">Bouaké</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="exampleInputPassword1" class="form-label">Lieu d’exercice</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Tout</option>
+                                    <option value="1">Au marché</option>
+                                    <option value="2">Dans la rue</option>
+                                    <option value="3">A domicile</option>
+                                    <option value="3">Dans un magazin</option>
+                                    <option value="3">Au champ</option>
+                                    <option value="3">Autre</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="col-md">
+                                    <label for="exampleInputPassword1" class="form-label">Secteur d’activité</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Tout</option>
+                                        <option value="1">Agriculture</option>
+                                        <option value="2">Commerce</option>
+                                        <option value="3">Domestique</option>
+                                        <option value="3">Minier</option>
+                                        <option value="3">Artisanat</option>
+                                        <option value="3">Transport</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card fixed-height">
+                    <div class="card-body">
+                        <img src="~/Images/carteAlerte.JPG" style="height:600px" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="card fixed-height">
+                    <div class="card-body">
+                        <form class="form-container">
+                            <div>
+                                <label for="prenom">Région</label>
+                                <input type="text" id="prenom" name="prenom" style="max-width: 500px;">
+                            </div>
+
+                            <div>
+                                <label for="nom">Commune</label>
+                                <input type="text" id="nom" name="nom" style="max-width: 500px;">
+                            </div>
+
+                            <div>
+                                <label for="email">Lieu d’exercice</label>
+                                <input type="email" id="email" name="email" style="max-width: 500px;">
+                            </div>
+
+                            <div>
+                                <label for="telephone">Secteur d’activité</label>
+                                <input type="tel" id="telephone" name="telephone" style="max-width: 500px;">
+                            </div>
+
+                            <div style="grid-column: 1 / span 2;">
+                                <label for="message">Description</label>
+                                <textarea id="message" name="message" rows="2" style="max-width: 1000px;"></textarea>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#image" data-whatever="@@mdo">Image</button>
+                            </div>
+                            <div>
+
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Plus de détail</button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#verification" data-whatever="@@mdo">Traiter l'alerte</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-4" style="padding-bottom:20px">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card fixed-height_flex">
+                    <div class="card-body">
+                        <h3>
+                            Liste des alertes
+                        </h3>
+                        <div class="d-grid gap-3 d-md-block">
+                            <button class="btn btn-primary btn-sm" type="button">Word</button>
+                            <button class="btn btn-success btn-sm" type="button">Excel</button>
+                            <button class="btn btn-danger btn-sm" type="button">PDF</button>
+                        </div>
+                        <br />
+                        <table class="table table-hover">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Régions</th>
+                                <th scope="col">Communes</th>
+                                <th scope="col">Lieu d’exercice</th>
+                                <th scope="col">Secteur d’activité</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Gbêkè</td>
+                                    <td>Bouaké</td>
+                                    <td>Au marché</td>
+                                    <td>Artisanat</td>
+                                    <td><a href="#" data-target="#image" data-toggle="modal"  data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
+                                    <td>
+                                        <span class="badge text-bg-primary">Vérifier</span>
+                                    </td>
+                                    <td>
+                                        <div class="d-grid gap-2 d-md-block">
+                                            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Plus de détaille</button>
+                                            <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#verification" data-whatever="@@mdo">Plus de détaille</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Montagne</td>
+                                    <td>Man</td>
+                                    <td>Dans la rue</td>
+                                    <td>Transport</td>
+                                    <td><a href="#" data-target="#image" data-toggle="modal" data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
+                                    <td><span class="badge text-bg-danger">En attente</span></td>
+                                    <td>
+                                        <div class="d-grid gap-2 d-md-block">
+                                            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Plus de détaille</button>
+                                            <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#verification" data-whatever="@@mdo">Plus de détaille</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Gbêkè</td>
+                                    <td>Bouaké</td>
+                                    <td>Au marché</td>
+                                    <td>Artisanat</td>
+                                    <td><a href="#" data-target="#image" data-toggle="modal" data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
+                                    <td>
+                                        <span class="badge text-bg-primary">Vérifier</span>
+                                    </td>
+                                    <td>
+                                        <div class="d-grid gap-2 d-md-block">
+                                            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Plus de détaille</button>
+                                            <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#verification" data-whatever="@@mdo">Plus de détaille</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Montagne</td>
+                                    <td>Man</td>
+                                    <td>Dans la rue</td>
+                                    <td>Transport</td>
+                                    <td><a href="#" data-target="#image" data-toggle="modal" data-whatever="@@mdo" style="color:blue">Image_Alerte_20023.png</a></td>
+                                    <td><span class="badge text-bg-danger">En attente</span></td>
+                                    <td>
+                                        <div class="d-grid gap-2 d-md-block">
+                                            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detail" data-whatever="@@mdo">Plus de détaille</button>
+                                            <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#verification" data-whatever="@@mdo">Plus de détaille</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Modal*@
+    <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detail alterte</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Région</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Commune</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Lieu d'excercice</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Secteur d'activité</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nomdre d'enfant</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nom de l'utilisateur</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Coordonnées GPS</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" style="max-width:800px">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Choisir une image</label>
+                            <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Tranche d'âge'</label>
+                            <select class="form-select" aria-label="Default select example" style="max-width:800px">
+                                <option selected>Choisir</option>
+                                <option value="1">5-10</option>
+                                <option value="2">10-14</option>
+                                <option value="3">14-17</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Commentaire</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="max-width:800px"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Image de l'alterte</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Images/imageEnfant.jpg" height="500" />
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="verification" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Traiter alerte</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Traiter l'alerte</label>
+                            <select class="form-select" aria-label="Default select example" style="max-width:800px">
+                                <option selected>Choisir</option>
+                                <option value="1">Rejeter</option>
+                                <option value="2">Valider</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Commentaire</label>
+                            <textarea class="form-control" id="message-text" style="max-width:800px"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Choisir une image</label>
+                            <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,183 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    Layout = null;
-}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="topfloor HTML 5 Template " />
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
-
-    <!-- template styles -->
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
-  
-</head>
-<body>
-
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-    <!-- preloader -->
-    <div class="loader-wrap">
-        <div class="preloader">
-            <div id="handle-preloader" class="handle-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- preloader end -->
-
-    <div class="page-wrapper">
-        <header class="main-header-three">
-            <div class="first-menu">
-                <div class="d-flex justify-content-around">
-
-                    <div class="p-1">
-                        <center>
-                            <img src="~/Images/armoirie278x90.png" />
-                        </center>
-                    </div>
-
-                    <div class="p-2">
-                        <center>
-                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
-                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
-                        </center>
-                    </div>
-                    <div class="p-2">
-                        <img src="~/Images/LOGO-MEPS4_278x90.png" />
-                    </div>
-                </div>
-            </div>
-
-            <nav class="main-menu main-menu-four" style="background-color:forestgreen">
-                <div class="main-menu-four__wrapper">
-                    <div class="container">
-                        <div class="main-menu-four__wrapper-inner">
-                            <div class="main-menu-four__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
-                            </div>
-                            <div class="main-menu-four__left">
-                                <div class="main-menu-four__main-menu-box">
-                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                    <ul class="main-menu__list">
-                                        <li>
-                                            @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
-                                            <ul>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
-                                            <ul>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
-                                            <ul>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                                <li style="background-color: #007565">
-                                                    @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="main-menu-four__right">
-                                <div class="main-menu-four__search-btn-box">
-                                    <div class="main-menu-four__btn-box">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-        </header>
-
-        <div class="stricky-header stricked-menu main-menu main-menu-three">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-
-        <div class="">
-
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}     
+        <div class="container-fluid" style="padding-left:0px !important; padding-right:0px !important">
             <section class="main-slider-three">
-
                 <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -211,7 +37,6 @@
                     </a>
                 </div>
             </section>
-
             <section style="padding-top:50px; padding-bottom:50px">
                 <div class="d-flex justify-content-center">
                     <div class="container text-center">
@@ -238,36 +63,34 @@
                     </div>
                 </div>
             </section>
-            <!-- Why Choose One Start -->
-
             <section class="testimonial-two">
                 <div class="container-fluid">
                     <center>
                         <h3 style="font-size:48px">NOS STATISTIQUES</h3>
                     </center>
                     <div class="row">
-                        <div class="col-xl-4 col-lg-5 col-md-5  wow fadeInLeft" data-wow-delay="500ms" >
-                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                        <div class="col-xl-4 col-lg-5 col-md-5  wow fadeInLeft" data-wow-delay="500ms">
+                            <figure class="highcharts-figure" style="border: 2px solid orange;box-shadow: #b0b0b0 0px 19px 29px 10px;">
                                 <div id="containerM"></div>
                                 <center>
                                     <h4>Pourcentage des enfants en activités par région</h4>
                                 </center>
                             </figure>
                         </div>
-                        <div class="col-xl-4 col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="500ms" >
-                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                        <div class="col-xl-4 col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="500ms">
+                            <figure class="highcharts-figure" style="border: 2px solid orange;box-shadow: #b0b0b0 0px 19px 29px 10px;">
                                 <div id="container1"></div>
                                 <center>
                                     <h4>Effectif des enfants en activités par sexe et par région</h4>
-                                </center>                 
+                                </center>
                             </figure>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-5 wow fadeInRight" data-wow-delay="500ms">
-                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                            <figure class="highcharts-figure" style="border: 2px solid orange;box-shadow: #b0b0b0 0px 19px 29px 10px;">
                                 <div id="container"></div>
                                 <center>
                                     <h4>Pourcentage des enfants en activités en 2022 par regions</h4>
-                                </center>                              
+                                </center>
                             </figure>
                         </div>
                     </div>
@@ -423,7 +246,7 @@
                         <!--Services One Single Start-->
                         <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
                             <!--Services Five Single Start-->
-                            <div class="services-five__single"  style="box-shadow: #b0b0b0 0px 19px 29px 0px;">
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 0px;">
                                 <center>
                                     <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z" /></svg>
                                     <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Tableau de bord</a></h3>
@@ -446,7 +269,7 @@
                             <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
                                 <center>
                                     <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q32 0 62-6t58-17l60 61q-41 20-86 31t-94 11Zm280-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM424-296 254-466l56-56 114 114 400-401 56 56-456 457Z" /></svg>
-                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white" >Suivi et Evaluation</a></h3>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Suivi et Evaluation</a></h3>
                                 </center>
                             </div>
                         </div>
@@ -478,99 +301,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-
-            <!--Site Footer Start-->
-            <footer class="site-footer site-footer-four">
-                <div class="site-footer__shape-1">
-                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
-                </div>
-                <div class="site-footer__bottom">
-                    <div class="container">
-                        <div class="site-footer__bottom-inner">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__social">
-                                    <a href="#"><span class="icon-facebook"></span></a>
-                                    <a href="#"><span class="icon-twitter"></span></a>
-                                    <a href="#"><span class="icon-linkin"></span></a>
-                                    <a href="#"><span class="icon-pinterest"></span></a>
-                                </div>
-                            </div>
-                            <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
-                            <ul class="list-unstyled site-footer__bottom-menu">
-                                <li>
-                                    <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
-                                    <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
-                                    <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!--Site Footer End-->
         </div>
-    </div>
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler">
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms" style="color:black">
-                <div class="footer-widget__social" style="color:black">
-
-                </div>
-            </div>
-        </div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-
-    <div class="scroll-to-top">
-        <svg class="scroll-top-inner" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-
-    <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/marque/marquee.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
-
+    @section scripts{
     <!-- template js -->
     <script src="~/Content/FichierAsset/assets/js/topfloor.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -1182,6 +916,4 @@
         });
 
     </script>
-
-</body>
-</html>
+}

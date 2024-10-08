@@ -64,6 +64,31 @@ namespace DLTEv3.Controllers
         {
             return PartialView("_listeForm6");
         }
+        public ActionResult FormEnfantUtilisateur()
+        {
+            return View();
+        }
+        public ActionResult FormEnfantAssiste()
+        {
+            return View();
+        }
+        public ActionResult FormFichePreIdentification()
+        {
+            return View();
+        }
+        public ActionResult FormEtablissement()
+        {
+            return View();
+        }
+        public ActionResult FormStructure()
+        {
+            return View();
+        }
+
+        public ActionResult FormCartographie()
+        {
+            return View();
+        }
 
         // GET: AcCollecteDonnees/Details/5
         public ActionResult Details(int id)

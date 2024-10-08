@@ -1,0 +1,57 @@
+﻿<div style="height:1000px; width:100%">
+    <center>
+        <h2 style="color: #238c8f; padding: 25px ">
+            STRUCTURE VERSION FINALE
+        </h2>
+    </center>
+    <table id="example" class="table table-striped" style="width:100%;">
+        <thead style="border-color:gray">
+            <tr>
+                <th>Nom et prénoms point focal</th>
+                <th>Nom et prénoms chef collecteur</th>
+                <th>Nom et prénoms du collecteur</th>
+                <th>Code point focal</th>
+                <th>Code superviseur</th>
+                <th>Code chef collecteur</th>
+                <th>Code collecteur</th>
+                <th>Nom du répondant </th>
+                <th>Qualité du répondant </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Nom et prénoms point focal</th>
+                <th>Nom et prénoms chef collecteur</th>
+                <th>Nom et prénoms du collecteur</th>
+                <th>Code point focal</th>
+                <th>Code superviseur</th>
+                <th>Code chef collecteur</th>
+                <th>Code collecteur</th>
+                <th>Nom du répondant </th>
+                <th>Qualité du répondant </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+    new DataTable('#example', {
+        dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
+        buttons: [
+            {
+                extend: 'copy',
+                className: 'buttons-copy'
+            },
+            {
+                extend: 'excel',
+                className: 'buttons-excel'
+            },
+            {
+                extend: 'pdf',
+                className: 'buttons-pdf'
+            }
+        ]
+
+    });
+</script>

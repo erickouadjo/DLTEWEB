@@ -1,0 +1,296 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="description" content="topfloor HTML 5 Template " />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style>
+        /* Style pour le menu latéral */
+        .sidebar {
+            min-height: 200px; /* Prend toute la hauteur de la page */
+            width: 250px; /* Largeur du menu */
+            position: fixed; /* Fixé sur le côté gauche */
+            top: 0;
+            left: 0;
+            background-color: green; /* Couleur de fond */
+            padding-top: 20px; /* Espacement en haut */
+            margin-top: 250px;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+            .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .sidebar ul li {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    text-align: left;
+                }
+
+                    .sidebar ul li a {
+                        display: block;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-size: 15px;
+                    }
+
+                    .sidebar ul li:hover {
+                        background-color: #18600B; /* Couleur au survol */
+                    }
+
+        /* Contenu principal */
+        .content {
+            margin-left: 220px; /* Ajoute un espace pour ne pas être sous le menu */
+            padding: 20px;
+            min-height: 800px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+  
+        @Html.Partial("~/Views/Shared/_MenuPrincipal.cshtml")
+        <div class="container-fluid" style="background-color: #D3E3FD;">
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="#" id="ListeForm1">
+                            Ut
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding:10px 0px 10px 0px" id="ListeForm2">
+                            FICHE DE PRE-IDENTIFICATION DES ENF...
+                        </a>
+                    </li>
+                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</a></li>
+                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">ETABLISSEMENT SCOLAIRE ET CENTRE...</a></li>
+                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm5">STRUCTUR VERSION FINALE</a></li>
+                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm6">ENFANTS ASSISTES</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+
+                <div class="container-fluid">
+                    <h1>COLLECTE DE DONNEES</h1>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card fixed-height_flex">
+                                <div id="loading-spinner" style="display: none;">
+                                    <p>Chargement...</p>
+                                </div>
+                                <div class="card-body" id="partial-view-container">
+                                    @Html.Partial("~/Views/AcCollecteDonnees/_listeForm1.cshtml")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer site-footer-four">
+            <div class="site-footer__shape-1">
+                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__social">
+                                <a href="#"><span class="icon-facebook"></span></a>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="#"><span class="icon-linkin"></span></a>
+                                <a href="#"><span class="icon-pinterest"></span></a>
+                            </div>
+                        </div>
+                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                        <ul class="list-unstyled site-footer__bottom-menu">
+                            <li>
+                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.colVis.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        new DataTable('#example', {
+            dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
+            buttons: [
+                {
+                    extend: 'copy',
+                    className: 'buttons-copy'
+                },
+                {
+                    extend: 'excel',
+                    className: 'buttons-excel'
+                },
+                {
+                    extend: 'pdf',
+                    className: 'buttons-pdf'
+                }
+            ]
+
+        });
+ $(document).ready(function () {
+    function loadPartialView(url) {
+        $('#loading-spinner').show(); // Afficher l'indicateur de chargement
+        $('#partial-view-container').load(url, function () {
+            $('#loading-spinner').hide(); // Masquer l'indicateur une fois le chargement terminé
+        });
+    }
+
+    $('#ListeForm1').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm1")');
+    });
+
+    $('#ListeForm2').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm2")');
+    });
+
+    $('#ListeForm3').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm3")');
+    });
+
+    $('#ListeForm4').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm4")');
+    });
+
+    $('#ListeForm5').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm5")');
+    });
+
+    $('#ListeForm6').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm6")');
+    });
+});
+
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,381 @@
+﻿@{
+    ViewBag.Title = "FormEnfantUtilisateur";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+        <div class="container">
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ FICHE PRE-IDENTIFICATION DES ENFANTSET DE LEUR UTILISATEUR</b>
+                <!-- Section 0A: Informations des points focaux, superviseurs, collecteurs -->
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+
+
+                    <div class="form-group">
+                        <label for="fiche">N° de fiche :</label>
+                        <input type="number" id="fiche" placeholder="Numéro de fiche" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom_prenoms_point_focal">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="nom_prenoms_point_focal" placeholder="Nom et prénoms point focal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code_point_focal">0A2. Code point focal :</label>
+                        <input type="number" id="code_point_focal" placeholder="___" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom_prenoms_superviseur">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="nom_prenoms_superviseur" placeholder="Nom et prénoms superviseur" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code_superviseur">0A4. Code superviseur :</label>
+                        <input type="number" id="code_superviseur" placeholder="___" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom_prenoms_chef_collecteur">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="nom_prenoms_chef_collecteur" placeholder="Nom et prénoms du chef collecteur" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code_chef_collecteur">0A6. Code chef collecteur :</label>
+                        <input type="number" id="code_chef_collecteur" placeholder="___" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom_prenoms_collecteur">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="nom_prenoms_collecteur" placeholder="Nom et prénoms du collecteur" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code_collecteur">0A8. Code collecteur :</label>
+                        <input type="number" id="code_collecteur" placeholder="___" required>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Numéro d’ordre</th>
+                                <th>Nom et Prénoms de l’enfant</th>
+                                <th>Année de naissance</th>
+                                <th>Sexe</th>
+                                <th>Etat de scolarisation</th>
+                                <th>Formation professionnelle</th>
+                                <th>Situation de l’enfant</th>
+                                <th>Affiliation Chef ménage</th>
+                                <th>Nom de l’employeur/ utilisateur de l’enfant</th>
+                                <th>Filiation avec l’utilisateur</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td><input type="text" placeholder="Nom et Prénoms"></td>
+                                <td><input type="number" placeholder="AAAA" min="1900" max="2024"></td>
+                                <td>
+                                    <select>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">N’a jamais été à l’école</option>
+                                        <option value="2">Arrêté d’aller à l’école</option>
+                                        <option value="3">Inscrit mais ne prend pas régulièrement</option>
+                                        <option value="4">Va régulièrement à l’école</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant travailleur</option>
+                                        <option value="2">Enfant assisté travailleur</option>
+                                        <option value="3">Enfant assisté non travailleur</option>
+                                        <option value="4">Enfant à risque</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant chef de ménage</option>
+                                        <option value="2">Père/Mère</option>
+                                        <option value="3">Conjoint(e)</option>
+                                        <option value="4">Fils/Filles</option>
+                                        <option value="5">Grands-parents</option>
+                                        <option value="6">Autres parents</option>
+                                        <option value="7">Tuteurs</option>
+                                        <option value="8">Employeur</option>
+                                        <option value="9">Grands frères/sœurs</option>
+                                        <option value="10">Oncle/tante</option>
+                                        <option value="11">Ami</option>
+                                        <option value="12">Beaux-parents</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" placeholder="Nom de l’employeur"></td>
+                                <td><input type="text" placeholder="Relation"></td>
+                            </tr>
+                            <!-- Répétez le bloc ci-dessus pour plus d'enfants -->
+                            <tr>
+                                <td>2.</td>
+                                <td><input type="text" placeholder="Nom et Prénoms"></td>
+                                <td><input type="number" placeholder="AAAA" min="1900" max="2024"></td>
+                                <td>
+                                    <select>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">N’a jamais été à l’école</option>
+                                        <option value="2">Arrêté d’aller à l’école</option>
+                                        <option value="3">Inscrit mais ne prend pas régulièrement</option>
+                                        <option value="4">Va régulièrement à l’école</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant travailleur</option>
+                                        <option value="2">Enfant assisté travailleur</option>
+                                        <option value="3">Enfant assisté non travailleur</option>
+                                        <option value="4">Enfant à risque</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant chef de ménage</option>
+                                        <option value="2">Père/Mère</option>
+                                        <option value="3">Conjoint(e)</option>
+                                        <option value="4">Fils/Filles</option>
+                                        <option value="5">Grands-parents</option>
+                                        <option value="6">Autres parents</option>
+                                        <option value="7">Tuteurs</option>
+                                        <option value="8">Employeur</option>
+                                        <option value="9">Grands frères/sœurs</option>
+                                        <option value="10">Oncle/tante</option>
+                                        <option value="11">Ami</option>
+                                        <option value="12">Beaux-parents</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" placeholder="Nom de l’employeur"></td>
+                                <td><input type="text" placeholder="Relation"></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td><input type="text" placeholder="Nom et Prénoms"></td>
+                                <td><input type="number" placeholder="AAAA" min="1900" max="2024"></td>
+                                <td>
+                                    <select>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">N’a jamais été à l’école</option>
+                                        <option value="2">Arrêté d’aller à l’école</option>
+                                        <option value="3">Inscrit mais ne prend pas régulièrement</option>
+                                        <option value="4">Va régulièrement à l’école</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant travailleur</option>
+                                        <option value="2">Enfant assisté travailleur</option>
+                                        <option value="3">Enfant assisté non travailleur</option>
+                                        <option value="4">Enfant à risque</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant chef de ménage</option>
+                                        <option value="2">Père/Mère</option>
+                                        <option value="3">Conjoint(e)</option>
+                                        <option value="4">Fils/Filles</option>
+                                        <option value="5">Grands-parents</option>
+                                        <option value="6">Autres parents</option>
+                                        <option value="7">Tuteurs</option>
+                                        <option value="8">Employeur</option>
+                                        <option value="9">Grands frères/sœurs</option>
+                                        <option value="10">Oncle/tante</option>
+                                        <option value="11">Ami</option>
+                                        <option value="12">Beaux-parents</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" placeholder="Nom de l’employeur"></td>
+                                <td><input type="text" placeholder="Relation"></td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td><input type="text" placeholder="Nom et Prénoms"></td>
+                                <td><input type="number" placeholder="AAAA" min="1900" max="2024"></td>
+                                <td>
+                                    <select>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">N’a jamais été à l’école</option>
+                                        <option value="2">Arrêté d’aller à l’école</option>
+                                        <option value="3">Inscrit mais ne prend pas régulièrement</option>
+                                        <option value="4">Va régulièrement à l’école</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant travailleur</option>
+                                        <option value="2">Enfant assisté travailleur</option>
+                                        <option value="3">Enfant assisté non travailleur</option>
+                                        <option value="4">Enfant à risque</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="1">Enfant chef de ménage</option>
+                                        <option value="2">Père/Mère</option>
+                                        <option value="3">Conjoint(e)</option>
+                                        <option value="4">Fils/Filles</option>
+                                        <option value="5">Grands-parents</option>
+                                        <option value="6">Autres parents</option>
+                                        <option value="7">Tuteurs</option>
+                                        <option value="8">Employeur</option>
+                                        <option value="9">Grands frères/sœurs</option>
+                                        <option value="10">Oncle/tante</option>
+                                        <option value="11">Ami</option>
+                                        <option value="12">Beaux-parents</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" placeholder="Nom de l’employeur"></td>
+                                <td><input type="text" placeholder="Relation"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1187 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="topfloor HTML 5 Template " />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
+    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+  
+</head>
+<body>
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!-- preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <div class="page-wrapper">
+        <header class="main-header-three">
+            <div class="first-menu">
+                <div class="d-flex justify-content-around">
+
+                    <div class="p-1">
+                        <center>
+                            <img src="~/Images/armoirie278x90.png" />
+                        </center>
+                    </div>
+
+                    <div class="p-2">
+                        <center>
+                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
+                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
+                        </center>
+                    </div>
+                    <div class="p-2">
+                        <img src="~/Images/LOGO-MEPS4_278x90.png" />
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-menu main-menu-four" style="background-color:forestgreen">
+                <div class="main-menu-four__wrapper">
+                    <div class="container">
+                        <div class="main-menu-four__wrapper-inner">
+                            <div class="main-menu-four__logo">
+                                <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+                            </div>
+                            <div class="main-menu-four__left">
+                                <div class="main-menu-four__main-menu-box">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                    <ul class="main-menu__list">
+                                        <li>
+                                            @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                        </li>
+                                        <li>
+                                            <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-menu-four__right">
+                                <div class="main-menu-four__search-btn-box">
+                                    <div class="main-menu-four__btn-box">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu main-menu-three">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <div class="">
+
+            <section class="main-slider-three">
+
+                <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="~/Images/bann44.png" class="img-fluid" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="~/Images/bann66.png" class="img-fluid" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="~/Images/bann99.png" class="img-fluid" />
+                        </div>
+                    </div>
+
+                    <!-- Controls (optional) -->
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </section>
+
+            <section style="padding-top:50px; padding-bottom:50px">
+                <div class="d-flex justify-content-center">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col" style="display: flex; justify-content: flex-end;">
+                                <div class="wow fadeInLeft" data-wow-delay="100ms" style="box-shadow: #b0b0b0 0px 7px 29px 0px;">
+                                    <img src="~/Images/DG.png" height="400" />
+                                    <h4>Kouakou Kra Martin N’GUETTIA</h4>
+                                    <h6>Directeur de la Lutte contre le Travail des Enfants</h6>
+                                </div>
+                            </div>
+                            <div class="col" style="display: flex; justify-content: flex-start;">
+                                <div style=" text-align: start" class="wow fadeInRight" data-wow-delay="500ms">
+                                    <h2 style="color:#228B22">Direction de la lutte contre le travail des Enfants(DLTE)</h2>
+                                    <p class="wow fadeInDown" data-wow-delay="100ms" style="font-size:22px">
+                                        La DLTE a pour mission d’élaborer, de suivre et de contrôler l’application des normes, des lois et règlements en matière de travail des enfants.
+                                        D’identifier de coordonner et mettre en œuvre des mesures dans le domaine de la lutte contre les pires formes du travail des enfants et
+                                        d’assurer la prévention et la protection contre les pires formes du travail des enfants.
+                                    </p>
+                                    <button class="btn" style="background-color:orangered; color:white; padding :5px 20px 5px 20px">Lire +</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why Choose One Start -->
+
+            <section class="testimonial-two">
+                <div class="container-fluid">
+                    <center>
+                        <h3 style="font-size:48px">NOS STATISTIQUES</h3>
+                    </center>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-5  wow fadeInLeft" data-wow-delay="500ms" >
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                                <div id="containerM"></div>
+                                <center>
+                                    <h4>Pourcentage des enfants en activités par région</h4>
+                                </center>
+                            </figure>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="500ms" >
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                                <div id="container1"></div>
+                                <center>
+                                    <h4>Effectif des enfants en activités par sexe et par région</h4>
+                                </center>                 
+                            </figure>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-5 wow fadeInRight" data-wow-delay="500ms">
+                            <figure class="highcharts-figure" style="border: 2px solid orange;">
+                                <div id="container"></div>
+                                <center>
+                                    <h4>Pourcentage des enfants en activités en 2022 par regions</h4>
+                                </center>                              
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-two">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h3 class="section-title__title">ACTUALITE</h3>
+                    </div>
+                    <div class="services-two__bottom">
+                        <div class="services-two__nav">
+                            <div class="swiper-button-next1">
+                                <i class="icon-left-arrow"></i>
+                            </div>
+                            <div class="swiper-button-prev1">
+                                <i class="icon-right-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="thm-swiper__slider swiper-container" data-swiper-options='{"slidesPerView": 1,
+                                                                                                    "spaceBetween": 0,
+                                                                                                    "speed": 2000,
+                                                                                                    "loop": true,
+                                                                                                    "pagination": {
+                                                                                                        "el": ".swiper-dot-style1",
+                                                                                                        "type": "bullets",
+                                                                                                        "clickable": true
+                                                                                                    },
+
+                                                                                                    "navigation": {
+                                                                                                        "nextEl": ".swiper-button-prev1",
+                                                                                                        "prevEl": ".swiper-button-next1"
+                                                                                                    },
+                                                                                                    "autoplay": { "delay": 9000 },
+                                                                                                    "breakpoints": {
+                                                                                                        "0": {
+                                                                                                            "spaceBetween": 0,
+                                                                                                            "slidesPerView": 1
+                                                                                                        },
+                                                                                                        "375": {
+                                                                                                            "spaceBetween": 0,
+                                                                                                            "slidesPerView": 1
+                                                                                                        },
+                                                                                                        "575": {
+                                                                                                            "spaceBetween": 0,
+                                                                                                            "slidesPerView": 1
+                                                                                                        },
+                                                                                                        "768": {
+                                                                                                            "spaceBetween": 30,
+                                                                                                            "slidesPerView": 2
+                                                                                                        },
+                                                                                                        "992": {
+                                                                                                            "spaceBetween": 30,
+                                                                                                            "slidesPerView": 3
+                                                                                                        },
+                                                                                                        "1200": {
+                                                                                                            "spaceBetween": 30,
+                                                                                                            "slidesPerView": 3
+                                                                                                        },
+                                                                                                        "1320": {
+                                                                                                            "spaceBetween": 30,
+                                                                                                            "slidesPerView": 3
+                                                                                                        }
+                                                                                                    }
+                                                                                                }'>
+                            <div class="swiper-wrapper">
+                                <!--Services Two Single Start-->
+                                <div class="swiper-slide wow fadeInLeft" data-wow-delay="100ms">
+                                    <div class="services-two__single">
+                                        <div class="services-two__img-box">
+                                            <div class="services-two__img">
+                                                <img src="~/Images/info2.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="services-two__content">
+                                            <h3 class="services-two__title">
+                                                <a href="/AcCommunication">
+                                                    Côte d’Ivoire : plus de 3,7 millions de kits scolaires..
+                                                </a>
+                                            </h3>
+                                            <p class="services-two__text">
+                                                Le Premier ministre, Patrick Achi, a lancé officiellement ce lundi 25 septembre...
+                                            </p>
+                                            <a href="/AcCommunication" class="services-two__read-more">
+                                                Voir plus<span class="icon-arrow-left"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Services Two Single End-->
+                                <!--Services Two Single Start-->
+                                <div class="swiper-slide wow fadeInLeft" data-wow-delay="200ms">
+                                    <div class="services-two__single">
+                                        <div class="services-two__img-box">
+                                            <div class="services-two__img">
+                                                <img src="~/Images/info1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="services-two__content">
+                                            <h3 class="services-two__title">
+                                                <a href="/AcCommunication">
+                                                    21ème édition de la Journée Mondiale
+                                                </a>
+                                            </h3>
+                                            <p class="services-two__text">
+                                                Madame Dominique Ouattara, Première Dame de Côte d’Ivoire...
+                                            </p>
+                                            <a href="/AcCommunication" class="services-two__read-more">
+                                                Voir
+                                                plus<span class="icon-arrow-left"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Services Two Single End-->
+                                <!--Services Two Single Start-->
+                                <div class="swiper-slide wow fadeInLeft" data-wow-delay="300ms">
+                                    <div class="services-two__single">
+                                        <div class="services-two__img-box">
+                                            <div class="services-two__img">
+                                                <img src="~/Images/info3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="services-two__content">
+                                            <h3 class="services-two__title">
+                                                <a href="/AcCommunication">
+                                                    Côte d’Ivoire- AIP/ Des coopératives du secteur..
+                                                </a>
+                                            </h3>
+                                            <p class="services-two__text">
+                                                Daloa, 02 juil 2024 (AIP) – Des coopératives du secteur café – cacao se ...
+                                            </p>
+                                            <a href="/AcCommunication" class="services-two__read-more">
+                                                Voir
+                                                plus<span class="icon-arrow-left"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Services Two Single End-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service-one" id="services" style="padding-top:20px">
+                <div class="container">
+                    <center>
+                        <h3 style="font-size:48px">NOS MODULES</h3>
+                    </center>
+
+                    <div class="row">
+                        <!--Services One Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single"  style="box-shadow: #b0b0b0 0px 19px 29px 0px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Tableau de bord</a></h3>
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-440 160-640v400h360v80H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v280h-80v-200L480-440Zm0-80 320-200H160l320 200ZM760-40l-56-56 63-64H600v-80h167l-64-64 57-56 160 160L760-40ZM160-640v440-240 3-283 80Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Communication</a></h3>
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q32 0 62-6t58-17l60 61q-41 20-86 31t-94 11Zm280-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM424-296 254-466l56-56 114 114 400-401 56 56-456 457Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white" >Suivi et Evaluation</a></h3>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInLeft" data-wow-delay="100ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Traitement et Alerte</a></h3>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Cartographie</a></h3>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-xl-4  wow fadeInRight" data-wow-delay="300ms">
+                            <!--Services Five Single Start-->
+                            <div class="services-five__single" style="box-shadow: #b0b0b0 0px 19px 29px 10px;">
+                                <center>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#ffffff"><path d="M480-120q-151 0-255.5-46.5T120-280v-400q0-66 105.5-113T480-840q149 0 254.5 47T840-680v400q0 67-104.5 113.5T480-120Zm0-479q89 0 179-25.5T760-679q-11-29-100.5-55T480-760q-91 0-178.5 25.5T200-679q14 30 101.5 55T480-599Zm0 199q42 0 81-4t74.5-11.5q35.5-7.5 67-18.5t57.5-25v-120q-26 14-57.5 25t-67 18.5Q600-528 561-524t-81 4q-42 0-82-4t-75.5-11.5Q287-543 256-554t-56-25v120q25 14 56 25t66.5 18.5Q358-408 398-404t82 4Zm0 200q46 0 93.5-7t87.5-18.5q40-11.5 67-26t32-29.5v-98q-26 14-57.5 25t-67 18.5Q600-328 561-324t-81 4q-42 0-82-4t-75.5-11.5Q287-343 256-354t-56-25v99q5 15 31.5 29t66.5 25.5q40 11.5 88 18.5t94 7Z" /></svg>
+                                    <h3 class="services-five__title"><a href="roof-repair-pros.html" style="color: white">Collecte de données</a></h3>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--Site Footer Start-->
+            <footer class="site-footer site-footer-four">
+                <div class="site-footer__shape-1">
+                    <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
+                </div>
+                <div class="site-footer__bottom">
+                    <div class="container">
+                        <div class="site-footer__bottom-inner">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__social">
+                                    <a href="#"><span class="icon-facebook"></span></a>
+                                    <a href="#"><span class="icon-twitter"></span></a>
+                                    <a href="#"><span class="icon-linkin"></span></a>
+                                    <a href="#"><span class="icon-pinterest"></span></a>
+                                </div>
+                            </div>
+                            <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
+                            <ul class="list-unstyled site-footer__bottom-menu">
+                                <li>
+                                    <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
+                                    <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
+                                    <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--Site Footer End-->
+        </div>
+    </div>
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms" style="color:black">
+                <div class="footer-widget__social" style="color:black">
+
+                </div>
+            </div>
+        </div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+
+    <div class="scroll-to-top">
+        <svg class="scroll-top-inner" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/marque/marquee.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
+    <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
+
+    <!-- template js -->
+    <script src="~/Content/FichierAsset/assets/js/topfloor.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script type="text/javascript">
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                align: 'left',
+                text: ''
+            },
+            subtitle: {
+                align: 'left',
+                text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+            },
+            accessibility: {
+                announceNewData: {
+                    enabled: true
+                }
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+                    '<b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [
+                {
+                    name: 'Browsers',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: '2009',
+                            y: 63.06,
+                            drilldown: '2009'
+                        },
+                        {
+                            name: '2010',
+                            y: 19.84,
+                            drilldown: '2010'
+                        },
+                        {
+                            name: '2011',
+                            y: 4.18,
+                            drilldown: '2011'
+                        },
+                        {
+                            name: '2012',
+                            y: 4.12,
+                            drilldown: '2012'
+                        },
+                        {
+                            name: '2013',
+                            y: 2.33,
+                            drilldown: '2013'
+                        },
+                        {
+                            name: '2014',
+                            y: 0.45,
+                            drilldown: '2014'
+                        },
+
+                    ]
+                }
+            ],
+            drilldown: {
+                breadcrumbs: {
+                    position: {
+                        align: 'right'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Chrome',
+                        id: 'Chrome',
+                        data: [
+                            [
+                                'v65.0',
+                                0.1
+                            ],
+                            [
+                                'v64.0',
+                                1.3
+                            ],
+                            [
+                                'v63.0',
+                                53.02
+                            ],
+                            [
+                                'v62.0',
+                                1.4
+                            ],
+                            [
+                                'v61.0',
+                                0.88
+                            ],
+                            [
+                                'v60.0',
+                                0.56
+                            ],
+                            [
+                                'v59.0',
+                                0.45
+                            ],
+                            [
+                                'v58.0',
+                                0.49
+                            ],
+                            [
+                                'v57.0',
+                                0.32
+                            ],
+                            [
+                                'v56.0',
+                                0.29
+                            ],
+                            [
+                                'v55.0',
+                                0.79
+                            ],
+                            [
+                                'v54.0',
+                                0.18
+                            ],
+                            [
+                                'v51.0',
+                                0.13
+                            ],
+                            [
+                                'v49.0',
+                                2.16
+                            ],
+                            [
+                                'v48.0',
+                                0.13
+                            ],
+                            [
+                                'v47.0',
+                                0.11
+                            ],
+                            [
+                                'v43.0',
+                                0.17
+                            ],
+                            [
+                                'v29.0',
+                                0.26
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Firefox',
+                        id: 'Firefox',
+                        data: [
+                            [
+                                'v58.0',
+                                1.02
+                            ],
+                            [
+                                'v57.0',
+                                7.36
+                            ],
+                            [
+                                'v56.0',
+                                0.35
+                            ],
+                            [
+                                'v55.0',
+                                0.11
+                            ],
+                            [
+                                'v54.0',
+                                0.1
+                            ],
+                            [
+                                'v52.0',
+                                0.95
+                            ],
+                            [
+                                'v51.0',
+                                0.15
+                            ],
+                            [
+                                'v50.0',
+                                0.1
+                            ],
+                            [
+                                'v48.0',
+                                0.31
+                            ],
+                            [
+                                'v47.0',
+                                0.12
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Internet Explorer',
+                        id: 'Internet Explorer',
+                        data: [
+                            [
+                                'v11.0',
+                                6.2
+                            ],
+                            [
+                                'v10.0',
+                                0.29
+                            ],
+                            [
+                                'v9.0',
+                                0.27
+                            ],
+                            [
+                                'v8.0',
+                                0.47
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Safari',
+                        id: 'Safari',
+                        data: [
+                            [
+                                'v11.0',
+                                3.39
+                            ],
+                            [
+                                'v10.1',
+                                0.96
+                            ],
+                            [
+                                'v10.0',
+                                0.36
+                            ],
+                            [
+                                'v9.1',
+                                0.54
+                            ],
+                            [
+                                'v9.0',
+                                0.13
+                            ],
+                            [
+                                'v5.1',
+                                0.2
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Edge',
+                        id: 'Edge',
+                        data: [
+                            [
+                                'v16',
+                                2.6
+                            ],
+                            [
+                                'v15',
+                                0.92
+                            ],
+                            [
+                                'v14',
+                                0.4
+                            ],
+                            [
+                                'v13',
+                                0.1
+                            ]
+                        ]
+                    },
+                    {
+                        name: 'Opera',
+                        id: 'Opera',
+                        data: [
+                            [
+                                'v50.0',
+                                0.96
+                            ],
+                            [
+                                'v49.0',
+                                0.82
+                            ],
+                            [
+                                'v12.1',
+                                0.14
+                            ]
+                        ]
+                    }
+                ]
+            }
+        });
+        Highcharts.chart('containerM', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            subtitle: {
+                text:
+                    'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>'
+            },
+            plotOptions: {
+                series: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: [{
+                        enabled: true,
+                        distance: 20
+                    }, {
+                        enabled: true,
+                        distance: -40,
+                        format: '{point.percentage:.1f}%',
+                        style: {
+                            fontSize: '1.2em',
+                            textOutline: 'none',
+                            opacity: 0.7
+                        },
+                        filter: {
+                            operator: '>',
+                            property: 'percentage',
+                            value: 10
+                        }
+                    }]
+                }
+            },
+            series: [
+                {
+                    name: 'Percentage',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: 'Guémon',
+                            y: 55.02
+                        },
+                        {
+                            name: 'Bélier',
+                            sliced: true,
+                            selected: true,
+                            y: 26.71
+                        },
+                        {
+                            name: 'Nawa',
+                            y: 1.09
+                        },
+                        {
+                            name: 'Haut sassandra',
+                            y: 15.5
+                        },
+                        {
+                            name: 'Lagune',
+                            y: 1.68
+                        }
+                    ]
+                }
+            ]
+        });
+
+        Highcharts.chart('container1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [187749, 387749, 129000, 34300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 140500, 19500, 113500]
+            }
+            ]
+        });
+        Highcharts.chart('container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2023 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Gorçon',
+                data: [387749, 280000, 829000, 64300, 14000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [5321, 140000, 10000, 140500, 19500, 713500]
+            }
+            ]
+        });
+        Highcharts.chart('container3', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+        Highcharts.chart('container4', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Nombre d\'enfant travailleur recencés en 2024 en fonction des regions',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Lôh-Djiboua', 'Kabadougou', 'Marahoué', 'Gbêkê', 'Gontougo', 'Grands-Ponts'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Garçon',
+                data: [387749, 280000, 129000, 84300, 54000, 34300]
+            },
+            {
+                name: 'Fille',
+                data: [45321, 140000, 10000, 290500, 19500, 213500]
+            }
+            ]
+        });
+
+        $(document).ready(function () {
+
+            // Select the header element using jQuery
+            var $header = $('.navbar');
+
+            // Function to toggle the sticky class based on scroll position
+            function checkScroll() {
+                var currentPosition = $header.css('position');
+                if (window.scrollY >= 131) {
+                    // Toggle position
+                    if (currentPosition === 'static') {
+                        $header.css({
+                            'position': 'fixed',
+                            'top': '0', // Optional: add this if you want it to stick at the top
+                            'width': '100%' // Optional: ensure it spans the full width
+                        });
+                    }
+                } else {
+                    // Reset to static position
+                    $header.css({
+                        'position': 'static',
+                        'top': '', // Optional: remove top if set before
+                        'width': '' // Optional: remove width if set before
+                    });
+                }
+            }
+
+            // Event listener to call checkScroll function on scroll
+            $(window).on('scroll', checkScroll);
+
+            // Initial check in case the page is loaded at the top
+            checkScroll();
+        });
+
+    </script>
+
+</body>
+</html>
