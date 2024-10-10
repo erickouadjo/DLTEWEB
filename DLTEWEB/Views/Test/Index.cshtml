@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 ﻿
 @{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+=======
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+>>>>>>> df625e91ddb1c2247874209258581808e58cdd5f
 }
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Formulaire d'informations</title>
     <style>
 
@@ -84,10 +92,61 @@
 
         .checkbox-group label, .radio-group label {
             width: 50%;
+=======
+    <title>Formulaire Multi-page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
         }
+
+        .form-page {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+            .form-page.active {
+                display: block;
+            }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .navigation-buttons button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                background-color: #007bff;
+                color: white;
+            }
+
+                .navigation-buttons button:disabled {
+                    background-color: #cccccc;
+                    cursor: not-allowed;
+                }
+
+        .save-button {
+            background-color: #28a745;
+>>>>>>> df625e91ddb1c2247874209258581808e58cdd5f
+        }
+
+            .save-button:hover {
+                background-color: #218838;
+            }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <div style="background-color: #D3E3FD;">
 
         <div class="container" style="background-color:white;">
@@ -364,5 +423,131 @@
         </div>
     </div>
    
+=======
+
+    <h1>Formulaire Multi-page</h1>
+
+    <form id="multiStepForm">
+
+        <!-- Page 1 -->
+        <div class="form-page active" id="page1">
+            <h2>Page 1 - Informations personnelles</h2>
+            <label for="nom">Nom:</label><br>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <label for="prenom">Prénom:</label><br>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="form-page" id="page2">
+            <h2>Page 2 - Contact</h2>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telephone">Téléphone:</label><br>
+            <input type="text" id="telephone" name="telephone" required><br><br>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="form-page" id="page3">
+            <h2>Page 3 - Adresse</h2>
+            <label for="adresse">Adresse:</label><br>
+            <input type="text" id="adresse" name="adresse" required><br><br>
+
+            <label for="ville">Ville:</label><br>
+            <input type="text" id="ville" name="ville" required><br><br>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="form-page" id="page4">
+            <h2>Page 4 - Informations professionnelles</h2>
+            <label for="emploi">Emploi:</label><br>
+            <input type="text" id="emploi" name="emploi" required><br><br>
+
+            <label for="entreprise">Entreprise:</label><br>
+            <input type="text" id="entreprise" name="entreprise" required><br><br>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="form-page" id="page5">
+            <h2>Page 5 - Informations professionnelles</h2>
+            <label for="emploi">Emploi:</label><br>
+            <input type="text" id="emploi" name="emploi" required><br><br>
+
+            <label for="entreprise">Entreprise:</label><br>
+            <input type="text" id="entreprise" name="entreprise" required><br><br>
+        </div>
+
+        <!-- Page 6 -->
+        <div class="form-page" id="page6">
+            <h2>Page 6 - Résumé</h2>
+            <p>Veuillez vérifier vos informations avant de soumettre le formulaire.</p>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="navigation-buttons">
+            <button type="button" id="prevBtn" disabled>Précédent</button>
+            <button type="button" id="nextBtn">Suivant</button>
+            <button type="submit" id="saveBtn" class="save-button" style="display: none;">Enregistrer</button>
+        </div>
+
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            var currentPage = 1;
+            var totalPages = 12;
+
+            // Fonction pour afficher la page actuelle et masquer les autres
+            function showPage(page) {
+                $('.form-page').removeClass('active');
+                $('#page' + page).addClass('active');
+
+                // Mise à jour des boutons suivant/précédent
+                if (page === 1) {
+                    $('#prevBtn').prop('disabled', true);
+                } else {
+                    $('#prevBtn').prop('disabled', false);
+                }
+
+                if (page === totalPages) {
+                    $('#nextBtn').hide();
+                    $('#saveBtn').show();
+                } else {
+                    $('#nextBtn').show();
+                    $('#saveBtn').hide();
+                }
+            }
+
+            // Fonction pour gérer le bouton suivant
+            $('#nextBtn').click(function () {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+
+            // Fonction pour gérer le bouton précédent
+            $('#prevBtn').click(function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+
+            // Soumission du formulaire
+            $('#multiStepForm').submit(function (e) {
+                e.preventDefault();
+                alert('Formulaire enregistré avec succès !');
+                // Vous pouvez ajouter ici du code pour envoyer le formulaire à un serveur, par exemple avec AJAX.
+            });
+
+            // Afficher la première page au chargement
+            showPage(currentPage);
+        });
+    </script>
+
+>>>>>>> df625e91ddb1c2247874209258581808e58cdd5f
 </body>
 </html>
