@@ -1,0 +1,140 @@
+﻿
+<div style="height:1000px; width:100%">
+    <center>
+        <h2 style="color: #238c8f; padding: 25px ">
+            ADMINISTRATION GENERALES
+        </h2>
+    </center>
+
+    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#imprimer" data-whatever="@@mdo">Faire une importation</button>
+    <hr />
+    <div class="container">
+        <div class="row " style="margin:2px">
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" alt="eric" />
+                <h6>Fichier1</h6>
+            </div>
+            <div class="col-md-2 justify-content-center" style="padding: 10px">
+                <img src="~/Images/log-excel.png" height="50" />
+                <h6>Fichier2</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-pdf.png" height="50" />
+                <h6>Fichier3</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" />
+                <h6>Fichier4</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-excel.png" height="50" />
+                <h6>Fichier5</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" />
+                <h6>Fichier6</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-pdf.png" height="50" />
+                <h6>Fichier7</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" />
+                <h6>Fichier8</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-excel.png" height="50" />
+                <h6>Fichier9</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-pdf.png" height="50" />
+                <h6>Fichier10</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" />
+                <h6>Fichier11</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <img src="~/Images/log-word1.png" height="50" />
+                <h6>Fichier12</h6>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <a href="#">
+                    <img src="~/Images/log-excel.png" height="50" />
+                    <h6>Fichier13</h6>
+                </a>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <a href="#">
+                    <img src="~/Images/log-word1.png" height="50" />
+                    <h6>Fichier14</h6>
+                </a>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <a href="#">
+                    <img src="~/Images/log-pdf.png" height="50" />
+                    <h6>Fichier15</h6>
+                </a>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <a href="#">
+                    <img src="~/Images/log-word1.png" height="50" />
+                    <h6>Fichier16</h6>
+                </a>
+            </div>
+            <div class="col-md-2" style="padding: 10px">
+                <a href="#">
+                    <img src="~/Images/log-excel.png" height="50" />
+                    <h6>Fichier17</h6>
+                </a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="modal fade" id="imprimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">IMPORTATION DE CARTOGRAPHIE ET GUIDE D'ENTRETIEN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <a href="#" style="color:blue">Télécharger_un_model</a>
+                        <hr />
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Selectionner le fichier</label>
+                            <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                        </div>
+
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Charger</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>new DataTable('#example', {
+        dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
+        buttons: [
+            {
+                extend: 'copy',
+                className: 'buttons-copy'
+            },
+            {
+                extend: 'excel',
+                className: 'buttons-excel'
+            },
+            {
+                extend: 'pdf',
+                className: 'buttons-pdf'
+            }
+        ]
+
+    });</script>

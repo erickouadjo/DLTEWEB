@@ -3,8 +3,57 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
 }
+<style>
+    .separator {
+        width: 1px;
+        background-color: black; /* Couleur du trait */
+        height: 300px; /* Pour s'assurer que le trait est de la hauteur des colonnes */
+    }
 
-<section>
+
+    .wrapper {
+        width: 450px;
+        height: 50px;
+        position: relative;
+        margin: auto;
+        background: #ccc;
+        overflow: hidden;
+    }
+
+    .wrapper::after {
+        width: 448px;
+        height: 48px;
+        content: "";
+        position: absolute;
+        border: solid 1px white;
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+        font-size: 25px;
+        line-height: 50px;
+        text-align: center;
+        color: var(--color-just-black);
+    }
+
+    .boxes {
+        position: relative;
+        left: -50px;
+    }
+
+    .navv {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+</style>
+<div style="background-color: #f1faff;">
     <center>
         <h3 style="padding:20px 0px 20px 0px">
             Actualité
@@ -13,7 +62,7 @@
     <div class="container">
         <div class="row">
             <!--Team One Single Start-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
+            <div class="col-xl-3 col-lg-3 wow fadeInLeft" data-wow-delay="100ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -21,8 +70,8 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
-                            @Html.ActionLink("67.73% des internautes trouvent “injuste” la décision", "Details", new { id = 1 })
+                        <h3 class="team-one__title" style="font-size:18px">
+                            @Html.ActionLink("67.73% des internautes trouvent “injuste” la..", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
@@ -30,7 +79,7 @@
             </div>
             <!--Team One Single End-->
             <!--Team One Single Start-->
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+            <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="200ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -38,8 +87,8 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
-                            @Html.ActionLink("Amélioration de la performance des projets d...", "Details", new { id = 1 })
+                        <h3 class="team-one__title" style="font-size:18px">
+                            @Html.ActionLink("Amélioration de la performance d...", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
@@ -47,7 +96,7 @@
             </div>
             <!--Team One Single End-->
             <!--Team One Single Start-->
-            <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="300ms">
+            <div class="col-xl-3 col-lg-3  wow fadeInRight" data-wow-delay="300ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -55,15 +104,14 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
-
+                        <h3 class="team-one__title" style="font-size:18px">
                             @Html.ActionLink("21ième édition de la journée mondiale...", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="300ms">
+            <div class="col-xl-3 col-lg-3  wow fadeInRight" data-wow-delay="300ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -71,14 +119,14 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
+                        <h3 class="team-one__title" style="font-size:18px">
                             @Html.ActionLink("Bonne gouvernance : Le CEPICI et...", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="300ms">
+            <div class="col-xl-3 col-lg-3  wow fadeInRight" data-wow-delay="300ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -86,14 +134,14 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
+                        <h3 class="team-one__title" style="font-size:18px">
                             @Html.ActionLink("L'ONG Main d'Afrique dans une dynami", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="300ms">
+            <div class="col-xl-3 col-lg-3  wow fadeInRight" data-wow-delay="300ms">
                 <div class="team-one__single">
                     <div class="team-one__img-box">
                         <div class="team-one__img">
@@ -101,8 +149,8 @@
                         </div>
                     </div>
                     <div class="team-one__content">
-                        <h3 class="team-one__title">
-                            @Html.ActionLink("ALEPE : UNE ONG OFFRE UNE CANTINE SCOLAIRE..", "Details", new { id = 1 })
+                        <h3 class="team-one__title" style="font-size:18px">
+                            @Html.ActionLink("ALEPE : UNE ONG OFFRE UNE CANTINE SCOL..", "Details", new { id = 1 })
                         </h3>
                         <p class="team-one__sub-title">12/12/2024</p>
                     </div>
@@ -111,41 +159,70 @@
             <!--Team One Single End-->
         </div>
     </div>
-</section>
-@section scripts{
-    <script>
-        $(document).ready(function () {
-            // Select the header element using jQuery
-            var $header = $('.navbar');
+    <div style="background-color: #9AD2C5; min-height: 300px; padding-top: 20px; padding-bottom: 20px;">
+        <div class="container" style="color:black">
+            <div class="row justify-content-start">
 
-            // Function to toggle the sticky class based on scroll position
-            function checkScroll() {
-                var currentPosition = $header.css('position');
-                if (window.scrollY >= 131) {
-                    // Toggle position
-                    if (currentPosition === 'static') {
+                <div class="col-md-7" wow fadeInLeft" data-wow-delay="100ms">
+                    <h1>Ecrivez un commentaire</h1>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre nom et prénom">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Votre email : nom@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre commentaire"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-dark" value="Envoyer" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-5" style="padding-left:200px; padding-top:30px" wow fadeInRight" data-wow-delay="100ms">
+                    <img src="~/Images/enveloppe.png" height="200" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    @section scripts{
+        <script>
+            $(document).ready(function () {
+
+                // Select the header element using jQuery
+                var $header = $('.navbar');
+
+                // Function to toggle the sticky class based on scroll position
+                function checkScroll() {
+                    var currentPosition = $header.css('position');
+                    if (window.scrollY >= 131) {
+                        // Toggle position
+                        if (currentPosition === 'static') {
+                            $header.css({
+                                'position': 'fixed',
+                                'top': '0', // Optional: add this if you want it to stick at the top
+                                'width': '100%' // Optional: ensure it spans the full width
+                            });
+                        }
+                    } else {
+                        // Reset to static position
                         $header.css({
-                            'position': 'fixed',
-                            'top': '0', // Optional: add this if you want it to stick at the top
-                            'width': '100%' // Optional: ensure it spans the full width
+                            'position': 'static',
+                            'top': '', // Optional: remove top if set before
+                            'width': '' // Optional: remove width if set before
                         });
                     }
-                } else {
-                    // Reset to static position
-                    $header.css({
-                        'position': 'static',
-                        'top': '', // Optional: remove top if set before
-                        'width': '' // Optional: remove width if set before
-                    });
                 }
-            }
 
-            // Event listener to call checkScroll function on scroll
-            $(window).on('scroll', checkScroll);
+                // Event listener to call checkScroll function on scroll
+                $(window).on('scroll', checkScroll);
 
-            // Initial check in case the page is loaded at the top
-            checkScroll();
-        });
-    </script>
+                // Initial check in case the page is loaded at the top
+                checkScroll();
+            });
+        </script>
 
-}}
+    }

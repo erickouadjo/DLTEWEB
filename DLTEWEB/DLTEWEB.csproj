@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EE7737AA-DFDB-4DE0-8674-2D413DC514DC}</ProjectGuid>
+    <ProjectGuid>{8705BEC4-973C-46ED-9963-ABC96FA77243}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -486,7 +486,13 @@
     <Content Include="Images\banniere33.png" />
     <Content Include="Images\carte.png" />
     <Content Include="Images\carteAlerte.JPG" />
+    <Content Include="Images\carte_evolution_par_region.png" />
+    <Content Include="Images\carte_incident.png" />
+    <Content Include="Images\carte_initiative.png" />
+    <Content Include="Images\carte_regionale.png" />
+    <Content Include="Images\carte_structure.png" />
     <Content Include="Images\communication.png" />
+    <Content Include="Images\contact_mail.png" />
     <Content Include="Images\dashboard.png" />
     <Content Include="Images\dashboard_icon.png" />
     <Content Include="Images\DG.png" />
@@ -494,13 +500,19 @@
     <Content Include="Images\DLTEG.png" />
     <Content Include="Images\DLTEN.png" />
     <Content Include="Images\DLTEY.png" />
+    <Content Include="Images\email.png" />
     <Content Include="Images\enfants.jpg" />
+    <Content Include="Images\enveloppe.png" />
     <Content Include="Images\fanion.jpg" />
     <Content Include="Images\graph.png" />
     <Content Include="Images\imageEnfant.jpg" />
     <Content Include="Images\info1.png" />
     <Content Include="Images\info2.png" />
     <Content Include="Images\info3.png" />
+    <Content Include="Images\log-excel.png" />
+    <Content Include="Images\log-pdf.png" />
+    <Content Include="Images\log-word.png" />
+    <Content Include="Images\log-word1.png" />
     <Content Include="Images\logo-cntig2024ok.png" />
     <Content Include="Images\LOGO-MEPS4_278x90.png" />
     <Content Include="Images\MEPS.png" />
@@ -672,7 +684,6 @@
     <Content Include="Views\Zone\Index.cshtml" />
     <Content Include="Views\Structure\Index.cshtml" />
     <Content Include="Views\AcCartographie\Zone.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\AcCartographie\Index1.cshtml" />
     <Content Include="Views\Communication\Index.cshtml" />
     <Content Include="Views\AcCollecteDonnees\FormStructure.cshtml" />
@@ -683,12 +694,12 @@
     <Content Include="Views\AcCollecteDonnees\FormEtablissement.cshtml" />
     <Content Include="Views\Shared\_MenuPrincipal.cshtml" />
     <Content Include="Views\Utilisateur\Index.cshtml" />
-    <Content Include="Views\Test\Login.cshtml" />
     <Content Include="Views\Test\formulaireMultipage.cshtml" />
-=======
-    <Content Include="Views\Utilisateur\Index.cshtml" />
-    <Content Include="Views\Shared\_MenuPrincipal.cshtml" />
->>>>>>> df625e91ddb1c2247874209258581808e58cdd5f
+    <Content Include="Views\AcCommunication\Bibliotheque.cshtml" />
+    <Content Include="Views\AcCommunication\_listeForm1.cshtml" />
+    <Content Include="Views\AcCommunication\_listeForm2.cshtml" />
+    <Content Include="Views\AcCommunication\_listeForm3.cshtml" />
+    <Content Include="Views\AcCommunication\_listeForm4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

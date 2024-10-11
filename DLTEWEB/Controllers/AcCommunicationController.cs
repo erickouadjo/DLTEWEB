@@ -13,6 +13,33 @@ namespace DLTEv3.Controllers
         {
             return View();
         }
+        public ActionResult Bibliotheque()
+        {
+            return View();
+        }
+
+        public ActionResult Form1()
+        {
+            return View();
+        }
+        public ActionResult listeForm1()
+        {
+            return PartialView("_listeForm1");
+        }
+
+        public ActionResult listeForm2()
+        {
+            return PartialView("_listeForm2");
+        }
+        public ActionResult listeForm3()
+        {
+            return PartialView("_listeForm3");
+        }
+       
+        public ActionResult listeForm4()
+        {
+            return PartialView("_listeForm4");
+        }
 
         // GET: AcCommunication/Details/5
         public ActionResult Details(int id)

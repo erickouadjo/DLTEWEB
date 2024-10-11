@@ -59,13 +59,6 @@
 
 </head>
 <body>
-
-<<<<<<< HEAD
-=======
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
->>>>>>> df625e91ddb1c2247874209258581808e58cdd5f
     <!-- preloader -->
     <div class="loader-wrap">
         <div class="preloader">
@@ -146,10 +139,19 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                        <li style="margin-left:15px">
+                                            <a href="#" style="color:aliceblue; text-decoration:none">COMMUNICATION</a>
+                                            <ul>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("ACTUALITE", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                                <li style="background-color: #007565">
+                                                    @Html.ActionLink("BIBLIOTHEQUE", "Bibliotheque", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
+                                                </li>
+                                            </ul>
                                         </li>
-                                        <li>
+                                      
+                                        <li style="margin-left:15px">
                                             <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
                                             <ul>
                                                 <li style="background-color: #007565">
@@ -225,15 +227,67 @@
         <div class="site-footer__bottom">
             <div class="container">
                 <div class="site-footer__bottom-inner">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="footer-widget__social">
-                            <a href="#"><span class="icon-facebook"></span></a>
-                            <a href="#"><span class="icon-twitter"></span></a>
-                            <a href="#"><span class="icon-linkin"></span></a>
-                            <a href="#"><span class="icon-pinterest"></span></a>
+                   
+                        <div class="col-md-2 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget__column footer-widget__services">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">Nos secteurs</h3>
+                                </div>
+                                <ul class="footer-widget__services-list list-unstyled">
+                                    <li>
+                                        <a href="elite-roof-installations.html">
+                                            <span class="icon-arrow-left"></span>Emploi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sky-shield-roofing.html">
+                                            <span class="icon-arrow-left"></span>Protection social
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sky-shield-roofing.html">
+                                            <span class="icon-arrow-left"></span>Education
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sky-shield-roofing.html">
+                                            <span class="icon-arrow-left"></span>Développement
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                    
+                    <div class="col-md-2 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__column footer-widget__contact">
+                            <div class="footer-widget__title-box">
+                                <h3 class="footer-widget__title">Contact</h3>
+                            </div>
+                            <ul class="footer-widget__contact-list list-unstyled">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-envolop"></span>
+                                    </div>
+                                    <a href="mailto:info@delte.ci">info@delte.ci</a>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-location"></span>
+                                    </div>
+                                    <p>DLTE</p>
+                                </li>
+                                <li>
+                                    <div class="footer-widget__social">
+                                        <a href="#"><span class="icon-facebook"></span></a>
+                                        <a href="#"><span class="icon-twitter"></span></a>
+                                        <a href="#"><span class="icon-linkin"></span></a>
+                                        <a href="#"><span class="icon-pinterest"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
                     <ul class="list-unstyled site-footer__bottom-menu">
                         <li>
                             <h6 style="color:white">Abonnez-vous à notre newsletter</h6>

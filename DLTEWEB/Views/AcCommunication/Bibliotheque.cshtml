@@ -18,32 +18,31 @@
         font-size: 12px;
     }
 
-    .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-    }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    .sidebar ul li {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        padding-left: 15px;
-        text-align: left;
-        border-bottom: 1px solid white;
-    }
+            .sidebar ul li {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 15px;
+                padding-left: 15px;
+                text-align: left;
+                border-bottom: 1px solid white;
+            }
 
-    .sidebar ul li a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-size: 15px;
+                .sidebar ul li a {
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-size: 15px;
+                }
 
-    }
-
-    .sidebar ul li:hover {
-        background-color: #18600B; /* Couleur au survol */
-    }
+                .sidebar ul li:hover {
+                    background-color: #18600B; /* Couleur au survol */
+                }
 
     /* Contenu principal */
     .content {
@@ -66,25 +65,23 @@
         <ul>
             <li>
                 <a href="#" id="ListeForm1">
-                    CARTOGRAPHIE ET GUIDE D'ENTRETIEN
+                    ADMINISTRATION GENERALE
                 </a>
             </li>
             <li>
                 <a href="#" style="padding:10px 0px 10px 0px" id="ListeForm2">
-                    FICHE DE PRE-IDENTIFICATION DES ENF...
+                    SECTEUR DE L'EMPLOI
                 </a>
             </li>
-            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</a></li>
-            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">ETABLISSEMENT SCOLAIRE ET CENTRE...</a></li>
-            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm5">STRUCTURE VERSION FINALE</a></li>
-            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm6">ENFANTS ASSISTES</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">SECTEUR DU TRAVAIL</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">PROTECTION SOCIAL</a></li>
         </ul>
     </div>
 
     <div class="content">
 
         <div class="container-fluid">
-            <h1>COLLECTE DE DONNEES</h1>
+            <h1>BIBLIOTHEQUE</h1>
             <br />
             <div class="row">
                 <div class="col-md-12">
@@ -93,7 +90,7 @@
                             <p>Chargement...</p>
                         </div>
                         <div class="card-body" id="partial-view-container">
-                            @Html.Partial("~/Views/AcCollecteDonnees/_listeForm1.cshtml")
+                            @Html.Partial("~/Views/AcCommunication/_listeForm1.cshtml")
                         </div>
                     </div>
                 </div>
