@@ -1,0 +1,877 @@
+﻿@{
+    ViewBag.Title = "FormEnfantUtilisateur";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+        <div class="container">
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ ENFANTS ASSISTES</b>
+                <!-- Section 0A: Informations des points focaux, superviseurs, collecteurs -->
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+
+                    <div class="form-group">
+                        <label for="point_focal_nom">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="point_focal_nom" class="text-input" placeholder="Nom et prénoms du point focal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="point_focal_code">0A2. Code point focal :</label>
+                        <input type="text" id="point_focal_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_nom">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="superviseur_nom" class="text-input" placeholder="Nom et prénoms du superviseur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_code">0A4. Code superviseur :</label>
+                        <input type="text" id="superviseur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_nom">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_nom" class="text-input" placeholder="Nom et prénoms du chef collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_code">0A6. Code chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_nom">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="collecteur_nom" class="text-input" placeholder="Nom et prénoms du collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_code">0A8. Code collecteur :</label>
+                        <input type="text" id="collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+                </div>
+                <!-- Section A : Informations sur le répondant -->
+                <div class="section">
+                    <h2>Section A : Informations sur le répondant</h2>
+
+                    <div class="form-group">
+                        <label for="nom_repondant">A1. Nom :</label>
+                        <input type="text" id="nom_repondant" class="text-input" placeholder="Nom du répondant">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annee_naissance">A2. Année de naissance :</label>
+                        <input type="number" id="annee_naissance" class="number-input" maxlength="4" placeholder="AAAA">
+                    </div>
+
+                    <div class="form-group">
+                        <label>A3. Sexe :</label>
+                        <input type="radio" id="masculin" name="sexe" value="1">
+                        <label for="masculin">1. Masculin</label>
+                        <input type="radio" id="feminin" name="sexe" value="2">
+                        <label for="feminin">2. Féminin</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>A4. L’enfant a-t-il un extrait de naissance/jugement supplétif ?</label>
+                        <input type="radio" id="extrait_oui" name="extrait" value="1">
+                        <label for="extrait_oui">1. Oui</label>
+                        <input type="radio" id="extrait_non" name="extrait" value="2">
+                        <label for="extrait_non">2. Non</label>
+                        <input type="radio" id="extrait_ns" name="extrait" value="3">
+                        <label for="extrait_ns">3. Ne sait pas</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationalite_pere">A5a. Nationalité du Père :</label>
+                        <input type="text" id="nationalite_pere" class="text-input" placeholder="Nationalité du père">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationalite_mere">A5b. Nationalité de la Mère :</label>
+                        <input type="text" id="nationalite_mere" class="text-input" placeholder="Nationalité de la mère">
+                    </div>
+                </div>
+
+                <!-- Section B : Informations sur la famille -->
+                <div class="section">
+                    <h2>Section B : Informations sur la Famille</h2>
+
+                    <div class="form-group">
+                        <label for="nb_freres_soeurs">B1. Nombre de frères et sœurs :</label>
+                        <input type="number" id="nb_freres_soeurs" class="number-input" maxlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rang_fratrie">Rang dans la fratrie :</label>
+                        <input type="number" id="rang_fratrie" class="number-input" maxlength="2">
+                    </div>
+
+                    <label for="nb_freres_soeurs">B2. Indiquez les frères/sœurs selon les situations suivantes :</label>
+                    <table class="family-table">
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>B2.a.1 Nom et prénoms</th>
+                                <th>B2.a.2 Année de naissance</th>
+                                <th>B2.a.3 Scolarité</th>
+                                <th>B2.a.4 Activité</th>
+                                <th>B2.a.5 Vit-il dans le ménage ?</th>
+                                <th>B2.a.6 Sinon, où vit-il ?</th>
+                                <th>B2.a.7 Chez qui ?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Ligne 1 -->
+                            <tr>
+                                <td>01</td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="number" class="number-input" maxlength="4"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                            </tr>
+                            <!-- Ajouter d'autres lignes similaires pour les frères/sœurs suivants -->
+
+                            <tr>
+                                <td>02</td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="number" class="number-input" maxlength="4"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="number" class="number-input" maxlength="4"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="number" class="number-input" maxlength="4"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="number" class="number-input" maxlength="4"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">Oui</option>
+                                        <option value="2">Non</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="text-input"></td>
+                                <td><input type="text" class="text-input"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Section B3 et B4 : Statut des parents et résidence -->
+                <div class="section">
+                    <h2>Section B3 et B4 : Statut des parents et résidence</h2>
+
+                    <div class="form-group">
+                        <label for="pere_statut">B3.a Le père est-il ?</label>
+                        <input type="radio" id="pere_vivant_menage" name="pere_statut" value="1">
+                        <label for="pere_vivant_menage">1. Vivant, dans le ménage</label>
+                        <input type="radio" id="pere_vivant_hors_menage" name="pere_statut" value="2">
+                        <label for="pere_vivant_hors_menage">2. Vivant, hors ménage</label>
+                        <input type="radio" id="pere_decede" name="pere_statut" value="3">
+                        <label for="pere_decede">3. Décédé</label>
+                        <input type="radio" id="pere_ne_sait_pas" name="pere_statut" value="4">
+                        <label for="pere_ne_sait_pas">4. Ne sait pas</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mere_statut">B3.b La mère est-elle ?</label>
+                        <input type="radio" id="mere_vivante_menage" name="mere_statut" value="1">
+                        <label for="mere_vivante_menage">1. Vivante, dans le ménage</label>
+                        <input type="radio" id="mere_vivante_hors_menage" name="mere_statut" value="2">
+                        <label for="mere_vivante_hors_menage">2. Vivante, hors ménage</label>
+                        <input type="radio" id="mere_decedee" name="mere_statut" value="3">
+                        <label for="mere_decedee">3. Décédée</label>
+                        <input type="radio" id="mere_ne_sait_pas" name="mere_statut" value="4">
+                        <label for="mere_ne_sait_pas">4. Ne sait pas</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avec_parents">B4. Vis-tu actuellement avec tes parents ?</label>
+                        <input type="radio" id="avec_parents_oui" name="avec_parents" value="1">
+                        <label for="avec_parents_oui">1. Oui</label>
+                        <input type="radio" id="avec_parents_non" name="avec_parents" value="2">
+                        <label for="avec_parents_non">2. Non</label>
+                    </div>
+
+                    <!-- Si non, avec qui vit-il ? -->
+                    <div class="form-group" id="avec_qui_vit" style="display:none;">
+                        <label for="avec_qui">Si l’enfant ne vit avec aucun parent biologique, avec qui vit-il (code) ?</label>
+                        <input type="text" id="avec_qui" class="text-input" placeholder="Nom de la personne / relation">
+                        <input type="text" id="code_avec_qui" class="text-input" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activite_pere">B5. Principale activité professionnelle des parents/tuteurs :</label>
+                        <div>
+                            <label for="activite_pere">Père :</label>
+                            <input type="text" id="activite_pere" class="text-input" placeholder="Activité du père">
+                        </div>
+                        <div>
+                            <label for="activite_mere">Mère :</label>
+                            <input type="text" id="activite_mere" class="text-input" placeholder="Activité de la mère">
+                        </div>
+                        <div>
+                            <label for="activite_tuteur">Tuteur :</label>
+                            <input type="text" id="activite_tuteur" class="text-input" placeholder="Activité du tuteur">
+                        </div>
+                    </div>
+                </div>
+                <!-- Section C : Statut de l'Enfant -->
+                <div class="section">
+                    <h2>Section C : Statut de l'Enfant</h2>
+
+                    <!-- C1 : Type d'enfant -->
+                    <div class="form-group">
+                        <label for="type_enfant">C1.a Type d’enfant :</label>
+                        <input type="radio" id="enfant_assiste" name="type_enfant" value="1">
+                        <label for="enfant_assiste">1. Enfant assisté</label>
+                        <input type="radio" id="enfant_risque" name="type_enfant" value="2">
+                        <label for="enfant_risque">2. Enfant à risque</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nature_pf">C1.b Nature de la PFTE :</label>
+                        <input type="text" id="nature_pf" class="text-input" placeholder="Nature de la PFTE">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nature_risque">C1.c Nature du risque :</label>
+                        <input type="text" id="nature_risque" class="text-input" placeholder="Nature du risque">
+                    </div>
+
+                    <!-- C2 : Types d'appui en matière d'éducation reçus -->
+                    <div class="form-group">
+                        <label for="appui_education">C2.a Types d'appui en matière d’éducation reçus par les enfants :</label>
+                        <div>
+                            <input type="checkbox" id="inscription" name="appui_education" value="1">
+                            <label for="inscription">1. Inscription/Réinscription à l’école/formation professionnelle</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="alphabétisation" name="appui_education" value="2">
+                            <label for="alphabétisation">2. Instruction au cours d’alphabétisation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="formation_pro" name="appui_education" value="3">
+                            <label for="formation_pro">3. Formation professionnelle</label>
+                        </div>
+                        <!-- Ajouter les autres options ici -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autres_appui_education">C2.b Autres types d'appui en matière d’éducation reçus par les enfants :</label>
+                        <input type="text" id="autres_appui_education" class="text-input" placeholder="Autres appuis reçus">
+                    </div>
+
+                    <!-- C3 : Types d'appui non éducatif reçus -->
+                    <div class="form-group">
+                        <label for="appui_non_education">C3.a Autres types d’appui non éducatif reçus :</label>
+                        <div>
+                            <input type="checkbox" id="alimentation" name="appui_non_education" value="1">
+                            <label for="alimentation">1. Alimentation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="medicaments" name="appui_non_education" value="2">
+                            <label for="medicaments">2. Médicaments</label>
+                        </div>
+                        <!-- Ajouter les autres options ici -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autres_appui_non_education">C3.b Autres types d’appui reçus :</label>
+                        <input type="text" id="autres_appui_non_education" class="text-input" placeholder="Autres types d'appui non éducatif">
+                    </div>
+
+                    <!-- C4 : Structure(s) appuyant l’enfant -->
+                    <div class="form-group">
+                        <label for="structures_appui">C4. Quelle(s) structure(s) appuie(nt) l’enfant ?</label>
+                        <input type="text" id="structures_appui" class="text-input" placeholder="Nom de la ou des structures">
+                    </div>
+
+                    <!-- C5 : Souhaits prioritaires de l’enfant -->
+                    <div class="form-group">
+                        <label for="souhaits_prioritaires">C5.a Trois souhaits prioritaires de l’enfant :</label>
+                        <div>
+                            <input type="checkbox" id="uniformes" name="souhaits_prioritaires" value="1">
+                            <label for="uniformes">1. Uniformes scolaires</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sacs_ecole" name="souhaits_prioritaires" value="2">
+                            <label for="sacs_ecole">2. Sacs d'école/formation professionnelle</label>
+                        </div>
+                        <!-- Ajouter les autres options ici -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autres_souhaits">C5.b Autres souhaits prioritaires de l’enfant :</label>
+                        <input type="text" id="autres_souhaits" class="text-input" placeholder="Autres souhaits">
+                    </div>
+
+                    <!-- C6 à C9 : Fréquentation scolaire/formation professionnelle -->
+                    <div class="form-group">
+                        <label for="frequentation_ecole">C6. As-tu déjà fréquenté l’école/formation professionnelle ?</label>
+                        <input type="radio" id="frequentation_oui" name="frequentation_ecole" value="1">
+                        <label for="frequentation_oui">1. Oui</label>
+                        <input type="radio" id="frequentation_non" name="frequentation_ecole" value="2">
+                        <label for="frequentation_non">2. Non</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="derniere_classe">C7.a Dernière classe achevée :</label>
+                        <input type="text" id="derniere_classe" class="text-input" placeholder="Classe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annee_achevee">C7.b Année :</label>
+                        <input type="text" id="annee_achevee" class="text-input" placeholder="Année">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classe_actuelle">C9.a Classe actuelle :</label>
+                        <input type="text" id="classe_actuelle" class="text-input" placeholder="Classe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annee_actuelle">C9.b Année :</label>
+                        <input type="text" id="annee_actuelle" class="text-input" placeholder="Année">
+                    </div>
+                    <!-- C7.a et C9.a : Dernière classe achevée et classe actuelle -->
+                    <div class="form-group">
+                        <label for="derniere_classe">C7.a Dernière classe achevée :</label>
+                        <select id="derniere_classe" name="derniere_classe">
+                            <option value="1">1. Maternelle</option>
+                            <option value="2">2. CP1</option>
+                            <option value="3">3. CP2</option>
+                            <option value="4">4. CE1</option>
+                            <option value="5">5. CE2</option>
+                            <option value="6">6. CM1</option>
+                            <option value="7">7. CM2</option>
+                            <option value="8">8. 6ème</option>
+                            <option value="9">9. 5ème</option>
+                            <option value="10">10. 4ème</option>
+                            <option value="11">11. 3ème</option>
+                            <option value="12">12. 2ème</option>
+                            <option value="13">13. 1ère</option>
+                            <option value="14">14. Terminale</option>
+                            <option value="15">15. Secondaire professionnel et technique 1ère Année</option>
+                            <option value="16">16. Secondaire professionnel et technique 2ème Année</option>
+                            <option value="17">17. Secondaire professionnel et technique 3ème Année</option>
+                            <option value="18">18. Secondaire professionnel et technique 4ème Année</option>
+                            <option value="19">19. Supérieur général 1ère Année</option>
+                            <option value="20">20. Supérieur général 2ème Année</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classe_actuelle">C9.a Classe actuelle :</label>
+                        <select id="classe_actuelle" name="classe_actuelle">
+                            <option value="1">1. Maternelle</option>
+                            <option value="2">2. CP1</option>
+                            <option value="3">3. CP2</option>
+                            <option value="4">4. CE1</option>
+                            <option value="5">5. CE2</option>
+                            <option value="6">6. CM1</option>
+                            <option value="7">7. CM2</option>
+                            <option value="8">8. 6ème</option>
+                            <option value="9">9. 5ème</option>
+                            <option value="10">10. 4ème</option>
+                            <option value="11">11. 3ème</option>
+                            <option value="12">12. 2ème</option>
+                            <option value="13">13. 1ère</option>
+                            <option value="14">14. Terminale</option>
+                            <option value="15">15. Secondaire professionnel et technique 1ère Année</option>
+                            <option value="16">16. Secondaire professionnel et technique 2ème Année</option>
+                            <option value="17">17. Secondaire professionnel et technique 3ème Année</option>
+                            <option value="18">18. Secondaire professionnel et technique 4ème Année</option>
+                            <option value="19">19. Supérieur général 1ère Année</option>
+                            <option value="20">20. Supérieur général 2ème Année</option>
+                        </select>
+                    </div>
+
+                    <!-- C10 : Fréquence de fréquentation scolaire -->
+                    <div class="form-group">
+                        <label for="frequence">C10. Fréquence :</label>
+                        <input type="radio" id="frequence_regulier" name="frequence" value="1">
+                        <label for="frequence_regulier">1. Régulièrement</label>
+                        <input type="radio" id="frequence_parfois" name="frequence" value="2">
+                        <label for="frequence_parfois">2. Parfois</label>
+                        <input type="radio" id="frequence_rarement" name="frequence" value="3">
+                        <label for="frequence_rarement">3. Rarement</label>
+                    </div>
+
+                    <!-- C11 : Raisons de fréquentation irrégulière -->
+                    <div class="form-group">
+                        <label>C11.a Si parfois ou rarement, donner la/les raison(s) :</label>
+                        <div>
+                            <input type="checkbox" id="raison_aucune" name="raisons" value="1">
+                            <label for="raison_aucune">1. Aucune raison évoquée</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="raison_frais_scolarite" name="raisons" value="2">
+                            <label for="raison_frais_scolarite">2. Frais de scolarité non payés</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="raison_faim" name="raisons" value="3">
+                            <label for="raison_faim">3. Faim/manque de nourriture</label>
+                        </div>
+                        <!-- Ajouter les autres raisons ici -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autres_raisons">C11.b Autres raisons :</label>
+                        <input type="text" id="autres_raisons" class="text-input" placeholder="Indiquer d'autres raisons">
+                    </div>
+
+                    <!-- C12 : Performance scolaire/professionnelle -->
+                    <div class="form-group">
+                        <label for="moyenne">C12.1 Moyenne de classe sur 20 :</label>
+                        <input type="text" id="moyenne" class="text-input" placeholder="Ex : 12,50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rang">C12.2.a Rang occupé lors du dernier examen :</label>
+                        <input type="text" id="rang" class="text-input" placeholder="Rang">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="effectif">C12.2.b Effectif de la classe lors du dernier examen :</label>
+                        <input type="text" id="effectif" class="text-input" placeholder="Effectif">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assimilation">C12.3 Assimilation de l’apprentissage :</label>
+                        <input type="radio" id="assimilation_bonne" name="assimilation" value="1">
+                        <label for="assimilation_bonne">1. Bonne</label>
+                        <input type="radio" id="assimilation_moyenne" name="assimilation" value="2">
+                        <label for="assimilation_moyenne">2. Moyenne</label>
+                        <input type="radio" id="assimilation_faible" name="assimilation" value="3">
+                        <label for="assimilation_faible">3. Faible</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="punitions">C12.4 Nombre de fois où tu as été puni(e) cette année :</label>
+                        <input type="text" id="punitions" class="text-input" placeholder="Nombre de punitions">
+                    </div>
+
+                    <!-- C12.5 Jeux préférés -->
+                    <div class="form-group">
+                        <label for="jeux_preferes">C12.5.a Jeux préférés :</label>
+                        <div>
+                            <input type="checkbox" id="football" name="jeux_preferes" value="1">
+                            <label for="football">1. Football</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="basketball" name="jeux_preferes" value="2">
+                            <label for="basketball">2. Basketball</label>
+                        </div>
+                        <!-- Ajouter les autres options ici -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autres_jeux">C12.b Autres jeux préférés :</label>
+                        <input type="text" id="autres_jeux" class="text-input" placeholder="Indiquer autres jeux">
+                    </div>
+
+                    <!-- C12.6 Nombre d'amis intimes -->
+                    <div class="form-group">
+                        <label for="amis_intimes">C12.6 Nombre d'amis intimes :</label>
+                        <input type="text" id="amis_intimes" class="text-input" placeholder="Nombre d'amis">
+                    </div>
+                    <!-- C13 : Problèmes rencontrés -->
+                    <div class="form-group">
+                        <label>C13. Éprouves-tu des problèmes ?</label>
+
+                        <!-- Problèmes à l'école/formation professionnelle -->
+                        <div class="form-section">
+                            <label>C13.a. À l'école/formation professionnelle :</label>
+                            <div>
+                                <label for="probleme_ecole">C13.a.1 Problème :</label>
+                                <input type="radio" id="ecole_oui" name="probleme_ecole" value="1">
+                                <label for="ecole_oui">Oui</label>
+                                <input type="radio" id="ecole_non" name="probleme_ecole" value="2">
+                                <label for="ecole_non">Non</label>
+                            </div>
+                            <div>
+                                <label for="probleme_ecole_principal">C13.a.2 Problème principal :</label>
+                                <input type="text" id="probleme_ecole_principal" class="text-input" placeholder="Indiquer le problème">
+                            </div>
+                            <div>
+                                <label for="solution_ecole">C13.a.3 Comment le problème peut être résolu :</label>
+                                <input type="text" id="solution_ecole" class="text-input" placeholder="Proposition de solution">
+                            </div>
+                        </div>
+
+                        <!-- Problèmes à la maison -->
+                        <div class="form-section">
+                            <label>C13.b. À la maison :</label>
+                            <div>
+                                <label for="probleme_maison">C13.b.1 Problème :</label>
+                                <input type="radio" id="maison_oui" name="probleme_maison" value="1">
+                                <label for="maison_oui">Oui</label>
+                                <input type="radio" id="maison_non" name="probleme_maison" value="2">
+                                <label for="maison_non">Non</label>
+                            </div>
+                            <div>
+                                <label for="probleme_maison_principal">C13.b.2 Problème principal :</label>
+                                <input type="text" id="probleme_maison_principal" class="text-input" placeholder="Indiquer le problème">
+                            </div>
+                            <div>
+                                <label for="solution_maison">C13.b.3 Comment le problème peut être résolu :</label>
+                                <input type="text" id="solution_maison" class="text-input" placeholder="Proposition de solution">
+                            </div>
+                        </div>
+
+                        <!-- Problèmes sur la route de l'école/formation professionnelle -->
+                        <div class="form-section">
+                            <label>C13.c. Sur la route de l'école/formation professionnelle :</label>
+                            <div>
+                                <label for="probleme_route">C13.c.1 Problème :</label>
+                                <input type="radio" id="route_oui" name="probleme_route" value="1">
+                                <label for="route_oui">Oui</label>
+                                <input type="radio" id="route_non" name="probleme_route" value="2">
+                                <label for="route_non">Non</label>
+                            </div>
+                            <div>
+                                <label for="probleme_route_principal">C13.c.2 Problème principal :</label>
+                                <input type="text" id="probleme_route_principal" class="text-input" placeholder="Indiquer le problème">
+                            </div>
+                            <div>
+                                <label for="solution_route">C13.c.3 Comment le problème peut être résolu :</label>
+                                <input type="text" id="solution_route" class="text-input" placeholder="Proposition de solution">
+                            </div>
+                        </div>
+
+                        <!-- Problèmes au travail -->
+                        <div class="form-section">
+                            <label>C13.d. Au travail :</label>
+                            <div>
+                                <label for="probleme_travail">C13.d.1 Problème :</label>
+                                <input type="radio" id="travail_oui" name="probleme_travail" value="1">
+                                <label for="travail_oui">Oui</label>
+                                <input type="radio" id="travail_non" name="probleme_travail" value="2">
+                                <label for="travail_non">Non</label>
+                            </div>
+                            <div>
+                                <label for="probleme_travail_principal">C13.d.2 Problème principal :</label>
+                                <input type="text" id="probleme_travail_principal" class="text-input" placeholder="Indiquer le problème">
+                            </div>
+                            <div>
+                                <label for="solution_travail">C13.d.3 Comment le problème peut être résolu :</label>
+                                <input type="text" id="solution_travail" class="text-input" placeholder="Proposition de solution">
+                            </div>
+                        </div>
+
+                        <!-- Problèmes dehors -->
+                        <div class="form-section">
+                            <label>C13.e. Dehors :</label>
+                            <div>
+                                <label for="probleme_dehors">C13.e.1 Problème :</label>
+                                <input type="radio" id="dehors_oui" name="probleme_dehors" value="1">
+                                <label for="dehors_oui">Oui</label>
+                                <input type="radio" id="dehors_non" name="probleme_dehors" value="2">
+                                <label for="dehors_non">Non</label>
+                            </div>
+                            <div>
+                                <label for="probleme_dehors_principal">C13.e.2 Problème principal :</label>
+                                <input type="text" id="probleme_dehors_principal" class="text-input" placeholder="Indiquer le problème">
+                            </div>
+                            <div>
+                                <label for="solution_dehors">C13.e.3 Comment le problème peut être résolu :</label>
+                                <input type="text" id="solution_dehors" class="text-input" placeholder="Proposition de solution">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section D : Activités menées par l'enfant -->
+                    <div class="form-group">
+                        <label>D1. Travailles-tu actuellement ?</label>
+                        <div>
+                            <input type="radio" id="travail_oui" name="travail" value="1">
+                            <label for="travail_oui">Oui</label>
+                            <input type="radio" id="travail_non" name="travail" value="2">
+                            <label for="travail_non">Non</label>
+                        </div>
+                    </div>
+
+                    <!-- Si l'enfant travaille -->
+                    <div class="form-group">
+                        <label for="lieu_travail">D2. Si oui, où travailles-tu ?</label>
+
+                        <!-- Lieu de travail et tâches -->
+                        <div>
+                            <label for="lieu_travail">Lieu de travail :</label>
+                            <input type="text" id="lieu_travail" class="text-input" placeholder="Indiquer le lieu de travail">
+                        </div>
+                        <div>
+                            <label for="taches_travail">Tâches :</label>
+                            <input type="text" id="taches_travail" class="text-input" placeholder="Indiquer les tâches">
+                        </div>
+
+                        <!-- Période de travail -->
+                        <div>
+                            <label>Période de travail :</label>
+                            <select id="periode_travail" name="periode_travail">
+                                <option value="1">Pendant des heures d'école/formation professionnelle</option>
+                                <option value="2">Après école/formation professionnelle</option>
+                                <option value="3">Week-ends</option>
+                                <option value="4">Vacances d'école/formation professionnelle</option>
+                                <option value="5">Saison pluvieuse</option>
+                            </select>
+                        </div>
+
+                        <!-- Nombre d'heures de travail par jour -->
+                        <div>
+                            <label for="heures_travail_jour">Nombre d'heures de travail par jour :</label>
+                            <input type="number" id="heures_travail_jour" class="text-input" placeholder="Nombre d'heures">
+                        </div>
+
+                        <!-- Nombre de jours par semaine -->
+                        <div>
+                            <label for="jours_travail_semaine">Nombre de jours par semaine :</label>
+                            <input type="number" id="jours_travail_semaine" class="text-input" placeholder="Nombre de jours">
+                        </div>
+
+                        <!-- Mode de paiement -->
+                        <div>
+                            <label for="mode_paiement">Mode de paiement :</label>
+                            <select id="mode_paiement" name="mode_paiement">
+                                <option value="1">Argent comptant</option>
+                                <option value="2">À crédit</option>
+                                <option value="3">Argent comptant et à crédit</option>
+                                <option value="4">Payé en nature</option>
+                                <option value="5">Non payé</option>
+                            </select>
+                        </div>
+
+                        <!-- Depuis combien de temps travailles-tu -->
+                        <div>
+                            <label for="duree_travail">Depuis combien de temps travailles-tu :</label>
+                            <select id="duree_travail" name="duree_travail">
+                                <option value="1">Moins d'un an</option>
+                                <option value="2">1-5 ans</option>
+                                <option value="3">5-10 ans</option>
+                                <option value="4">Plus de 10 ans</option>
+                            </select>
+                        </div>
+
+                        <!-- Pourquoi travailles-tu ? (3 raisons) -->
+                        <div>
+                            <label for="raisons_travail">Pourquoi travailles-tu ? (choisissez 3 raisons)</label>
+                            <div>
+                                <input type="checkbox" id="raison1" name="raisons_travail" value="1">
+                                <label for="raison1">Avoir un revenu de famille supplémentaire</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison2" name="raisons_travail" value="2">
+                                <label for="raison2">Avoir mon propre revenu</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison3" name="raisons_travail" value="3">
+                                <label for="raison3">Mes compagnons d’âges travaillent également</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison4" name="raisons_travail" value="4">
+                                <label for="raison4">Apprendre un métier</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison5" name="raisons_travail" value="5">
+                                <label for="raison5">Payer la dette du ménage</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison6" name="raisons_travail" value="6">
+                                <label for="raison6">Mes parents exigent que je travaille</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison7" name="raisons_travail" value="7">
+                                <label for="raison7">Problème d’accès à l’école/formation professionnelle</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison8" name="raisons_travail" value="8">
+                                <label for="raison8">Distance école-lieu d’habitation</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison9" name="raisons_travail" value="9">
+                                <label for="raison9">Frais d’écolage</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison10" name="raisons_travail" value="10">
+                                <label for="raison10">Pas de cantine à l’école</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison11" name="raisons_travail" value="11">
+                                <label for="raison11">Autre lié à l’école/formation professionnelle</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="raison12" name="raisons_travail" value="12">
+                                <label for="raison12">Autre différent d’école/formation professionnelle</label>
+                            </div>
+                        </div>
+
+                        <!-- Type de travail : Entreprise familiale -->
+                        <div class="form-section">
+                            <label for="entreprise_familiale">D2.a. Entreprise familiale (Fermes / plantations/Atelier/garage/Chantier)</label>
+                            <input type="text" id="entreprise_familiale" class="text-input" placeholder="Indiquer les détails">
+                        </div>
+
+                        <!-- Type de travail : Entreprise non familiale -->
+                        <div class="form-section">
+                            <label for="entreprise_non_familiale">D2.b. Entreprise non familiale (Fermes / plantations/Atelier/garage/chantier d’autrui)</label>
+                            <input type="text" id="entreprise_non_familiale" class="text-input" placeholder="Indiquer les détails">
+                        </div>
+
+                        <!-- Type de travail : Travail domestique -->
+                        <div class="form-section">
+                            <label for="travail_domestique">D2.c. Travail domestique chez une tierce personne</label>
+                            <input type="text" id="travail_domestique" class="text-input" placeholder="Indiquer les détails">
+                        </div>
+
+                        <!-- Type de travail : Autres -->
+                        <div class="form-section">
+                            <label for="travail_autres">D2.d. Autres (à préciser)</label>
+                            <input type="text" id="travail_autres" class="text-input" placeholder="Préciser">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

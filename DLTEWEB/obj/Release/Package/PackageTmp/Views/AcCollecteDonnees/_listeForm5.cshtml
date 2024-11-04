@@ -4,6 +4,9 @@
             STRUCTURE VERSION FINALE
         </h2>
     </center>
+    @Html.ActionLink("Faire un enregistrement", "FormStructure", "AcCollecteDonnees", new { area = "" }, new { @class = "btn btn-success" })
+    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#imprimer" data-whatever="@@mdo">Faire une importation</button>
+    <hr />
     <table id="example" class="table table-striped" style="width:100%;">
         <thead style="border-color:gray">
             <tr>
@@ -34,6 +37,34 @@
             </tr>
         </tfoot>
     </table>
+    <div class="modal fade" id="imprimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">IMPORTATION DE STRUCTURE VERSION FINALE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <a href="#" style="color:blue">Télécharger_un_model</a>
+                        <hr />
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Selectionner le fichier</label>
+                            <input class="form-control" type="file" id="formFile" style="max-width:800px">
+                        </div>
+
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Charger</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     new DataTable('#example', {

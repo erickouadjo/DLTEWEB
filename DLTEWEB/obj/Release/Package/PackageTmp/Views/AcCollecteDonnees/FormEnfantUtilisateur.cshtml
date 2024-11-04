@@ -1,0 +1,1175 @@
+﻿@{
+    ViewBag.Title = "FormEnfantUtilisateur";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+        <div class="container">
+
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</b>
+
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+
+                    <div class="form-group">
+                        <label for="point_focal_nom">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="point_focal_nom" class="text-input" placeholder="Nom et prénoms du point focal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="point_focal_code">0A2. Code point focal :</label>
+                        <input type="text" id="point_focal_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_nom">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="superviseur_nom" class="text-input" placeholder="Nom et prénoms du superviseur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_code">0A4. Code superviseur :</label>
+                        <input type="text" id="superviseur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_nom">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_nom" class="text-input" placeholder="Nom et prénoms du chef collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_code">0A6. Code chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_nom">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="collecteur_nom" class="text-input" placeholder="Nom et prénoms du collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_code">0A8. Code collecteur :</label>
+                        <input type="text" id="collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+                </div>
+
+
+
+                <div class="section1">
+                    <h2>Section A : Informations sur le répondant</h2>
+                    <label for="nom">B1.1. Nom du répondant :</label>
+                    <input type="text" id="nom" name="nom">
+
+                    <label for="rapport">B1.2. Le rapport du répondant avec l’utilisateur de l’enfant :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="rapport" value="utilisateur"> 1. Utilisateur lui-même</label>
+                        <label><input type="radio" name="rapport" value="parent"> 2. Parent proche de l’utilisateur</label>
+                        <label><input type="radio" name="rapport" value="metayer"> 3. Métayer</label>
+                        <label><input type="radio" name="rapport" value="autre"> 4. Autres (à indiquer)</label>
+                        <input type="text" name="autre_rapport" placeholder="Précisez si 'Autres'">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Section B : Informations générales sur l’employeur de l’enfant</h2>
+
+                    <label for="annee-naissance">B.1. Année de naissance :</label>
+                    <input type="number" id="annee-naissance" name="annee-naissance" maxlength="4">
+
+                    <label for="sexe">B.2. Sexe :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="sexe" value="masculin"> 1. Masculin</label>
+                        <label><input type="radio" name="sexe" value="feminin"> 2. Féminin</label>
+                    </div>
+
+                    <label for="statut-matrimonial">B.3. Statut matrimonial de l’employeur/utilisateur de l’enfant :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="statut-matrimonial" value="marie-monogame"> 1. Marié monogame</label>
+                        <label><input type="checkbox" name="statut-matrimonial" value="marie-polygame"> 2. Marié polygame</label>
+                        <label><input type="checkbox" name="statut-matrimonial" value="celibataire"> 3. Célibataire</label>
+                        <label><input type="checkbox" name="statut-matrimonial" value="separe-divorce"> 4. Séparé/divorcé</label>
+                        <label><input type="checkbox" name="statut-matrimonial" value="veuf"> 5. Veuf/Veuve</label>
+                        <label><input type="checkbox" name="statut-matrimonial" value="concubinage"> 6. Concubinage</label>
+                    </div>
+
+                    <label for="niveau-instruction">B.4. Niveau d’instruction de l’employeur/utilisateur de l’enfant :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="instruction" value="sans-instruction"> 1. Sans instruction</label>
+                        <label><input type="radio" name="instruction" value="primaire"> 2. Primaire</label>
+                        <label><input type="radio" name="instruction" value="secondaire"> 3. Secondaire</label>
+                        <label><input type="radio" name="instruction" value="superieur"> 4. Supérieur</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Section C : Conditions générales de travail de l’enfant/formation professionnelle</h2>
+
+                    <label for="secteur-activite">C1.a. Secteur d’activité où l’enfant travaille :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="secteur-activite" value="agriculture"> 1. Agriculture</label>
+                        <label><input type="checkbox" name="secteur-activite" value="commerce"> 2. Commerce</label>
+                        <label><input type="checkbox" name="secteur-activite" value="domestique"> 3. Domestique</label>
+                        <label><input type="checkbox" name="secteur-activite" value="mines"> 4. Mines</label>
+                        <label><input type="checkbox" name="secteur-activite" value="artisanat"> 5. Artisanat</label>
+                        <label><input type="checkbox" name="secteur-activite" value="transport"> 6. Transport</label>
+                        <label><input type="checkbox" name="secteur-activite" value="btp"> 7. BTP</label>
+                        <label><input type="checkbox" name="secteur-activite" value="autres"> 8. Autres</label>
+                    </div>
+
+                    <label for="autre-secteur">C1.b. Autre secteur d’activité où l’enfant travaille :</label>
+                    <input type="text" id="autre-secteur" name="autre-secteur">
+
+
+                    <label for="contrat">C2. Quel type de contrat avez-vous avec les enfants qui travaillent pour vous ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contrat" value="aucun"> 1. Aucun contrat</label>
+                        <label><input type="radio" name="contrat" value="oral"> 2. Contrat oral</label>
+                        <label><input type="radio" name="contrat" value="ecrit"> 3. Contrat écrit</label>
+                    </div>
+
+                    <label for="incitation">C3. Les apprentis/enfants qui travaillent pour vous reçoivent-ils une quelconque incitation financière ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="incitation" value="non"> C3.1. Non, aucune</label>
+                        <label><input type="radio" name="incitation" value="ration"> C3.2. Oui, ration/repas</label>
+                        <label><input type="radio" name="incitation" value="hebergement"> C3.3. Oui, hébergement</label>
+                        <label><input type="radio" name="incitation" value="vetements"> C3.4. Oui, vêtements</label>
+                        <label><input type="radio" name="incitation" value="transport"> C3.5. Oui, transport</label>
+                        <label><input type="radio" name="incitation" value="argent-poche"> C3.6. Oui, Argent de poche</label>
+                        <label><input type="radio" name="incitation" value="remuneration"> C3.7. Oui, Rémunération</label>
+                    </div>
+
+                    <label for="mode-octroi">C4. Principal mode d’octroi de cette incitation financière ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mode-octroi" value="tache"> 1. A la tâche</label>
+                        <label><input type="radio" name="mode-octroi" value="jour"> 2. Par jour</label>
+                        <label><input type="radio" name="mode-octroi" value="semaine"> 3. Par semaine</label>
+                        <label><input type="radio" name="mode-octroi" value="mois"> 4. Par mois</label>
+                        <label><input type="radio" name="mode-octroi" value="an"> 5. Par an/En fin de campagne</label>
+                        <label><input type="radio" name="mode-octroi" value="autre"> 6. Autre (à préciser)</label>
+                        <input type="text" name="autre-mode-octroi" placeholder="Précisez si 'Autre'">
+                    </div>
+
+
+                    <label for="incitation-age">C5. L’incitation financière des enfants est-elle liée à leur âge ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="incitation-age" value="identique"> 1. Non, ils sont traités de façon identique</label>
+                        <label><input type="radio" name="incitation-age" value="remuneres"> 2. Oui, les plus âgés sont mieux rémunérés</label>
+                    </div>
+
+
+                    <label for="formation">C6. Apportez-vous une quelconque formation aux enfants qui travaillent avec vous ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="formation" value="aucune"> 1. Non, aucune</label>
+                        <label><input type="radio" name="formation" value="sur-place"> 2. Oui, par moi-même sur place</label>
+                        <label><input type="radio" name="formation" value="structure"> 3. Oui, dans une structure/atelier extérieure</label>
+                    </div>
+
+                    <label for="competences">C7.a. Quelles compétences sont-elles enseignées aux enfants qui travaillent avec vous ?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="competences" value="techniques"> C7.a.1 Compétences techniques / Gestes professionnels</label>
+                        <label><input type="checkbox" name="competences" value="theoriques"> C7.a.2 Connaissances théoriques de base</label>
+                        <label><input type="checkbox" name="competences" value="organisation"> C7.a.3 Organisation de l’atelier, gestion de la production</label>
+                        <label><input type="checkbox" name="competences" value="maintenance"> C7.a.4 Maintenance des machines</label>
+                        <label><input type="checkbox" name="competences" value="comptabilite"> C7.a.5 Comptabilité et calcul des coûts</label>
+                        <label><input type="checkbox" name="competences" value="achat-matieres"> C7.a.6 Achat de matières d’œuvre</label>
+                        <label><input type="checkbox" name="competences" value="negociation"> C7.a.7 Négociation avec les clients</label>
+                        <label><input type="checkbox" name="competences" value="marketing"> C7.a.8 Marketing et publicité</label>
+                        <label><input type="checkbox" name="competences" value="outils"> C7.a.9 Manipulation des outils</label>
+                        <label><input type="checkbox" name="competences" value="alphabetisation"> C7.a.10 Alphabétisation / Calcul</label>
+                        <label><input type="checkbox" name="competences" value="autre"> C7.a.11 Autre</label>
+                        <input type="text" name="autre-competence" placeholder="Précisez si 'Autre'">
+                    </div>
+
+
+                    <label>C8. Horaires habituelles de travail :</label>
+                    <div class="time-input">
+                        <input type="time" name="debut-travail" placeholder="Début">
+                        <input type="time" name="fin-travail" placeholder="Fin">
+                    </div>
+
+                    <label>Pauses habituelles :</label>
+                    <div class="time-input">
+                        <input type="time" name="debut-pause" placeholder="Début">
+                        <input type="time" name="fin-pause" placeholder="Fin">
+                    </div>
+
+                    <label for="jours-travail">C9. Nombre de jours de travail/enfant :</label>
+                    <input type="number" id="jours-travail" name="jours-travail" min="0" max="365">
+
+                </div>
+
+                <div class="section">
+                    <h2>Section D : Main-d’œuvre</h2>
+
+                    <label>D1. Nombre d’employés :</label>
+                    <table>
+                        <tr>
+                            <th>Tranche d'âge</th>
+                            <th>Membres de la famille (Garçons)</th>
+                            <th>Membres de la famille (Filles)</th>
+                            <th>Non membres de la famille (Garçons)</th>
+                            <th>Non membres de la famille (Filles)</th>
+                        </tr>
+                        <tr>
+                            <td>5 à 13 ans</td>
+                            <td><input type="number" name="D1.a.1" min="0" max="99"></td>
+                            <td><input type="number" name="D1.a.2" min="0" max="99"></td>
+                            <td><input type="number" name="D1.a.3" min="0" max="99"></td>
+                            <td><input type="number" name="D1.a.4" min="0" max="99"></td>
+                        </tr>
+                        <tr>
+                            <td>14 à 17 ans</td>
+                            <td><input type="number" name="D1.b.1" min="0" max="99"></td>
+                            <td><input type="number" name="D1.b.2" min="0" max="99"></td>
+                            <td><input type="number" name="D1.b.3" min="0" max="99"></td>
+                            <td><input type="number" name="D1.b.4" min="0" max="99"></td>
+                        </tr>
+                        <tr>
+                            <td>Plus de 17 ans</td>
+                            <td><input type="number" name="D1.c.1" min="0" max="99"></td>
+                            <td><input type="number" name="D1.c.2" min="0" max="99"></td>
+                            <td><input type="number" name="D1.c.3" min="0" max="99"></td>
+                            <td><input type="number" name="D1.c.4" min="0" max="99"></td>
+                        </tr>
+                    </table>
+                    <label for="D2.a">D2.a. Raison(s) pour le recours à la main-d’œuvre enfantine (moins de 18 ans) :</label>
+                    <table>
+                        <tr>
+                            <td>D2.a.1. Permettre aux enfants de payer leur scolarité et tout autre frais d’écolage</td>
+                            <td><input type="checkbox" name="D2.a.1"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.2. Occuper des enfants pendant des vacances</td>
+                            <td><input type="checkbox" name="D2.a.2"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.3. Ils acceptent les salaires bas</td>
+                            <td><input type="checkbox" name="D2.a.3"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.4. Ils s'adaptent plus facilement</td>
+                            <td><input type="checkbox" name="D2.a.4"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.5. Ils acceptent de travailler plus longtemps</td>
+                            <td><input type="checkbox" name="D2.a.5"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.6. Ils sont plus enclins à effectuer certains travaux</td>
+                            <td><input type="checkbox" name="D2.a.6"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.7. Ils ne sont pas à l’origine de disputes</td>
+                            <td><input type="checkbox" name="D2.a.7"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.8. Pour aider leur famille</td>
+                            <td><input type="checkbox" name="D2.a.8"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.9. Les enfants accompagnent des parents</td>
+                            <td><input type="checkbox" name="D2.a.9"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.10. Il n'y a aucune solution de rechange au travail des enfants</td>
+                            <td><input type="checkbox" name="D2.a.10"></td>
+                        </tr>
+                        <tr>
+                            <td>D2.a.11. Autre (à indiquer)</td>
+                            <td><input type="text" name="D2.a.11"></td>
+                        </tr>
+                    </table>
+
+                    <label for="D2.b">D2.b. Autre raison pour le recours à la main d’œuvre enfantine :</label>
+                    <input type="text" id="D2.b" name="D2.b">
+
+                    <label for="D3">D3. Avez-vous souvent recours aux formes de main-d’œuvre suivantes ?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="D3.1" value="service"> D3.1. Groupe de prestation de service payant</label>
+                        <label><input type="checkbox" name="D3.2" value="entraide"> D3.2. Groupe d’entraide</label>
+                        <label><input type="checkbox" name="D3.3" value="metayer"> D3.3. Métayer</label>
+                        <label><input type="checkbox" name="D3.4" value="contractuels"> D3.4. Contractuels</label>
+                    </div>
+
+                    <label for="D4">D4. Ces groupes comptent-ils des enfants ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="D4" value="oui"> 1. Oui</label>
+                        <label><input type="radio" name="D4" value="non"> 2. Non</label>
+                    </div>
+
+                    <label for="D5">D5. Depuis combien d’années formez-vous des apprentis / travaillez-vous avec des enfants ?</label>
+                    <input type="number" id="D5" name="D5" min="0" max="99">
+
+                    <label for="D6">D6. Au regard de votre expérience, à quel âge le recours aux enfants dans le travail (apprentissage/utilisation) est-il acceptable/pertinent/efficace ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="D6" value="moins-de-10"> D6.1. Moins de 10 ans</label>
+                        <label><input type="radio" name="D6" value="10-12"> D6.2. 10-12 ans</label>
+                        <label><input type="radio" name="D6" value="13-15"> D6.3. 13-15 ans</label>
+                        <label><input type="radio" name="D6" value="16-17"> D6.4. 16-17 ans</label>
+                    </div>
+
+                    <label for="D7">D7. Pourquoi ?</label>
+                    <input type="text" id="D7" name="D7" min="0" max="99">
+                </div>
+                <h1 style="text-transform: uppercase;">Formulaire d'informations sur l'enfant</h1>
+                <div class="section">
+                    <h2>Section A : Informations sur l’enfant</h2>
+                    <div class="inline-group">
+                        <label for="date_passage">Date de passage :</label>
+                        <input type="text" id="date_passage" name="date_passage" placeholder="jj/mm/aaaa">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="nom_enfant">A1. Nom de l’enfant :</label>
+                        <input type="text" id="nom_enfant" name="nom_enfant" placeholder="Nom">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="annee_naissance">A2. Année de naissance :</label>
+                        <input type="number" id="annee_naissance" name="annee_naissance" min="1900" max="2024">
+                    </div>
+
+                    <div class="radio-group">
+                        <label>A3. Sexe :</label>
+                        <label><input type="radio" name="sexe" value="masculin"> 1. Masculin</label>
+                        <label><input type="radio" name="sexe" value="feminin"> 2. Féminin</label>
+                    </div>
+
+                    <div class="radio-group">
+                        <label>A4. As-tu déjà fréquenté l’école/formation professionnelle :</label>
+                        <label><input type="radio" name="frequente_ecole" value="oui"> 1. Oui</label>
+                        <label><input type="radio" name="frequente_ecole" value="non"> 2. Non</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="derniere_classe">A5.a. Si oui, dernière classe achevée :</label>
+                        <input type="number" id="derniere_classe" name="derniere_classe" min="1" max="21" placeholder="Code de la classe">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="annee_classe">A5.b. Année :</label>
+                        <input type="number" id="annee_classe" name="annee_classe" min="1900" max="2024">
+                    </div>
+
+                    <div class="radio-group">
+                        <label>A6. Vas-tu actuellement à l’école/formation professionnelle :</label>
+                        <label><input type="radio" name="actuellement_ecole" value="oui"> 1. Oui</label>
+                        <label><input type="radio" name="actuellement_ecole" value="non"> 2. Non</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="classe_actuelle">A7.a. Si oui, classe actuelle :</label>
+                        <input type="number" id="classe_actuelle" name="classe_actuelle" min="1" max="21" placeholder="Code de la classe">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="annee_actuelle">A7.b. Année :</label>
+                        <input type="number" id="annee_actuelle" name="annee_actuelle" min="1900" max="2024">
+                    </div>
+
+                    <h4>Liste des codes pour A5.a et A7.a :</h4>
+                    <p>1. Maternelle, 2. CP1, 3. CP2, 4. CE1, 5. CE2, 6. CM1, 7. CM2, 8. 6ème, 9. 5ème, 10. 4ème, 11. 3ème, 12. 2ème, 13. 1ère, 14. Terminale, 15. Secondaire professionnel et technique 1ère Année, 16. Secondaire professionnel et technique 2ème Année, 17. Secondaire professionnel et technique 3ème Année, 18. Secondaire professionnel et technique 4ème Année, 19. Supérieur général 1ère Année, 20. Supérieur général 2ème Année.</p>
+
+                    <label>A8.a. Pourquoi avez-vous quitté l'école/formation professionnelle ?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="travail"> 1. Recherche de travail</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="frais"> 2. N'a pas pu payer les frais d’écolage</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="trop_dur"> 3. Le travail d'école/formation professionnelle était trop dur</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="parents"> 4. Mes parents ont exigé que je cesse d'aller à l'école</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="age"> 5. La majeure partie des enfants de mon âge n’allait pas à l'école</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="pas_interessant"> 6. L'école/formation professionnelle n'était pas intéressante</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="echec"> 7. Echec scolaire</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="famille"> 8. Problèmes familiaux</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="grossesse"> 9. Grossesse</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="distance"> 10. Ecole/formation trop éloignée</label>
+                        <label><input type="checkbox" name="raison_quitter_ecole" value="autre"> 11. Autres</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_raison_1">A8.b Autres raisons 1 :</label>
+                        <input type="text" id="autre_raison_1" name="autre_raison_1" placeholder="Préciser">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_raison_2">A8.b Autres raisons 2 :</label>
+                        <input type="text" id="autre_raison_2" name="autre_raison_2" placeholder="Préciser">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_raison_3">A8.b Autres raisons 3 :</label>
+                        <input type="text" id="autre_raison_3" name="autre_raison_3" placeholder="Préciser">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="nationalite_pere">A9.a. Nationalité du père :</label>
+                        <input type="text" id="nationalite_pere" name="nationalite_pere">
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="nationalite_mere">A9.b. Nationalité de la mère :</label>
+                        <input type="text" id="nationalite_mere" name="nationalite_mere">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Section C : Détails sur le lieu de travail de l’enfant</h2>
+
+                    <p><strong>C1.a. Enoncer le secteur d’activité où l’enfant travaille :</strong></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="secteur_activite" value="agriculture"> 1. Agriculture</label>
+                        <label><input type="checkbox" name="secteur_activite" value="commerce"> 2. Commerce</label>
+                        <label><input type="checkbox" name="secteur_activite" value="domestique"> 3. Domestique</label>
+                        <label><input type="checkbox" name="secteur_activite" value="mines"> 4. Mines</label>
+                        <label><input type="checkbox" name="secteur_activite" value="artisanat"> 5. Artisanat</label>
+                        <label><input type="checkbox" name="secteur_activite" value="transport"> 6. Transport</label>
+                        <label><input type="checkbox" name="secteur_activite" value="btp"> 7. BTP (Bâtiment et Travaux Publics)</label>
+                        <label><input type="checkbox" name="secteur_activite" value="autres"> 8. Autres</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_secteur">C1.b. Autre secteur à indiquer :</label>
+                        <input type="text" id="autre_secteur" name="autre_secteur">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Section D : Secteur d'activité</h2>
+                    <p><strong>D1.a. Type d’activité agricole :</strong></p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="activite_agricole" value="charbon"> 8. Production de charbon de bois</label>
+                        <label><input type="checkbox" name="activite_agricole" value="cereales"> 11. Culture de céréales</label>
+                        <label><input type="checkbox" name="activite_agricole" value="legumes"> 12. Culture de légumes, horticulture</label>
+                        <label><input type="checkbox" name="activite_agricole" value="elevage"> 14. Élevage</label>
+                        <label><input type="checkbox" name="activite_agricole" value="cacao"> 16. Culture du cacao</label>
+                        <label><input type="checkbox" name="activite_agricole" value="cafe"> 18. Culture du café</label>
+                        <label><input type="checkbox" name="activite_agricole" value="hevea"> 19. Culture d’hévéa</label>
+                        <label><input type="checkbox" name="activite_agricole" value="sylviculture"> 21. Sylviculture</label>
+                        <label><input type="checkbox" name="activite_agricole" value="cueillette"> 22. Cueillette</label>
+                        <label><input type="checkbox" name="activite_agricole" value="peche"> 50. Pêche, pisciculture, aquaculture</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_activite_agricole">D1.b. Autre type d’activité agricole à préciser :</label>
+                        <input type="text" id="autre_activite_agricole" name="autre_activite_agricole">
+                    </div>
+
+                    <h4>D2.1. Types de travaux exécutés dans l’agriculture et la foresterie</h4>
+
+                    <h5>D2.1.1.a. Types de travaux agricoles :</h5>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="travaux_agricoles" value="abattage"> 1. L’abattage des arbres</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="defrichage"> 2. Le défrichage</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="brulage"> 3. Le brulage des parcelles</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="chasse"> 4. La chasse au gibier avec une arme</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="bucheronnage"> 5. Le bucheronnage</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="charbon"> 6. La production de charbon de bois</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="dessouchage"> 7. Le dessouchage</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="trouaison"> 8. La trouaison</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="ecabossage"> 9. L’écabossage avec un objet tranchant</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="recolte"> 10. La récolte avec une machette ou faucille</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="agrochimique"> 11. La manipulation de produits agrochimiques</label>
+                        <label><input type="checkbox" name="travaux_agricoles" value="engins_motorises"> 12. La conduite d’engins motorisés</label>
+                    </div>
+
+                    <div class="inline-group">
+                        <label for="autre_travaux_agricoles">D2.1.1.b. Autres types de travaux agricoles (à préciser) :</label>
+                        <input type="text" id="autre_travaux_agricoles" name="autre_travaux_agricoles">
+                    </div>
+                </div>
+                <h1>D2.1.2. DANS L’ÉLEVAGE</h1>
+                <div class="section">
+                    <h2>D2.1.2.a Types de travaux d’élevage</h2>
+                    <label><input type="checkbox"> Les activités de bouviers</label><br>
+                    <label><input type="checkbox"> La contention des animaux</label><br>
+                    <label><input type="checkbox"> La manipulation des produits vétérinaires</label><br>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.1.3. DANS LA PÊCHE</h1>
+                <div class="section">
+                    <h2>D2.1.3.a Types de travaux dans la pêche</h2>
+                    <label><input type="checkbox"> La pêche en eau profonde</label><br>
+                    <label><input type="checkbox"> Travaux de construction d’étangs, de digues et de barrages piscicoles</label><br>
+                    <label><input type="checkbox"> Le nettoyage du poisson</label>
+                    <br>
+                    <label>Autres types de travaux de pêche:</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.2. COMMERCE</h1>
+                <div class="section">
+                    <h2>D2.2.1.a Type d’activité commerciale :</h2>
+                    <input type="text" class="activity-input" placeholder="Préciser ici">
+                </div>
+
+                <div class="section">
+                    <h2>D2.2.1.b Autres types d’activité commerciales</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.2.2.a Tâches exercées dans le commerce</h2>
+                    <label><input type="checkbox"> La vente de support à caractère pornographique</label><br>
+                    <label><input type="checkbox"> La prostitution</label><br>
+                    <label><input type="checkbox"> Le proxénétisme</label><br>
+                    <label><input type="checkbox"> La récupération d’objet dans les décharges publiques</label><br>
+                    <label><input type="checkbox"> La vidange d’ordures ménagères</label><br>
+                    <label><input type="checkbox"> La pré-collecte d’ordures ménagères</label><br>
+                    <label><input type="checkbox"> La collecte d’ordures ménagères</label><br>
+                    <label><input type="checkbox"> La production de produits chimiques</label><br>
+                    <label><input type="checkbox"> L’achat ou la vente de produits chimiques</label><br>
+                    <label><input type="checkbox"> Les activités de portefaix dans les marchés</label><br>
+                    <label><input type="checkbox"> Le travail dans les débits de boissons et les boîtes de nuit</label><br>
+                    <label><input type="checkbox"> Le travail de serveuse et de serveurs dans les restaurants et bars</label><br>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.2.3.a Lieu d’exercice :</h2>
+                    <label><input type="checkbox"> Marché</label><br>
+                    <label><input type="checkbox"> Rue</label><br>
+                    <label><input type="checkbox"> À domicile</label><br>
+                    <label><input type="checkbox"> Magasin</label><br>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.3. MINES</h1>
+                <div class="section">
+                    <h2>D2.3.1.a Type d’activité minières</h2>
+                    <input type="text" class="activity-input" placeholder="Préciser ici">
+                </div>
+
+                <div class="section">
+                    <h2>D2.3.1.b Autre type d’activités minières</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.3.2.a Tâches exercées par les enfants</h2>
+                    <label><input type="checkbox"> La foration de mines</label><br>
+                    <label><input type="checkbox"> Les tirs de mine</label><br>
+                    <label><input type="checkbox"> Le transport des fragments de pierre</label><br>
+                    <label><input type="checkbox"> Le transport de blocs de pierre</label><br>
+                    <label><input type="checkbox"> Le concassage</label><br>
+                    <label><input type="checkbox"> L’extraction de minerai à l’aide de produits chimiques</label><br>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.3.3.a Lieu d’exercice :</h2>
+                    <label><input type="checkbox"> Carrière sauvage</label><br>
+                    <label><input type="checkbox"> Mine autorisée</label><br>
+                    <label><input type="checkbox"> Puits</label><br>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.3.4.a Type de minerai extrait</h2>
+                    <label><input type="checkbox"> Or</label><br>
+                    <label><input type="checkbox"> Fer</label><br>
+                    <label><input type="checkbox"> Minerais non ferreux</label><br>
+                    <label><input type="checkbox"> Pierres</label><br>
+                    <label><input type="checkbox"> Sable</label><br>
+                    <label><input type="checkbox"> Argile</label><br>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+                <h1>D2.4. ARTISANAT</h1>
+                <div class="section">
+                    <h2>D2.4.1.a Types d’activité exercés :</h2>
+                    <input type="text" class="activity-input" placeholder="Type d’activité 1">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 2">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 3">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 4">
+                </div>
+                <div class="section">
+                    <h2>D2.4.1.b Autres types d’activités exercées :</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.4.2.a Tâches exercées par les enfants</h2>
+                    <label><input type="checkbox"> Le graissage des machines</label><br>
+                    <label><input type="checkbox"> Le nettoyage des machines</label><br>
+                    <label><input type="checkbox"> La visite ou la réparation des machines ou mécanismes en marche</label><br>
+                    <label><input type="checkbox"> L’ajustage</label><br>
+                    <label><input type="checkbox"> Le meulage</label><br>
+                    <label><input type="checkbox"> La vidange</label><br>
+                    <label><input type="checkbox"> L’affûtage</label><br>
+                    <label><input type="checkbox"> Le fraisage</label><br>
+                    <label><input type="checkbox"> Le laminage</label><br>
+                    <label><input type="checkbox"> La descente de moteur</label><br>
+                    <label><input type="checkbox"> La manipulation de batteries</label><br>
+                    <label><input type="checkbox"> La fabrication d’armes à feu</label><br>
+                    <label><input type="checkbox"> La réparation d’armes à feu</label><br>
+                    <label><input type="checkbox"> La fabrication d’explosifs</label><br>
+                    <label><input type="checkbox"> La manipulation d’explosifs</label><br>
+                    <label><input type="checkbox"> Le ponçage motorisé de cuir</label><br>
+                    <label><input type="checkbox"> Le tannage de peau</label><br>
+                    <label><input type="checkbox"> La teinturerie</label><br>
+                    <label><input type="checkbox"> L’impression</label><br>
+                    <label><input type="checkbox"> Le rabotage mécanisé du bois</label><br>
+                    <label><input type="checkbox"> Le traitement chimique et mécanisé du bois</label><br>
+                    <label><input type="checkbox"> L’égrenage</label><br>
+                    <label><input type="checkbox"> La filature</label><br>
+                    <label><input type="checkbox"> La production de droguerie</label><br>
+                    <label><input type="checkbox"> La brasserie</label><br>
+                    <label><input type="checkbox"> La production d’alcool</label><br>
+                    <label><input type="checkbox"> La chaudronnerie</label><br>
+                    <label><input type="checkbox"> La manipulation des hydrocarbures</label><br>
+                    <label><input type="checkbox"> La manipulation de tous produits inflammables</label><br>
+                    <label><input type="checkbox"> Le travail dans la forge</label><br>
+                    <label><input type="checkbox"> La ferronnerie</label><br>
+                    <label><input type="checkbox"> Le puisatier</label><br>
+                    <label><input type="checkbox"> Coiffure</label><br>
+                    <label><input type="checkbox"> Couture</label><br>
+                    <label><input type="checkbox"> Blanchisserie/Lavage/Repassage</label><br>
+                    <label><input type="checkbox"> Vulgarisateur</label><br>
+                    <label><input type="checkbox"> Vente de pièces détachées</label><br>
+                    <label><input type="checkbox"> Mécanique Moto/Auto</label><br>
+                    <label><input type="checkbox"> Confection articles en bois</label><br>
+                    <label><input type="checkbox"> Tissage/Fabrication de pagne traditionnel</label><br>
+                    <label><input type="checkbox"> Moudre/travail de grain/piler à la machine</label><br>
+                    <label><input type="checkbox"> Autres</label><br>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.4.3.a Lieu d’exercice :</h2>
+                    <label><input type="checkbox"> Garage</label>
+                    <label><input type="checkbox"> Ambulant</label>
+                    <label><input type="checkbox"> Domicile</label>
+                    <label><input type="checkbox"> Autres ateliers</label>
+                    <label><input type="checkbox"> Atelier de couture</label>
+                    <label><input type="checkbox"> Atelier de tisserand</label>
+                    <label><input type="checkbox"> Salon de coiffure</label>
+                    <label><input type="checkbox"> Menuiserie</label>
+                    <label><input type="checkbox"> Cordonnerie</label>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.5. TRANSPORT</h1>
+                <div class="section">
+                    <h2>D2.5.1.a Types d’activité exercé :</h2>
+                    <input type="text" class="activity-input" placeholder="Type d’activité 1">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 2">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 3">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 4">
+                </div>
+                <div class="section">
+                    <h2>D2.5.1.b Autres types d’activités exercées dans le transport :</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.5.2.a Types de travaux exercés par les enfants</h2>
+                    <label><input type="checkbox"> Transport routier de passagers</label>
+                    <label><input type="checkbox"> Transport routier de marchandises</label>
+                    <label><input type="checkbox"> Mototaxis</label>
+                    <label><input type="checkbox"> Apprenti/mécanicien</label>
+                    <label><input type="checkbox"> Portefaix/pousse-pousse</label>
+                    <label><input type="checkbox"> Chargement de bagages/véhicules</label>
+                    <label><input type="checkbox"> Chargement de bagages/moto</label>
+                    <label><input type="checkbox"> Chauffeur</label>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.5.3.a Lieu d’exercice du transport par l’enfant :</h2>
+                    <label><input type="checkbox"> À la gare</label>
+                    <label><input type="checkbox"> Naviguant</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.6. BATIMENT ET TRAVAUX PUBLICS</h1>
+                <div class="section">
+                    <h2>D2.6.1.a Types d’activité exercé :</h2>
+                    <input type="text" class="activity-input" placeholder="Type d’activité 1">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 2">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 3">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 4">
+                </div>
+                <div class="section">
+                    <h2>D2.6.1.b Autres types d’activité exercées dans les BTP :</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.6.2.a Tâches exercées par les enfants</h2>
+                    <label><input type="checkbox"> Les activités générales de BTP</label>
+                    <label><input type="checkbox"> L’extraction des matériaux de construction</label>
+                    <label><input type="checkbox"> La construction de bâtiments ou édifices</label>
+                    <label><input type="checkbox"> La reconstruction de bâtiments ou édifices</label>
+                    <label><input type="checkbox"> L’entretien de bâtiments ou édifices</label>
+                    <label><input type="checkbox"> La réparation de bâtiments ou édifices</label>
+                    <label><input type="checkbox"> La modification de bâtiments ou édifices</label>
+                    <label><input type="checkbox"> La démolition de tous bâtiments ou édifices</label>
+                    <label><input type="checkbox"> Les travaux de préparation et de fondations précédant lesdits travaux</label>
+                    <label><input type="checkbox"> La fabrication de matériaux de construction</label>
+                    <label><input type="checkbox"> Les activités de chantier naval</label>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.6.3.a Lieu d’exercice des travaux BTP par l’enfant :</h2>
+                    <label><input type="checkbox"> Chantier industriel</label>
+                    <label><input type="checkbox"> Chantier particulier</label>
+                    <label><input type="checkbox"> Domicile</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>D2.7. SECTION DOMESTIQUE</h1>
+                <div class="section">
+                    <h2>D2.7.1.a Types d’activité exercée :</h2>
+                    <input type="text" class="activity-input" placeholder="Type d’activité 1">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 2">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 3">
+                    <input type="text" class="activity-input" placeholder="Type d’activité 4">
+                </div>
+                <div class="section">
+                    <h2>D2.7.1.b Autres types d’activité domestique :</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.2.a Tâches exercées par les enfants</h2>
+                    <label><input type="checkbox"> Gardiennage</label>
+                    <label><input type="checkbox"> Serveur/Serveuse</label>
+                    <label><input type="checkbox"> Petite activité familiale</label>
+                    <label><input type="checkbox"> Ménage/Entretien</label>
+                    <label><input type="checkbox"> Baby Sitting</label>
+                    <label><input type="checkbox"> Puiser de l’eau</label>
+                    <label><input type="checkbox"> Cuisine</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.3.a Type d'habitat :</h2>
+                    <label><input type="checkbox"> Case/baraque</label>
+                    <label><input type="checkbox"> Villa</label>
+                    <label><input type="checkbox"> Appartement</label>
+                    <label><input type="checkbox"> Maison en bande</label>
+                    <label><input type="checkbox"> Cour commune</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.4 Taille du ménage de l’utilisateur/employeur :</h2>
+                    <input type="number" class="number-input" placeholder="Nombre de personnes">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.5 Nombre de pièces du logement :</h2>
+                    <input type="number" class="number-input" placeholder="Nombre de pièces">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.6 Vis-tu dans le ménage de l’employeur/utilisateur ?</h2>
+                    <label><input type="radio" name="residence" value="oui"> Oui</label>
+                    <label><input type="radio" name="residence" value="non"> Non</label>
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.7.a Lieu de couchage :</h2>
+                    <label><input type="checkbox"> Chambre</label>
+                    <label><input type="checkbox"> Salon</label>
+                    <label><input type="checkbox"> Cuisine</label>
+                    <label><input type="checkbox"> Magasin</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.8.a Nature du couchage :</h2>
+                    <label><input type="checkbox"> Natte</label>
+                    <label><input type="checkbox"> Lit</label>
+                    <label><input type="checkbox"> Banc/table</label>
+                    <label><input type="checkbox"> Pagne/tissu</label>
+                    <label><input type="checkbox"> À même le sol</label>
+                    <label><input type="checkbox"> Matelas par terre</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.9.a Quelle est la principale source d'approvisionnement en eau ?</h2>
+                    <label><input type="checkbox"> Robinet intérieur</label>
+                    <label><input type="checkbox"> Camion-citerne</label>
+                    <label><input type="checkbox"> Marigot/Mare/Rivière</label>
+                    <label><input type="checkbox"> Puits</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.10.a Quelle est la principale source d'éclairage ?</h2>
+                    <label><input type="checkbox"> Électricité</label>
+                    <label><input type="checkbox"> Pétrole lampant</label>
+                    <label><input type="checkbox"> Groupe électrogène</label>
+                    <label><input type="checkbox"> Énergie solaire</label>
+                    <label><input type="checkbox"> Bois</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>D2.7.11.a Quelle est la principale source de combustible ?</h2>
+                    <label><input type="checkbox"> Bois</label>
+                    <label><input type="checkbox"> Gaz</label>
+                    <label><input type="checkbox"> Charbon</label>
+                    <label><input type="checkbox"> Électricité</label>
+                    <label><input type="checkbox"> Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+                <h1>Section E : Conditions de travail</h1>
+
+                <div class="section">
+                    <h2>E.1 Horaires habituels de travail</h2>
+                    <label>
+                        Début : <input type="text" placeholder="__/__/h/__/__/mn" class="time-input">
+                    </label>
+                    <label>
+                        Fin : <input type="text" placeholder="__/__/h/__/__/mn" class="time-input">
+                    </label>
+                </div>
+
+                <div class="section">
+                    <h2>E.1.a.2 Pauses habituelles</h2>
+                    <label>
+                        Début : <input type="text" placeholder="__/__/h/__/__/mn" class="time-input">
+                    </label>
+                    <label>
+                        Fin : <input type="text" placeholder="__/__/h/__/__/mn" class="time-input">
+                    </label>
+                </div>
+
+                <div class="section">
+                    <h2>E2. Nombre de jours de travail/enfant :</h2>
+                    <input type="number" class="number-input" placeholder="Nombre de jours">
+                </div>
+
+                <div class="section">
+                    <h2>E3. Pourquoi travailles-tu ?</h2>
+                    <label><input type="checkbox"> Recherche de complément au revenu familial</label>
+                    <label><input type="checkbox"> Gagner mon propre argent</label>
+                    <label><input type="checkbox"> Mes compagnons d'âge travaillent également</label>
+                    <label><input type="checkbox"> Mes parents exigent que je travaille</label>
+                    <label><input type="checkbox"> Argent pour aller à l’école/formation professionnelle</label>
+                    <label><input type="checkbox"> Aide familiale</label>
+                    <label><input type="checkbox"> Besoin d’apprentissage</label>
+                    <label><input type="checkbox"> Argent de poche</label>
+                    <label><input type="checkbox"> Soins médicaux</label>
+                    <label><input type="checkbox"> Acquisition de machines-outils</label>
+                    <label><input type="checkbox"> École éloignée</label>
+                    <label><input type="checkbox"> Échec scolaire/oisif</label>
+                    <label><input type="checkbox"> Enfant-Parent/ Enfant responsabilisé /enfant chef de ménage</label>
+                    <label><input type="checkbox"> Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>E3.b Autres raisons :</h2>
+                    <input type="text" id="D7" name="D7" min="0" max="99">
+                </div>
+
+                <div class="section">
+                    <h2>E4. Quel est le type de travail de l’enfant ?</h2>
+                    <label><input type="radio" name="work_type" value="1"> 1. Travail rémunéré</label>
+                    <label><input type="radio" name="work_type" value="2"> 2. Travail non rémunéré</label>
+                </div>
+
+                <div class="section">
+                    <h2>Quel type de contrat avez-vous avec votre employeur ?</h2>
+                    <label><input type="radio" name="contract_type" value="1"> 1. Aucun contrat</label>
+                    <label><input type="radio" name="contract_type" value="2"> 2. Contrat oral</label>
+                    <label><input type="radio" name="contract_type" value="3"> 3. Contrat écrit</label>
+                </div>
+
+                <div class="section">
+                    <h2>E5.a Comment êtes-vous rémunéré ? (citer un seul)</h2>
+                    <label><input type="radio" name="remuneration" value="1"> 1. À la tâche</label>
+                    <label><input type="radio" name="remuneration" value="2"> 2. À l'heure</label>
+                    <label><input type="radio" name="remuneration" value="3"> 3. Journalier</label>
+                    <label><input type="radio" name="remuneration" value="4"> 4. Hebdomadaire</label>
+                    <label><input type="radio" name="remuneration" value="5"> 5. Mensuel</label>
+                    <label><input type="radio" name="remuneration" value="6"> 6. Annuel</label>
+                    <label><input type="radio" name="remuneration" value="7"> 7. Après la vente du produit (cacao, or…)</label>
+                    <label><input type="radio" name="remuneration" value="8"> 8. À la fin des vacances scolaires</label>
+                    <label><input type="radio" name="remuneration" value="9"> 9. Repas quotidien</label>
+                    <label><input type="radio" name="remuneration" value="10"> 10. Autres</label>
+                </div>
+
+                <div class="section">
+                    <h2>E5.b Autres types de rémunération (à préciser) :</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <h1>Section F : Rémunération</h1>
+
+                <div class="section">
+                    <h2>F1. Mode de rémunération</h2>
+                    <label><input type="checkbox"> 1. Nature</label>
+                    <label><input type="checkbox"> 2. Espèce</label>
+                    <label><input type="checkbox"> 3. Nature et espèce</label>
+                </div>
+
+                <div class="section">
+                    <h2>F2 : À qui remet-on ta rémunération ?</h2>
+                    <label><input type="radio" name="recipient" value="1"> 1. Moi-même</label>
+                    <label><input type="radio" name="recipient" value="2"> 2. À mes parents</label>
+                    <label><input type="radio" name="recipient" value="3"> 3. Autre parent</label>
+                    <label><input type="radio" name="recipient" value="4"> 4. Tierce personne</label>
+                </div>
+
+                <div class="section">
+                    <h2>F3.a Si autre que 1, pourquoi ?</h2>
+                    <label><input type="checkbox"> 1. Trop jeune</label>
+                    <label><input type="checkbox"> 2. Sécurisation des gains</label>
+                    <label><input type="checkbox"> 3. Achat de vêtements, vélos, etc.</label>
+                    <label><input type="checkbox"> 4. Scolarisation/Écolage</label>
+                    <label><input type="checkbox"> 5. Épargne / Investissement pour un métier</label>
+                    <label><input type="checkbox"> 6. Argent remis à l’intermédiaire pour l’emploi</label>
+                    <label><input type="checkbox"> 7. Aider les parents à s’occuper de moi / Exigence des parents</label>
+                    <label><input type="checkbox"> 8. Autres</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>F4 : À quelle période travaillez-vous ?</h2>
+                    <label><input type="radio" name="working_period" value="1"> 1. À plein temps</label>
+                    <label><input type="radio" name="working_period" value="2"> 2. Vacances scolaires (jours de repos)</label>
+                    <label><input type="radio" name="working_period" value="3"> 3. Après école/formation professionnelle</label>
+                    <label><input type="radio" name="working_period" value="4"> 4. Occasionnellement</label>
+                </div>
+
+                <div class="section">
+                    <h2>F5 : Avez-vous été malade au cours des 03 derniers mois ?</h2>
+                    <label><input type="radio" name="illness_last_3_months" value="1"> 1. Oui</label>
+                    <label><input type="radio" name="illness_last_3_months" value="2"> 2. Non</label>
+                </div>
+
+                <div class="section" id="illness-count" style="display:none;">
+                    <h2>F6 : Combien de fois avez-vous été malade au cours des 03 derniers mois ?</h2>
+                    <input type="number" class="number-input" placeholder="Nombre de fois">
+                </div>
+
+                <div class="section" id="illness-details" style="display:none;">
+                    <h2>F7.a : De quelle maladie avez-vous le plus souffert au cours des 03 derniers mois ?</h2>
+                    <label><input type="checkbox"> 1. Maladies de peau</label>
+                    <label><input type="checkbox"> 2. Maladies respiratoires</label>
+                    <label><input type="checkbox"> 3. Diarrhée</label>
+                    <label><input type="checkbox"> 4. Fièvre, paludisme</label>
+                    <label><input type="checkbox"> 5. Douleurs (cou, dos, hanche)</label>
+                    <label><input type="checkbox"> 6. Mal de tête</label>
+                    <label><input type="checkbox"> 7. Mal de ventre</label>
+                    <label><input type="checkbox"> 8. Saignement/viol</label>
+                    <label><input type="checkbox"> 9. Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>F8 : Où avez-vous été soigné ?</h2>
+                    <label><input type="radio" name="treatment_location" value="1"> 1. À l’hôpital</label>
+                    <label><input type="radio" name="treatment_location" value="2"> 2. Chez le guérisseur</label>
+                    <label><input type="radio" name="treatment_location" value="3"> 3. À la maison</label>
+                    <label><input type="radio" name="treatment_location" value="4"> 4. Aucun soin</label>
+                </div>
+
+                <div class="section">
+                    <h2>F9 : L’employeur/utilisateur vous a-t-il aidé ?</h2>
+                    <label><input type="radio" name="employer_aid" value="1"> 1. Oui (argent)</label>
+                    <label><input type="radio" name="employer_aid" value="2"> 2. Oui (soins)</label>
+                    <label><input type="radio" name="employer_aid" value="3"> 3. Non</label>
+                </div>
+
+                <div class="section" id="aid-reason" style="display:none;">
+                    <h2>F10.a. raison</h2>
+                    <label><input type="checkbox"> 1. Absence / Voyage de l'employeur</label>
+                    <label><input type="checkbox"> 2. Travailleur indépendant / Prise en charge personnelle et non par l'employeur</label>
+                    <label><input type="checkbox"> 3. Prise en charge familiale</label>
+                    <label><input type="checkbox"> 4. Manque de moyens, d'argent de l'employeur / Employeur non informé</label>
+                    <label><input type="checkbox"> 5. Maladie jugée bénigne</label>
+                    <label><input type="checkbox"> 6. Refus par l'employeur de la prise en charge</label>
+                    <label><input type="checkbox"> 7. Début de la maladie à la maison</label>
+                    <label><input type="checkbox"> 8. NSP</label>
+                    <label><input type="checkbox"> 9. Apprenti/En apprentissage</label>
+                    <label><input type="checkbox"> 10. Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>F11. Combien de fois avez-vous été blessé au cours des 03 derniers mois ?</h2>
+                    <input type="number" class="number-input" placeholder="Nombre de fois">
+                </div>
+
+                <div class="section">
+                    <h2>F12.a. Au cours des 03 derniers mois, de quelles blessures avez-vous été victimes ?</h2>
+                    <label><input type="checkbox"> 1. Blessures par objets coupants</label>
+                    <label><input type="checkbox"> 2. Brûlure par produit chimique</label>
+                    <label><input type="checkbox"> 3. Morsure (serpent, etc.)</label>
+                    <label><input type="checkbox"> 4. Fracture/traumatisme</label>
+                    <label><input type="checkbox"> 5. Brûlure par chaleur</label>
+                    <label><input type="checkbox"> 6. Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>F13 : Où avez-vous été soigné principalement ?</h2>
+                    <label><input type="radio" name="injury_treatment_location" value="1"> 1. À l’hôpital</label>
+                    <label><input type="radio" name="injury_treatment_location" value="2"> 2. Chez le guérisseur</label>
+                    <label><input type="radio" name="injury_treatment_location" value="3"> 3. À la maison</label>
+                    <label><input type="radio" name="injury_treatment_location" value="4"> 4. Lieu de travail</label>
+                </div>
+
+                <div class="section">
+                    <h2>F14.a L’utilisateur vous a-t-il aidé ?</h2>
+                    <label><input type="radio" name="injury_employer_aid" value="1"> 1. Oui (argent)</label>
+                    <label><input type="radio" name="injury_employer_aid" value="2"> 2. Oui (soins)</label>
+                    <label><input type="radio" name="injury_employer_aid" value="3"> 3. Non</label>
+                </div>
+
+                <div class="section" id="injury-aid-reason" style="display:none;">
+                    <h2>F14.b.1 Pourquoi ne vous a-t-il pas aidé ?</h2>
+                    <label><input type="checkbox"> 1. Absence / Voyage de l’employeur</label>
+                    <label><input type="checkbox"> 2. Travailleur indépendant / Prise en charge personnelle et non par l’employeur</label>
+                    <label><input type="checkbox"> 3. Prise en charge familiale</label>
+                    <label><input type="checkbox"> 4. Manque de moyens, d’argent de l’employeur / Employeur non informé</label>
+                    <label><input type="checkbox"> 5. Blessure jugée bénigne</label>
+                    <label><input type="checkbox"> 6. Refus par l’employeur de la prise en charge</label>
+                    <label><input type="checkbox"> 7. Blessures contractées à la maison</label>
+                    <label><input type="checkbox"> 8. NSP</label>
+                    <label><input type="checkbox"> 9. Apprenti/En apprentissage</label>
+                    <label><input type="checkbox"> 10. Autre</label>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+
+                <div class="section">
+                    <h2>F14.b.2 Autres raisons</h2>
+                    <input type="text" placeholder="Préciser" class="other-input">
+                </div>
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+                <script>
+                    // Script pour gérer l'affichage conditionnel
+                    document.querySelectorAll('input[name="illness_last_3_months"]').forEach((input) => {
+                        input.addEventListener('change', function () {
+                            document.getElementById('illness-count').style.display = this.value === "1" ? 'block' : 'none';
+                            document.getElementById('illness-details').style.display = this.value === "1" ? 'block' : 'none';
+                        });
+                    });
+
+                    document.querySelectorAll('input[name="employer_aid"]').forEach((input) => {
+                        input.addEventListener('change', function () {
+                            document.getElementById('aid-reason').style.display = this.value === "3" ? 'none' : 'block';
+                        });
+                    });
+
+                    document.querySelectorAll('input[name="injury_employer_aid"]').forEach((input) => {
+                        input.addEventListener('change', function () {
+                            document.getElementById('injury-aid-reason').style.display = this.value === "3" ? 'none' : 'block';
+                        });
+                    });</script>
+            </form>
+    </div>
+    </div>
+</body>
+</html>

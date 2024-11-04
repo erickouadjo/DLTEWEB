@@ -1,360 +1,129 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+<style>
+    /* Style pour le menu latéral */
+    .sidebar {
+        min-height: 200px; /* Prend toute la hauteur de la page */
+        width: 250px; /* Largeur du menu */
+        position: fixed; /* Fixé sur le côté gauche */
+        top: 0;
+        left: 0;
+        background-color: green; /* Couleur de fond */
+        padding-top: 20px; /* Espacement en haut */
+        margin-top: 250px;
+        margin-left: 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    .sidebar ul li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: left;
+        border-bottom: 1px solid white;
+    }
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <meta name="description" content="topfloor HTML 5 Template " />
+    .sidebar ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-size: 15px;
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/topfloor-icons/style.css">
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/nice-select/nice-select.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.css" />
+    }
 
-    <!-- template styles -->
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor.css" />
-    <link rel="stylesheet" href="~/Content/FichierAsset/assets/css/topfloor-responsive.css" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
-    <style>
-        /* Style pour le menu latéral */
-        .sidebar {
-            min-height: 200px; /* Prend toute la hauteur de la page */
-            width: 250px; /* Largeur du menu */
-            position: fixed; /* Fixé sur le côté gauche */
-            top: 0;
-            left: 0;
-            background-color: green; /* Couleur de fond */
-            padding-top: 20px; /* Espacement en haut */
-            margin-top: 250px;
-            margin-left: 20px;
-            border-radius: 5px;
-            font-size: 12px;
-        }
+    .sidebar ul li:hover {
+        background-color: #18600B; /* Couleur au survol */
+    }
 
-            .sidebar ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    /* Contenu principal */
+    .content {
+        margin-left: 220px; /* Ajoute un espace pour ne pas être sous le menu */
+        padding: 20px;
+        min-height: 800px;
+    }
 
-                .sidebar ul li {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    padding-right: 15px;
-                    padding-left: 15px;
-                    text-align: left;
-                }
+    h1 {
+        font-size: 24px;
+    }
 
-                    .sidebar ul li a {
-                        display: block;
-                        color: white;
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-size: 15px;
-                    }
+    p {
+        font-size: 16px;
+    }
+</style>
 
-                    .sidebar ul li:hover {
-                        background-color: #18600B; /* Couleur au survol */
-                    }
+<div class="container-fluid" style="background-color: #D3E3FD;">
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="#" id="ListeForm1">
+                    CARTOGRAPHIE ET GUIDE D'ENTRETIEN
+                </a>
+            </li>
+            <li>
+                <a href="#" style="padding:10px 0px 10px 0px" id="ListeForm2">
+                    FICHE DE PRE-IDENTIFICATION DES ENF...
+                </a>
+            </li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">ETABLISSEMENT SCOLAIRE ET CENTRE...</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm5">STRUCTURE VERSION FINALE</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm6">ENFANTS ASSISTES</a></li>
+        </ul>
+    </div>
 
-        /* Contenu principal */
-        .content {
-            margin-left: 220px; /* Ajoute un espace pour ne pas être sous le menu */
-            padding: 20px;
-            min-height: 800px;
-        }
+    <div class="content">
 
-        h1 {
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-    <div class="page-wrapper">
-        <header class="main-header-three">
-            <div class="first-menu">
-                <div class="d-flex justify-content-around">
-                    <div class="p-1">
-                        <center>
-                            <img src="~/Images/armoirie278x90.png" />
-                        </center>
-                    </div>
-
-                    <div class="p-2">
-                        <center>
-                            <h3 style="color: orangered; padding-top: 20px ">SIG D’OBSERVATION ET DE SUIVI DU TRAVAIL DES ENFANTS EN CÔTE D’IVOIRE</h3>
-                            <h4 style="color: #343D64; padding-top: 5px ">Direction de Lutte Contre le Travail des Enfants</h4>
-                        </center>
-                    </div>
-                    <div class="p-2">
-                        <img src="~/Images/LOGO-MEPS4_278x90.png" />
-                    </div>
-                </div>
-
-            </div>
-            <nav class="main-menu main-menu-four" style="background-color:forestgreen">
-                <div class="main-menu-four__wrapper">
-                    <div class="main-menu-four__wrapper-inner">
-                        <div class="main-menu-four__logo">
-                            <a href="index.html"><img src="assets/images/resources/logo-3.png" alt=""></a>
+        <div class="container-fluid">
+            <h1>COLLECTE DE DONNEES</h1>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card fixed-height_flex">
+                        <div id="loading-spinner" style="display: none;">
+                            <p>Chargement...</p>
                         </div>
-                        <div class="main-menu-four__left">
-                            <div class="main-menu-four__main-menu-box">
-                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                <ul class="main-menu__list">
-                                    <li>
-                                        @Html.ActionLink("ACCUEIL", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
-                                        @Html.ActionLink("TRAITEMENT ALERTE", "Index", "AcTraitementAlerte", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color:aliceblue; text-decoration:none">CARTOGRAPHIE</a>
-                                        <ul>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("INCIDENT", "Index", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("ORGANE DU SIGOSTECI", "OrganeSIGOSTECI", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("ZONE", "Zone", "AcCartographie", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        @Html.ActionLink("SUIVI ET EVALUATION", "Index", "AcSuiviEvaluation", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color:aliceblue; text-decoration:none">STATISTIQUE</a>
-                                        <ul>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("TABLEAU DE BORD", "Index", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("SYNTHESE", "Synthese", "AcTableauBord", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        @Html.ActionLink("COMMUNICATION", "Index", "AcCommunication", new { area = "" }, new { @class = "nav-link" })
-                                    </li>
-                                    <li>
-                                        <a href="#" style="color:aliceblue; text-decoration:none">ADMINISTRATION</a>
-                                        <ul>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("COLLECTE DE DONNEES", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("PROFIL", "Index", "AcCollecteDonnees", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("ACTIVITE", "Index", "Activite", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("ZONE", "Index", "Zone", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                            <li style="background-color: #007565">
-                                                @Html.ActionLink("STRUCTURE", "Index", "Structure", new { area = "" }, new { @class = "nav-link" })
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="main-menu-four__right">
-                            <div class="main-menu-four__search-btn-box">
-
-                                <div class="main-menu-four__btn-box">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container-fluid" style="background-color: #D3E3FD;">
-            <div class="sidebar">
-                <ul>
-                    <li>
-                        <a href="#" id="ListeForm1">
-                            CARTOGRAPHIE ET GUIDE D'ENTRETIEN
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" style="padding:10px 0px 10px 0px" id="ListeForm2">
-                            FICHE DE PRE-IDENTIFICATION DES ENF...
-                        </a>
-                    </li>
-                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">ENFANTS TRAVAILLEURS ET LEURS UTILISATEURS</a></li>
-                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">ETABLISSEMENT SCOLAIRE ET CENTRE...</a></li>
-                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm5">STRUCTUR VERSION FINALE</a></li>
-                    <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm6">ENFANTS ASSISTES</a></li>
-                </ul>
-            </div>
-
-            <div class="content">
-
-                <div class="container-fluid">
-                    <h1>COLLECTE DE DONNEES</h1>
-                    <br />
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card fixed-height_flex">
-                                <div id="loading-spinner" style="display: none;">
-                                    <p>Chargement...</p>
-                                </div>
-                                <div class="card-body" id="partial-view-container">
-
-
-                                    @Html.Partial("~/Views/AcCollecteDonnees/_listeForm1.cshtml")
-
-
-                                </div>
-                            </div>
+                        <div class="card-body" id="partial-view-container">
+                            @Html.Partial("~/Views/AcCollecteDonnees/_listeForm1.cshtml")
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="site-footer site-footer-four">
-            <div class="site-footer__shape-1">
-                <img src="assets/images/shapes/site-footer-shape-1.png" alt="">
-            </div>
-            <div class="site-footer__bottom">
-                <div class="container">
-                    <div class="site-footer__bottom-inner">
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="footer-widget__social">
-                                <a href="#"><span class="icon-facebook"></span></a>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                                <a href="#"><span class="icon-linkin"></span></a>
-                                <a href="#"><span class="icon-pinterest"></span></a>
-                            </div>
-                        </div>
-                        <p class="site-footer__bottom-text">© Starplate 2024 | Tout droit reservé</p>
-                        <ul class="list-unstyled site-footer__bottom-menu">
-                            <li>
-                                <h6 style="color:white">Abonnez-vous à notre newsletter</h6>
-                                <input type="email" placeholder="Entrer votre Email" name="email" class="form-control"><br />
-                                <button type="submit" class="form-control btn btn-outline-secondary">Souscrivez maintenant</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/odometer/odometer.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/swiper/swiper.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/wow/wow.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/isotope/isotope.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.circleType.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/jquery.circle-type/jquery.lettering.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/countdown/countdown.min.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/gsap.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/ScrollTrigger.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/gsap/SplitText.js"></script>
-    <script src="~/Content/FichierAsset/assets/vendors/scroll/scrolltop.min.js"></script>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.dataTables.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.colVis.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+@section scripts{
     <script>
-        new DataTable('#example', {
-            dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
-            buttons: [
-                {
-                    extend: 'copy',
-                    className: 'buttons-copy'
-                },
-                {
-                    extend: 'excel',
-                    className: 'buttons-excel'
-                },
-                {
-                    extend: 'pdf',
-                    className: 'buttons-pdf'
-                }
-            ]
+    new DataTable('#example', {
+        dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
+        buttons: [
+            {
+                extend: 'copy',
+                className: 'buttons-copy'
+            },
+            {
+                extend: 'excel',
+                className: 'buttons-excel'
+            },
+            {
+                extend: 'pdf',
+                className: 'buttons-pdf'
+            }
+        ]
 
-        });
- $(document).ready(function () {
+    });
+
+    $(document).ready(function () {
     function loadPartialView(url) {
         $('#loading-spinner').show(); // Afficher l'indicateur de chargement
         $('#partial-view-container').load(url, function () {
@@ -395,8 +164,5 @@
 
     </script>
 
-</body>
-</html>
-
-
+}
 

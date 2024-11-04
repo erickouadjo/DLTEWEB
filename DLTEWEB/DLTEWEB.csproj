@@ -684,8 +684,6 @@
     <Content Include="Views\Zone\Index.cshtml" />
     <Content Include="Views\Structure\Index.cshtml" />
     <Content Include="Views\AcCartographie\Zone.cshtml" />
-    <Content Include="Views\AcCartographie\Index1.cshtml" />
-    <Content Include="Views\Communication\Index.cshtml" />
     <Content Include="Views\AcCollecteDonnees\FormStructure.cshtml" />
     <Content Include="Views\AcCollecteDonnees\FormFichePreIdentification.cshtml" />
     <Content Include="Views\AcCollecteDonnees\FormCartographie.cshtml" />
@@ -704,6 +702,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Communication\" />
     <Folder Include="Views\Parametre\" />
   </ItemGroup>
   <ItemGroup>

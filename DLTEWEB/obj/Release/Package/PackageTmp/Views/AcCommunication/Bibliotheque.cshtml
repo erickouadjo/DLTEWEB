@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<style>
+    /* Style pour le menu latéral */
+    .sidebar {
+        min-height: 200px; /* Prend toute la hauteur de la page */
+        width: 250px; /* Largeur du menu */
+        position: fixed; /* Fixé sur le côté gauche */
+        top: 0;
+        left: 0;
+        background-color: green; /* Couleur de fond */
+        padding-top: 20px; /* Espacement en haut */
+        margin-top: 250px;
+        margin-left: 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .sidebar ul li {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 15px;
+                padding-left: 15px;
+                text-align: left;
+                border-bottom: 1px solid white;
+            }
+
+                .sidebar ul li a {
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-size: 15px;
+                }
+
+                .sidebar ul li:hover {
+                    background-color: #18600B; /* Couleur au survol */
+                }
+
+    /* Contenu principal */
+    .content {
+        margin-left: 220px; /* Ajoute un espace pour ne pas être sous le menu */
+        padding: 20px;
+        min-height: 800px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+</style>
+
+<div class="container-fluid" style="background-color: #D3E3FD;">
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="#" id="ListeForm1">
+                    ADMINISTRATION GENERALE
+                </a>
+            </li>
+            <li>
+                <a href="#" style="padding:10px 0px 10px 0px" id="ListeForm2">
+                    SECTEUR DE L'EMPLOI
+                </a>
+            </li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm3">SECTEUR DU TRAVAIL</a></li>
+            <li><a href="#" style="padding:10px 0px 10px 0px" id="ListeForm4">PROTECTION SOCIAL</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <div class="container-fluid">
+            <h1>BIBLIOTHEQUE</h1>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card fixed-height_flex">
+                        <div id="loading-spinner" style="display: none;">
+                            <p>Chargement...</p>
+                        </div>
+                        <div class="card-body" id="partial-view-container">
+                            @Html.Partial("~/Views/AcCommunication/_listeForm1.cshtml")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+    new DataTable('#example', {
+        dom: 'Bfrtip', // Utilisation de l'option dom pour ajouter les boutons
+        buttons: [
+            {
+                extend: 'copy',
+                className: 'buttons-copy'
+            },
+            {
+                extend: 'excel',
+                className: 'buttons-excel'
+            },
+            {
+                extend: 'pdf',
+                className: 'buttons-pdf'
+            }
+        ]
+
+    });
+
+    $(document).ready(function () {
+    function loadPartialView(url) {
+        $('#loading-spinner').show(); // Afficher l'indicateur de chargement
+        $('#partial-view-container').load(url, function () {
+            $('#loading-spinner').hide(); // Masquer l'indicateur une fois le chargement terminé
+        });
+    }
+
+    $('#ListeForm1').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm1")');
+    });
+
+    $('#ListeForm2').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm2")');
+    });
+
+    $('#ListeForm3').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm3")');
+    });
+
+    $('#ListeForm4').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm4")');
+    });
+
+    $('#ListeForm5').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm5")');
+    });
+
+    $('#ListeForm6').on('click', function (e) {
+        e.preventDefault();
+        loadPartialView('@Url.Action("ListeForm6")');
+    });
+});
+
+    </script>
+
+}
+

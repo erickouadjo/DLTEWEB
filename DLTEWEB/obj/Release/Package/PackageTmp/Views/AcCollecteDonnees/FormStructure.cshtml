@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "FormEnfantUtilisateur";
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+        <div class="container">
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ STRUCTURES</b>
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+
+                    <div class="form-group">
+                        <label for="point_focal_nom">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="point_focal_nom" class="text-input" placeholder="Nom et prénoms du point focal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="point_focal_code">0A2. Code point focal :</label>
+                        <input type="text" id="point_focal_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_nom">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="superviseur_nom" class="text-input" placeholder="Nom et prénoms du superviseur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_code">0A4. Code superviseur :</label>
+                        <input type="text" id="superviseur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_nom">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_nom" class="text-input" placeholder="Nom et prénoms du chef collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_code">0A6. Code chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_nom">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="collecteur_nom" class="text-input" placeholder="Nom et prénoms du collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_code">0A8. Code collecteur :</label>
+                        <input type="text" id="collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Section A : Profil</h2>
+
+                    <label for="nom_structure">A1.a Nom de la structure :</label>
+                    <input type="text" id="nom_structure" placeholder="Nom de la structure">
+
+                    <label for="sigle">A1.b Sigle :</label>
+                    <input type="text" id="sigle" placeholder="Sigle">
+
+                    <label for="adresse_postale">A2.a Adresse Postale :</label>
+                    <input type="text" id="adresse_postale" placeholder="Adresse Postale">
+
+                    <label for="telephone">A2.b Téléphone :</label>
+                    <input type="tel" id="telephone" placeholder="Téléphone">
+
+                    <label for="email">A2.c Email :</label>
+                    <input type="email" id="email" placeholder="Email">
+
+                    <label for="siege_social">A3. Siège social :</label>
+                    <input type="text" id="siege_social" placeholder="Siège social">
+
+                    <label for="nom_personne_contact">A4.a Nom de la personne à contacter/Répondant :</label>
+                    <input type="text" id="nom_personne_contact" placeholder="Nom du contact">
+
+                    <label for="fonction">A4.b Fonction :</label>
+                    <input type="text" id="fonction" placeholder="Fonction">
+                </div>
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

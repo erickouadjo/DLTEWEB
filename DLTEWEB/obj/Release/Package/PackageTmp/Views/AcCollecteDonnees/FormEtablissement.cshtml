@@ -1,0 +1,734 @@
+﻿@{
+    Layout = "~/Views/Shared/_MenuPrincipal.cshtml";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'informations</title>
+    <style>
+
+        h2 {
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="time"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .section1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+
+            .section h3 {
+                margin-top: 0;
+                background-color: #333333;
+                padding: 10px;
+                color: white;
+            }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+
+        .time-input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .time-input input {
+                width: 45%;
+            }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: start;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            .checkbox-group label, .radio-group label {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div style="background-color: #D3E3FD;">
+        <div class="container">
+            <form style="padding-top:20px !important">
+                <b style="color:orangered"><a href='javascript:history.go(-1)' style="color:green">COLLECTE DE DONNEES</a> \ ETABLISSEMENT SCOLAIRE ET CENTRE DE FORMATION</b>
+                
+                <div class="section">
+                    <h2>Section 0A : Informations des points focaux et collecteurs</h2>
+
+                    <div class="form-group">
+                        <label for="point_focal_nom">0A1. Nom et prénoms point focal :</label>
+                        <input type="text" id="point_focal_nom" class="text-input" placeholder="Nom et prénoms du point focal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="point_focal_code">0A2. Code point focal :</label>
+                        <input type="text" id="point_focal_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_nom">0A3. Nom et prénoms superviseur :</label>
+                        <input type="text" id="superviseur_nom" class="text-input" placeholder="Nom et prénoms du superviseur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="superviseur_code">0A4. Code superviseur :</label>
+                        <input type="text" id="superviseur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_nom">0A5. Nom et prénoms du chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_nom" class="text-input" placeholder="Nom et prénoms du chef collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chef_collecteur_code">0A6. Code chef collecteur :</label>
+                        <input type="text" id="chef_collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_nom">0A7. Nom et prénoms du collecteur :</label>
+                        <input type="text" id="collecteur_nom" class="text-input" placeholder="Nom et prénoms du collecteur">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collecteur_code">0A8. Code collecteur :</label>
+                        <input type="text" id="collecteur_code" class="code-input" maxlength="3" placeholder="Code">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Section A : Profil 	</h2>
+                    <div class="form-group">
+                        <label for="nom_etablissement">A1. Nom de l’établissement :</label>
+                        <input type="text" id="nom_etablissement" placeholder="Nom de l’établissement" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adresse_postale">A2.a. Adresse Postale :</label>
+                        <input type="text" id="adresse_postale" placeholder="Adresse Postale" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">A2.b. Téléphone :</label>
+                        <input type="tel" id="telephone" placeholder="Téléphone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">A2.c. Email :</label>
+                        <input type="email" id="email" placeholder="exemple@domaine.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="titre_repondant">A3. Titre du répondant :</label>
+                        <input type="text" id="titre_repondant" placeholder="Directeur ou adjoint/maitre/enseignant" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>A4.a. Type d’établissement :</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> 1. Ecole primaire publique</label>
+                            <label><input type="checkbox"> 2. Ecole primaire privée</label>
+                            <label><input type="checkbox"> 3. Ecole secondaire publique</label>
+                            <label><input type="checkbox"> 4. Ecole secondaire privée</label>
+                            <label><input type="checkbox"> 5. Autre (à préciser)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autre_type_etablissement">A4.b. Autre Type d’établissement (à préciser) :</label>
+                        <input type="text" id="autre_type_etablissement" placeholder="Précisez ici...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>A5.a. Niveau d’enseignement :</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> 1. Préscolaire</label>
+                            <label><input type="checkbox"> 2. Primaire</label>
+                            <label><input type="checkbox"> 3. Secondaire</label>
+                            <label><input type="checkbox"> 4. Alphabétisation</label>
+                            <label><input type="checkbox"> 5. Autre</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autre_niveau_enseignement">A5.b. Autre niveau d’enseignement à préciser :</label>
+                        <input type="text" id="autre_niveau_enseignement" placeholder="Autre niveau d’enseignement">
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <h2>Section B - Information sur l'école/formation professionnelle</h2>
+                    <label>B1. Caractéristiques des enseignants (indiquer le nombre)</label>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Qualité des enseignants</th>
+                                <th>Fonctionnaire Masculin</th>
+                                <th>Fonctionnaire Féminin</th>
+                                <th>Non fonctionnaire Masculin</th>
+                                <th>Non fonctionnaire Féminin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Moniteur/alphabétiseur/animateur</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Educateur spécialisé</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Institutrice adjointe</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Institutrice ordinaire</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Professeur</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Bénévoles</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Autres</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <label>B2. Existe-t-il une cantine dans l’établissement ?</label>
+                    <label><input type="radio" name="cantine" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="cantine" value="non"> 2. Non</label>
+
+                    <div class="form-group" id="cantine-details" style="display: none;">
+                        <label>B2.1. Nombre de rationnaires de la cantine :</label>
+                        <input type="number" min="0" placeholder="Nombre de rationnaires">
+
+                        <label>B2.2. Nombre de repas servis le mois précédent à la cantine :</label>
+                        <input type="number" min="0" placeholder="Nombre de repas">
+                    </div>
+                    <br />
+                    <label>B3. Quelle est approximativement la distance de l’école (à la localité) ?</label>
+                    <label><input type="radio" name="distance" value="plus_10km"> 1. Plus de 10 km</label>
+                    <label><input type="radio" name="distance" value="moins_10km"> 2. Moins de 10 km</label>
+                    <label><input type="radio" name="distance" value="moins_5km"> 3. Moins de 5 km</label>
+                    <label><input type="radio" name="distance" value="moins_2km"> 4. Moins de 2 km</label>
+
+                    <label>B4. Les élèves ont-ils accès à un centre de santé?</label>
+                    <label><input type="radio" name="centre_sante" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="centre_sante" value="non"> 2. Non</label>
+
+                    <label>B5.a. Existe-t-il des latrines fonctionnelles dans votre établissement ?</label>
+                    <label><input type="radio" name="latrines" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="latrines" value="non"> 2. Non</label>
+
+                    <div class="form-group" id="latrines-details" style="display: none;">
+                        <label>B5.b. Préciser le type :</label>
+                        <input type="text" placeholder="Type de latrines">
+                    </div>
+
+                    <label>B5.b. Si oui, sont-elles réparties selon le sexe ?</label>
+                    <label><input type="radio" name="repartition_sexe" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="repartition_sexe" value="non"> 2. Non</label>
+
+                    <label>B6.a. Existe-t-il un point d’eau potable dans votre établissement ?</label>
+                    <label><input type="radio" name="eau_potable" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="eau_potable" value="oui"> 1. Oui</label>
+                    <label><input type="radio" name="eau_potable" value="non"> 2. Non</label>
+
+                    <div class="form-group" id="source-eau" style="display: none;">
+                        <label>B6.a. Préciser la source :</label>
+                        <label><input type="radio" name="source_eau" value="eau_courante"> 1. Eau courante</label>
+                        <label><input type="radio" name="source_eau" value="forage"> 2. Forage</label>
+                        <label><input type="radio" name="source_eau" value="puits"> 3. Puits</label>
+                        <label><input type="radio" name="source_eau" value="autre"> 4. Autre</label>
+                        <input type="text" placeholder="Préciser autre source...">
+                    </div>
+                    <label>B7. Votre établissement a-t-il reçu des kits scolaires gratuits pour cette rentrée ?</label>
+                    <label><input type="radio" name="kits" value="oui" required> 1. Oui</label>
+                    <label><input type="radio" name="kits" value="non"> 2. Non (allez à B10)</label>
+
+                    <div id="kits-details" class="hidden">
+                        <label>B8. Combien de kits gratuits ont-été distribués dans l’établissement ?</label>
+                        <input type="number" min="0" placeholder="Nombre de kits gratuits" required>
+
+                        <label>B9. Origine de ces kits ?</label>
+                        <h4>B9.1.a. Public (nom)</h4>
+                        <input type="text" placeholder="Nom de l'organisme public">
+                        <h4>B9.1.b. Public (nombre)</h4>
+                        <input type="number" min="0" placeholder="Nombre de kits publics">
+
+                        <h4>B9.2.a. Privé (nom)</h4>
+                        <input type="text" placeholder="Nom de l'organisme privé">
+                        <h4>B9.2.b. Privé (nombre)</h4>
+                        <input type="number" min="0" placeholder="Nombre de kits privés">
+                    </div>
+
+                    <h3>B10. Effectifs de l’établissement</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Niveau scolaire</th>
+                                <th>Garçons<br>Retirés des PFTE</th>
+                                <th>Filles<br>Retirées des PFTE</th>
+                                <th>Total<br>Retirés</th>
+                                <th>Garçons<br>Total</th>
+                                <th>Filles<br>Total</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B10.a</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.b</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.c</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.d</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.e</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.f</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.g</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>B10.h</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>B11. Assiduité des élèves durant le mois dernier</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Enfants retirés des PFTE et inscrits</th>
+                                <th>Garçon</th>
+                                <th>Fille</th>
+                                <th>Ensemble de l’établissement</th>
+                                <th>Garçon</th>
+                                <th>Fille</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre d’enfant absents</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Nombre d’enfant ayant été assidus</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                            <tr>
+                                <td>Effectif total de l’établissement</td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                                <td><input type="number" min="0" placeholder="0"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <label>B12. Causes d’absence des enfants retirés</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="absence_causes" value="recherche_travail"> 1. Recherche du travail</label>
+                        <label><input type="checkbox" name="absence_causes" value="soccuper_famille"> 2. S'occuper d'autres membres de la famille</label>
+                        <label><input type="checkbox" name="absence_causes" value="indiscipline"> 3. Indiscipline</label>
+                        <label><input type="checkbox" name="absence_causes" value="maladie"> 4. Maladie</label>
+                        <label><input type="checkbox" name="absence_causes" value="abandon"> 5. Abandon</label>
+                        <label><input type="checkbox" name="absence_causes" value="exclusion_temporaire"> 6. Exclusion temporaire (temps à préciser)</label>
+                        <input type="text" placeholder="Temps d'exclusion (si applicable)">
+                        <label><input type="checkbox" name="absence_causes" value="faim"> 7. Faim/manque de nourriture</label>
+                        <label><input type="checkbox" name="absence_causes" value="distance"> 8. Distance</label>
+                        <label><input type="checkbox" name="absence_causes" value="autre"> 9. Autre</label>
+                        <input type="text" placeholder="Préciser autre cause...">
+                    </div>
+
+                    <h3>B13. Information sur la déclaration à l’état civil des enfants</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Possédant un extrait de naissance/jugement supplétif</th>
+                                <th>Enfants retirés des PFTE et inscrits</th>
+                                <th>Ensemble de l’établissement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Oui</td>
+                                <td><input type="number" min="0" placeholder="Garçons"></td>
+                                <td><input type="number" min="0" placeholder="Filles"></td>
+                            </tr>
+                            <tr>
+                                <td>Non</td>
+                                <td><input type="number" min="0" placeholder="Garçons"></td>
+                                <td><input type="number" min="0" placeholder="Filles"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <label>B14. Combien d’enfants ont-ils abandonné l’établissement au cours des 3 derniers mois?</label>
+                    <label>Garçons : <input type="number" min="0" placeholder="Nombre de garçons"></label>
+                    <label>Filles : <input type="number" min="0" placeholder="Nombre de filles"></label>
+
+                    <label>B15. Parmi eux combien d’enfants retirés des PFTE ont-ils abandonné l'établissement au cours des 3 derniers mois?</label>
+                    <label>Garçons : <input type="number" min="0" placeholder="Nombre de garçons"></label>
+                    <label>Filles : <input type="number" min="0" placeholder="Nombre de filles"></label>
+                </div>
+
+
+                <div class="section">
+                    <h2>C. Caractéristiques des enfants assistés</h2>
+                    <h4>Tableau récapitulatif des enfants retirés ayant abandonné l’école</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>B16.a Code de l’enfant</th>
+                                <th>B16.b Année de naissance</th>
+                                <th>B16.c Sexe (F=1, M=2)</th>
+                                <th>B16.d Date de départ de l’élève</th>
+                                <th>B16.e Classe au moment du départ (voir code)</th>
+                                <th>B16.f Cause principale (voir code section E3 Supp2 page 10)</th>
+                                <th>B16.g Destination (localité)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Remplir les lignes suivantes selon les données -->
+                            <tr>
+                                <td>01</td>
+                                <td><input type="text" placeholder="Code"></td>
+                                <td><input type="number" placeholder="Année"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">F</option>
+                                        <option value="2">M</option>
+                                    </select>
+                                </td>
+                                <td><input type="date"></td>
+                                <td><input type="text" placeholder="Classe"></td>
+                                <td><input type="text" placeholder="Cause"></td>
+                                <td><input type="text" placeholder="Destination"></td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td><input type="text" placeholder="Code"></td>
+                                <td><input type="number" placeholder="Année"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">F</option>
+                                        <option value="2">M</option>
+                                    </select>
+                                </td>
+                                <td><input type="date"></td>
+                                <td><input type="text" placeholder="Classe"></td>
+                                <td><input type="text" placeholder="Cause"></td>
+                                <td><input type="text" placeholder="Destination"></td>
+                            </tr>
+                            <!-- Répéter pour d'autres enfants -->
+                            <tr>
+                                <td>03</td>
+                                <td><input type="text" placeholder="Code"></td>
+                                <td><input type="number" placeholder="Année"></td>
+                                <td>
+                                    <select>
+                                        <option value="1">F</option>
+                                        <option value="2">M</option>
+                                    </select>
+                                </td>
+                                <td><input type="date"></td>
+                                <td><input type="text" placeholder="Classe"></td>
+                                <td><input type="text" placeholder="Cause"></td>
+                                <td><input type="text" placeholder="Destination"></td>
+                            </tr>
+                            <!-- Ajoutez plus de lignes selon besoin -->
+                        </tbody>
+                    </table>
+
+                    <h3>C1. Évaluation de la performance des enfants retirés des PFTE</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Domaines</th>
+                                <th>1. Meilleur</th>
+                                <th>2. Aucune différence</th>
+                                <th>3. Plus mauvais</th>
+                                <th>Pour 3, recommander une action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Travail de classe</td>
+                                <td><input type="checkbox" name="classe_performance" value="meilleur"></td>
+                                <td><input type="checkbox" name="classe_performance" value="aucune_difference"></td>
+                                <td><input type="checkbox" name="classe_performance" value="plus_mauvais"></td>
+                                <td><input type="text" placeholder="Action recommandée"></td>
+                            </tr>
+                            <tr>
+                                <td>2. Discipline/Socialisation</td>
+                                <td><input type="checkbox" name="discipline_performance" value="meilleur"></td>
+                                <td><input type="checkbox" name="discipline_performance" value="aucune_difference"></td>
+                                <td><input type="checkbox" name="discipline_performance" value="plus_mauvais"></td>
+                                <td><input type="text" placeholder="Action recommandée"></td>
+                            </tr>
+                            <tr>
+                                <td>3. Activités extra-scolaires</td>
+                                <td><input type="checkbox" name="activites_performance" value="meilleur"></td>
+                                <td><input type="checkbox" name="activites_performance" value="aucune_difference"></td>
+                                <td><input type="checkbox" name="activites_performance" value="plus_mauvais"></td>
+                                <td><input type="text" placeholder="Action recommandée"></td>
+                            </tr>
+                            <tr>
+                                <td>4. Apprentissage</td>
+                                <td><input type="checkbox" name="apprentissage_performance" value="meilleur"></td>
+                                <td><input type="checkbox" name="apprentissage_performance" value="aucune_difference"></td>
+                                <td><input type="checkbox" name="apprentissage_performance" value="plus_mauvais"></td>
+                                <td><input type="text" placeholder="Action recommandée"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>C2. Projets ou activités de lutte contre les PFTE</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Projet (ou activité)</th>
+                                <th>Partenaires dans la réalisation du projet</th>
+                                <th>Nombre d’élèves bénéficiaires</th>
+                                <th>Garçon</th>
+                                <th>Fille</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" placeholder="Nom du projet"></td>
+                                <td><input type="text" placeholder="Partenaires"></td>
+                                <td><input type="number" placeholder="Total"></td>
+                                <td><input type="number" placeholder="Garçons"></td>
+                                <td><input type="number" placeholder="Filles"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Nom du projet"></td>
+                                <td><input type="text" placeholder="Partenaires"></td>
+                                <td><input type="number" placeholder="Total"></td>
+                                <td><input type="number" placeholder="Garçons"></td>
+                                <td><input type="number" placeholder="Filles"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Nom du projet"></td>
+                                <td><input type="text" placeholder="Partenaires"></td>
+                                <td><input type="number" placeholder="Total"></td>
+                                <td><input type="number" placeholder="Garçons"></td>
+                                <td><input type="number" placeholder="Filles"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <label>C3. Appui dans le cadre du SOSTECI</label>
+                    <label>Votre établissement bénéficie-t-il d’appui dans le cadre du SOSTECI ?</label>
+                    <label><input type="radio" name="sosteci_support" value="oui"> Oui</label>
+                    <label><input type="radio" name="sosteci_support" value="non"> Non</label>
+
+                    <h4>C4. Si oui, Quels types d’appuis votre établissement a-t-il reçus?</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="support_types" value="revenu"> Activité génératrice de revenu</label>
+                        <label><input type="checkbox" name="support_types" value="equipement"> Équipement (mobilier)</label>
+                        <label><input type="checkbox" name="support_types" value="sanitaire"> Sanitaire</label>
+                        <label><input type="checkbox" name="support_types" value="matériels"> Matériels didactiques</label>
+                        <label><input type="checkbox" name="support_types" value="formation"> Formation</label>
+                        <label><input type="checkbox" name="support_types" value="coges"> Appui au COGES</label>
+                        <label><input type="checkbox" name="support_types" value="autres"> Autres</label>
+                        <input type="text" placeholder="Préciser d'autres types d’appui...">
+                    </div>
+
+                    <h4>C5. Activité génératrice de revenu</h4>
+                    <label>a) Type d’activité : <input type="text" placeholder="Type d’activité"></label>
+                    <label>b) Nombre d'enfants tirant bénéfice de l’activité : <input type="number" placeholder="Nombre d'enfants"></label>
+                    <label>c) Nature des bénéfices tirés : <input type="text" placeholder="Nature des bénéfices"></label>
+
+                    <h4>C6. Difficultés rencontrées dans la mise en œuvre des activités de lutte contre les PFTE</h4>
+                    <textarea placeholder="Décrivez les difficultés rencontrées..." rows="2" cols="50"></textarea>
+                </div>
+
+
+
+                <center style="padding:10px">
+                    <button type="submit" class="btn btn-lg btn-success">Soumettre</button>
+                </center>
+
+
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('input[name="kits"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
+                document.getElementById("kits-details").style.display = event.target.value === "oui" ? "block" : "none";
+            });
+        });
+
+    </script>
+    <script>
+        // Gestion de l'affichage des sections en fonction des réponses
+        document.querySelectorAll('input[name="cantine"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
+                document.getElementById("cantine-details").style.display = event.target.value === "oui" ? "block" : "none";
+            });
+        });
+
+        document.querySelectorAll('input[name="latrines"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
+                document.getElementById("latrines-details").style.display = event.target.value === "oui" ? "block" : "none";
+            });
+        });
+
+        document.querySelectorAll('input[name="eau_potable"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
+                document.getElementById("source-eau").style.display = event.target.value === "oui" ? "block" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>

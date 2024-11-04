@@ -5362,8 +5362,8 @@ html.lenis {
 .team-one__content {
     position: relative;
     display: block;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: -50px;
     text-align: center;
     padding: 20px 20px 20px;
@@ -5398,11 +5398,11 @@ html.lenis {
 }
 
 .team-one__title {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 34px;
     letter-spacing: -0.96px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
     .team-one__title a {
